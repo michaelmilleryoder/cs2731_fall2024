@@ -24,11 +24,11 @@ University of Pittsburgh, Spring 2024
 	<tbody style="text-align:left">
 		<tr>
 			<td>Time</td>
-			<td>MW 3:00-4:15pm</td>
+			<td>MW 2:30-3:45pm</td>
 		</tr>
 		<tr>
 			<td>Location</td>
-			<td>Sennott Square 6110</td>
+			<td>Sennott Square 5313</td>
 		</tr>
 		<tr>
 			<td>Instructor</td>
