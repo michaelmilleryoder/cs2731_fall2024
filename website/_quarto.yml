@@ -1,9 +1,9 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: ../docs
 
 website:
-  title: "CS 2731 Introduction to Natural Language Processing, Fall 2024"
+  title: "CS 2731 Introduction to Natural Language Processing"
   navbar:
     left:
       - href: index.qmd

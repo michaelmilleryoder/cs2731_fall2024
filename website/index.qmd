@@ -1,5 +1,5 @@
 ---
-title: "CS 2731 Introduction to Natural Language Processing, Fall 2024"
+title: "CS 2731 Introduction to Natural Language Processing"
 ---
 
 This is a Quarto website.
