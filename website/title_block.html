@@ -1,0 +1,15 @@
+<header id="title-block-header">
+$if(image)$
+<style>
+.hero {
+  background-image: url($image$);
+  background-size: cover;
+  background-position-y: center;
+  height: 200px;
+}
+</style>
+<div class="hero"></div>
+$endif$
+$if(title)$<h1 class="title">$title$</h1>$endif$
+</div>
+</header>

@@ -1,8 +1,8 @@
 /* css styles */
 
 table.schedule {
-	width: 600px;
-	table-layout: fixed;
+	width: 800px;
+	/* table-layout: fixed; */
 }
 
 tr {
@@ -18,3 +18,14 @@ tr:last-child {
   border-bottom: none;
 }
 
+th, td {
+	padding: 8px;
+}
+
+.title {
+	text-align: center;
+}
+
+.navbar {
+	background-color: #e0e0e0;
+}
