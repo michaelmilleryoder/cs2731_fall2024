@@ -1,5 +1,9 @@
 /* css styles */
 
+figcaption {
+	text-align: right;
+}
+
 table.schedule {
 	width: 800px;
 	/* table-layout: fixed; */
