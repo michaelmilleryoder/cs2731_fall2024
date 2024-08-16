@@ -14,6 +14,13 @@
     "text": "School of Computing and Information, University of Pittsburgh\nFall 2024"
   },
   {
+    "objectID": "index.html#participation-grade",
+    "href": "index.html#participation-grade",
+    "title": "CS 2731 Introduction to Natural Language Processing",
+    "section": "Participation grade",
+    "text": "Participation grade\nIn-class, collaborative activities are better learning experiences when students come to class and participate. To encourage participation, there is a participation grade (5% of the total course grade). The majority of that grade comes from attendance, which will be taken via TopHat on randomly selected class sessions. The rest of the grade will be assigned based on whether a student asked questions in class or otherwise (such as during office hours),or partipated in in-class activites. If you did any of this basic engagement, full credit will be awarded."
+  },
+  {
     "objectID": "index.html#grading-scale",
     "href": "index.html#grading-scale",
     "title": "CS 2731 Introduction to Natural Language Processing",
@@ -21,11 +28,18 @@
     "text": "Grading scale\n\n\n\nRange\nLetter grade\n\n\n\n\n93.3 – 100%\nA\n\n\n90.0 – &lt;93.3%\nA-\n\n\n86.7 – &lt;90.0%\nB+\n\n\n83.3 – &lt;86.7%\nB\n\n\n80.0 – &lt;83.3%\nB-\n\n\n76.7 – &lt;80.0%\nC+\n\n\n73.3 – &lt;76.7%\nC\n\n\n70.0 – &lt;73.3%\nC-\n\n\n66.7 – &lt;70.0%\nD+\n\n\n63.3 – &lt;66.7%\nD\n\n\n60.0 – &lt;63.3%\nD-\n\n\n&lt; 60%\nF\n\n\n\nThe instructor reserves the right to change the grading scale depending on class performance, but only in the direction of raising grades for students. Feel free to stop by the instructor’s office hours or make an additional appointment anytime to talk about any issues you might have with your grade."
   },
   {
-    "objectID": "index.html#late-work-and-assignment-resubmission-policy",
-    "href": "index.html#late-work-and-assignment-resubmission-policy",
+    "objectID": "index.html#late-work-policy",
+    "href": "index.html#late-work-policy",
     "title": "CS 2731 Introduction to Natural Language Processing",
-    "section": "Late work and assignment resubmission policy",
-    "text": "Late work and assignment resubmission policy\nPlease contact the instructor and TA before the deadline if you need an extension due to unforeseen circumstances. We are happy to extend deadlines for deaths and funerals, illnesses, mental health crises or episodes, weddings, important religious and national holidays, job interviews, and other circumstances. There is no shame in asking; we care about your well-being more than we care about deadlines.\nUnless you let us know beforehand (or an adverse event occurred very close to the deadline), the late penalty is 2.5% per day, including weekend days and holidays, for all assignments. The latest you may turn assignments in is 2 weeks after the deadline, excluding the final project report, which must be turned in by the deadline.\nIf you are unsatisfied with your grade on an assignment and wish to resubmit work, talk with the instructor. Resubmissions are handled case by case, but are generally accepted in cases where parts of the assignment are missing."
+    "section": "Late work policy",
+    "text": "Late work policy\nPlease contact the instructor and TA before the deadline if you need an extension due to unforeseen circumstances. We are happy to extend deadlines for deaths and funerals, illnesses, mental health crises or episodes, weddings, important religious and national holidays, job interviews, and other circumstances. There is no shame in asking; we care about your well-being more than we care about deadlines.\nUnless you let us know beforehand (or an adverse event occurred very close to the deadline), the late penalty is 2.5% per day, including weekend days and holidays, for all assignments. The latest you may turn assignments in is 2 weeks after the deadline, excluding the final project report, which must be turned in by the deadline."
+  },
+  {
+    "objectID": "index.html#assignment-resubmission-policy",
+    "href": "index.html#assignment-resubmission-policy",
+    "title": "CS 2731 Introduction to Natural Language Processing",
+    "section": "Assignment resubmission policy",
+    "text": "Assignment resubmission policy\nIf you are unsatisfied with your grade on an assignment and wish to resubmit work, talk with the instructor. Resubmissions are handled case by case, but are generally accepted in cases where parts of the assignment are missing (sections of the rubric are 0). Updated or added text in resubmitted reports must be highlighted in yellow. Resubmissions are subject to an automatic 20% deduction. Only 1 resubmission per homework assignment will be accepted."
   },
   {
     "objectID": "index.html#academic-integrity-policy",

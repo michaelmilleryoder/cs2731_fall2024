@@ -329,6 +329,12 @@ Description | Points | Percentage of final grade
 &ensp;Each discussion post of 3 total required | 7 | 1.4
 **Grand total** | **500** | **100**
 
+## Participation grade
+In-class, collaborative activities are better learning experiences when students come to class and participate. 
+To encourage participation, there is a participation grade (5% of the total course grade).
+The majority of that grade comes from attendance, which will be taken via TopHat on randomly selected class sessions.
+The rest of the grade will be assigned based on whether a student asked questions in class or otherwise (such as during office hours),or partipated in in-class activites. If you did any of this basic engagement, full credit will be awarded.
+
 
 # Course description
 Computer programs that automatically process human language, such as chatbots, translation systems, and speech recognition systems, have become a part of everyday life. This course provides an introduction to the artificial intelligence research field that brought about these systems: natural language processing (NLP). Students will become familiar with foundational tasks in NLP such as language modeling, text classification, and sequence modeling. The course will cover both classic and contemporary approaches to these tasks, as well as how they are applied in language technologies. Topics of ethics, fairness, and bias in AI are incorporated throughout the course.
