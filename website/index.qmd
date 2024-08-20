@@ -42,7 +42,7 @@ Fall 2024
 		</tr>
 		<tr>
 			<td style="width:200px">Instructor office hours</td>
-			<td>By appointment in-person or on Zoom<br/>[Book an appointment](https://outlook-sdf.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)</td>
+			<td>By appointment in person at Sennott Square 6309 or on Zoom<br/>[Book an appointment](https://outlook-sdf.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)</td>
 		</tr>
 		<tr>
 			<td>TA</td>
@@ -112,8 +112,8 @@ Fall 2024
             <td>Bag-of-words, tf-idf, PPMI</td>
             <!--<td><a href="slides/session3_cs2731_spring2024.pdf">Bag-of-words, tf-idf, PPMI</a></td>-->
             <td>J+M 6.3-6.7</td>
-            <td>Reading quiz due 1pm; <br />HW1 out; <br/><b>Project survey due 09-05</b></td>
-            <!--<td>Reading quiz due 1pm; <br /><a href="hw1">HW1</a> out; <br/><b><a href="https://forms.gle/dtRnWmCpe9C8TXSm9">Project survey</a> due 01-18</b></td>-->
+            <td>Reading quiz due; <br />HW1 out; <br/><b>Project survey due 09-05</b></td>
+            <!--<td>Reading quiz due; <br /><a href="hw1">HW1</a> out; <br/><b><a href="https://forms.gle/dtRnWmCpe9C8TXSm9">Project survey</a> due 01-18</b></td>-->
         </tr>
         <tr>
             <td>4</td>
@@ -121,7 +121,7 @@ Fall 2024
             <td>Logistic regression part 1</td>
             <!--<td><a href="slides/session6_cs2731_spring2024.pdf">Logistic regression part 1</a></td>-->
             <td>J+M 5-5.2</td>
-            <td>Reading quiz due 1pm; <br />Project teams matched</td>
+            <td>Reading quiz; <br />Project teams matched</td>
         </tr>
         <tr>
             <td>5</td>
@@ -129,8 +129,8 @@ Fall 2024
             <td>Logistic regression part 2</td>
             <!--<td><a href="slides/session7_cs2731_spring2024.pdf">Logistic regression part 2</a></td>-->
             <td>J+M 5.3-5.9, 5.11</td>
-            <td>Reading quiz due 1pm;<br />Project pre-proposal form out</td>
-            <!--<td>Reading quiz due 1pm;<br /><a href="https://forms.gle/PTgXLUs6WCxLrgFt6">Project pre-proposal form</a> out</td>-->
+            <td>Reading quiz;<br />Project pre-proposal form out</td>
+            <!--<td>Reading quiz;<br /><a href="https://forms.gle/PTgXLUs6WCxLrgFt6">Project pre-proposal form</a> out</td>-->
         </tr>
         <tr>
             <td>6</td>
@@ -138,7 +138,8 @@ Fall 2024
             <td>Classifier evaluation</td>
             <!--<td><a href="slides/session5_cs2731_spring2024.pdf">Classifier evaluation</a></td>-->
             <td>J+M 4 (intro), 4.7-4.10,<br /><a href="https://aclanthology.org/Q18-1041.pdf">Bender & Friedman 2018 (data statements)</a><br /><a href="https://arxiv.org/pdf/1810.03993.pdf">Mitchell et al. 2019 (model cards)</a></td>
-            <td>Discussion post due 1pm; <br /><a href="hw2">HW2</a> out 01-30</td>
+            <td>Discussion post due; <br />HW2 out</td>
+            <!--<td>Discussion post due; <br /><a href="hw2">HW2</a> out 01-30</td>-->
         </tr>
         <tr>
             <td>7</td>
@@ -146,7 +147,8 @@ Fall 2024
             <td>Vector semantics, word2vec</td>
             <!--<td><a href="slides/session8_cs2731_spring2024.pdf">Vector semantics, word2vec</a></td>-->
             <td>J+M 6-6.2, 6.8-6.13,<br /><a href="https://aclanthology.org/2020.acl-main.485.pdf">Blodgett et al. 2020</a></td>
-            <td>Discussion post due 1pm;  <br/><b><a href="hw1">HW1</a> due 02-01</b></td>
+            <td>Discussion post due;  <br/><b>HW1 due</b></td>
+            <!--<td>Discussion post due;  <br/><b><a href="hw1">HW1</a> due 02-01</b></td>-->
         </tr>
         <tr>
             <td>8</td>
@@ -154,7 +156,8 @@ Fall 2024
             <td>Feedforward neural networks</td>
             <!--<td><a href="slides/session9_cs2731_spring2024.pdf">Feedforward neural networks</a></td>-->
             <td>J+M 7-7.1, 7.3-7.5, 7.8</td>
-            <td>Reading quiz due 1pm<br/><b><a href="https://forms.gle/PTgXLUs6WCxLrgFt6">Project pre-proposal form</a> due</b></td>
+            <td>Reading quiz due<br/><b>Project pre-proposal form due</b></td>
+            <!--<td>Reading quiz due<br/><strong><a href="https://forms.gle/PTgXLUs6WCxLrgFt6">Project pre-proposal form</a> due</strong></td>-->
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 3: Language models and conditional language models</td>
@@ -165,7 +168,7 @@ Fall 2024
             <td>N-gram language models part 1</td>
             <!--<td><a href="slides/session10_cs2731_spring2024.pdf">N-gram language models part 1</a></td>-->
             <td>J+M 3-3.2</td>
-            <td>Reading quiz due 1pm</td>
+            <td>Reading quiz due</td>
         </tr>
         <tr>
             <td>10</td>
@@ -173,7 +176,7 @@ Fall 2024
             <td>N-gram language models part 2, RNNs part 1</td>
             <!--<td><a href="slides/session11_cs2731_spring2024.pdf">N-gram language models part 2, RNNs part 1</a></td>-->
             <td>J+M 3.3-3.6, 3.9</td>
-            <td>Reading quiz due 1pm</td>
+            <td>Reading quiz due</td>
         </tr>
         <tr>
             <td>11</td>
@@ -181,7 +184,8 @@ Fall 2024
             <td>RNNs part 2, encoder-decoder</td>
             <!--<td><a href="slides/session12_cs2731_spring2024.pdf">RNNs part 2, encoder-decoder</a></td>-->
             <td>J+M 9-9.3, 9.6-9.9</td>
-            <td>Reading quiz due 1pm; <br/><b><a href="hw2">HW2</a> due 02-15</b></td>
+            <td>Reading quiz due; <br/><b>HW2 due</b></td>
+            <!--<td>Reading quiz due; <br/><b><a href="hw2">HW2</a> due 02-15</b></td>-->
         </tr>
         <tr>
             <td>12</td>
@@ -189,7 +193,8 @@ Fall 2024
             <td>Transformers part 1, beam search</td>
             <!--<td><a href="slides/session13_cs2731_spring2024.pdf">Transformers part 1, beam search</a></td>-->
             <td>J+M 10-10.2, 10.4</td>
-            <td>Reading quiz due 1pm;<br/><a href="hw3">HW3</a> out 02-20</td>
+            <td>Reading quiz due;<br/>HW3 out</td>
+            <!--<td>Reading quiz due;<br/><a href="hw3">HW3</a> out 02-20</td>-->
         </tr>
         <tr>
             <td>13</td>
@@ -197,7 +202,7 @@ Fall 2024
             <td>Transformers part 2, pretraining, BERT and GPT</td>
             <!--<td><a href="slides/session14_cs2731_spring2024.pdf">Transformers part 2, pretraining, BERT and GPT</a></td>-->
             <td>J+M 10.7, 11-11.3.2,<br><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023</a></td>
-            <td>Discussion post due 1pm;<br/><b>Project proposal and literature review due 02-22</b></td>
+            <td>Discussion post due;<br/><b>Project proposal and literature review due</b></td>
         </tr>
         <tr style="background-color:#cccccc">
             <td>14</td>
@@ -219,7 +224,8 @@ Fall 2024
             <td>Project proposal presentations</td>
             <!--<td><a href="slides/session16_cs2731.pdf">Project proposal presentations</a></td>-->
             <td></td>
-            <td><a href="hw4">HW4</a> out 03-05</td>
+            <td>HW4 out</td>
+            <!--<td><a href="hw4">HW4</a> out 03-05</td>-->
         </tr>
         <tr>
             <td>17</td>
@@ -239,7 +245,7 @@ Fall 2024
             <td>POS tagging, NER, HMMs part 1</td>
             <!--<td><a href="slides/session18_cs2731_spring2024.pdf">POS tagging, NER, HMMs part 1</a></td>-->
             <td>J+M 8-8.4.4</td>
-            <td>Reading quiz due 11:59pm</td>
+            <td>Reading quiz due</td>
         </tr>
         <tr>
             <td>19</td>
@@ -247,7 +253,7 @@ Fall 2024
             <td>HMMs part 2, Viterbi alg, neural sequence labeling</td>
             <!--<td><a href="slides/session19_cs2731_spring2024.pdf">HMMs part 2, Viterbi alg, neural sequence labeling</a></td>-->
             <td>J+M 8.4.5-8.4.6, 9.3.1, 11.3.3-11.3.4</td>
-            <td>Reading quiz due 11:59pm</td>
+            <td>Reading quiz due</td>
         </tr>
         <tr>
             <td>20</td>
@@ -255,7 +261,8 @@ Fall 2024
             <td>Dependency parsing</td>
             <!--<td><a href="slides/session21_cs2731_spring2024.pdf">Dependency parsing</a></td>-->
             <td>J+M 18-18.2, 18.4-18.5</td>
-            <td>Reading quiz due 11:59pm; <br/><b><a href="hw4">HW4</a> due</b></td>
+            <td>Reading quiz due; <br/><strong>HW4 due</strong></td>
+            <!--<td>Reading quiz due; <br/><strong><a href="hw4">HW4</a> due</strong></td>-->
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 5: Application areas</td>
@@ -266,7 +273,8 @@ Fall 2024
             <td>Machine translation part 1</td>
             <!--<td><a href="slides/session22_cs2731_spring2024.pdf">Machine translation part 1</a></td>-->
             <td>J+M 13-13.2,<br/><a href="https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/">Bender 2019</a></td>
-            <td>Reading quiz due 11:59pm;<br/><b><a href="https://forms.gle/F8fhBkUpgCSJDTNA9">Project peer review due</a></b></td>
+            <td>Reading quiz due;<br/><b>Project peer review due</b></td>
+            <!--<td>Reading quiz due;<br/><strong><a href="https://forms.gle/F8fhBkUpgCSJDTNA9">Project peer review due</a></strong></td>-->
         </tr>
         <tr>
             <td>22</td>
@@ -409,8 +417,8 @@ Teaching staff will respond during hours that work best for them; please feel no
 
 Range | Letter grade
 ----|----
-93.3 – 100% | A
-90.0 – <93.3% | A-
+93.0 – 100% | A
+90.0 – <93.0% | A-
 86.7 – <90.0% |B+
 83.3 – <86.7% |B
 80.0 – <83.3% |B-
