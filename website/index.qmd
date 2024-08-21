@@ -85,7 +85,7 @@ Fall 2024
             <td>Course, NLP intro</td>
             <!--<td><a href="slides/session1_cs2731_spring2024.pdf">Course, NLP intro</a></td>-->
             <td></td>
-            <td>Project survey out</td>
+            <td></td>
             <!--<td><a href="https://forms.gle/dtRnWmCpe9C8TXSm9">Project survey</a> out</td>-->
         </tr>
         <tr>
@@ -112,8 +112,8 @@ Fall 2024
             <td>Bag-of-words, tf-idf, PPMI</td>
             <!--<td><a href="slides/session3_cs2731_spring2024.pdf">Bag-of-words, tf-idf, PPMI</a></td>-->
             <td>J+M 6.3-6.7</td>
-            <td>Reading quiz due; <br />HW1 out; <br/><b>Project survey due 09-05</b></td>
-            <!--<td>Reading quiz due; <br /><a href="hw1">HW1</a> out; <br/><b><a href="https://forms.gle/dtRnWmCpe9C8TXSm9">Project survey</a> due 01-18</b></td>-->
+            <td>Reading quiz due; <br/>HW1 out</td>
+            <!--<td>Reading quiz due; <br/><a href="hw1">HW1</a> out; <br/><b><a href="https://forms.gle/dtRnWmCpe9C8TXSm9">Project survey</a> due 01-18</b></td>-->
         </tr>
         <tr>
             <td>4</td>
@@ -121,7 +121,7 @@ Fall 2024
             <td>Logistic regression part 1</td>
             <!--<td><a href="slides/session6_cs2731_spring2024.pdf">Logistic regression part 1</a></td>-->
             <td>J+M 5-5.2</td>
-            <td>Reading quiz; <br />Project teams matched</td>
+            <td>Reading quiz</td>
         </tr>
         <tr>
             <td>5</td>
@@ -448,7 +448,7 @@ Only 1 resubmission per homework assignment will be accepted.
 Students in this course will be expected to comply with the [University of Pittsburgh’s Policy on Academic Integrity](https://www.provost.pitt.edu/info/ai1.html). Any student suspected of violating this obligation for any reason during the semester will be required to participate in the procedural process, initiated at the instructor level, as outlined in the University Guidelines on Academic Integrity To learn more about Academic Integrity, visit the [Academic Integrity Guide](http://pitt.libguides.com/academicintegrity/) for an overview of the topic. For hands-on practice, complete the [Academic Integrity Modules](http://pitt.libguides.com/academicintegrity/plagiarism).
 
 ### Generative AI policy
-You are welcome to use generative AI programs (ChatGPT, DALL-E, etc.) as a student in this course. Since much of this course is about developing such tools in NLP, using currently available tools could not only aid you in the coursework but also expose you to the current capabilities and limitations of such systems.
+You are allowed to use generative AI programs (ChatGPT, DALL-E, etc.) as a student in this course in limited circumstances. Since much of this course is about developing such tools in NLP, using currently available tools can expose you to the current capabilities and limitations of such systems.
 
 However, your ethical responsibilities as a student remain the same. You must follow the [University of Pittsburgh’s Policy on Academic Integrity](https://www.provost.pitt.edu/info/ai1.html). 
 Here are some principles to keep in mind that can help you determine whether or not a specific use of generative AI is acceptable in this course (for all forms of generation: writing, code, images or other forms). Please ask the instructor if you are not sure about a specific use. You will not be blamed or retaliated against for asking.
