@@ -82,8 +82,7 @@ Fall 2024
         <tr>
             <td>1</td>
             <td>08-26 M</td>
-            <td>Course, NLP intro</td>
-            <!--<td><a href="slides/session1_cs2731_spring2024.pdf">Course, NLP intro</a></td>-->
+            <td><a href="slides/session1_cs2731_fall2024.pdf">Course, NLP intro</a></td>
             <td></td>
             <td></td>
             <!--<td><a href="https://forms.gle/dtRnWmCpe9C8TXSm9">Project survey</a> out</td>-->
