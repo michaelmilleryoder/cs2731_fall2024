@@ -46,7 +46,7 @@ Fall 2024
 		</tr>
 		<tr>
 			<td>TA</td>
-			<td><i>Jayden Serenari</i></td>
+			<td>Jayden Serenari</td>
 		</tr>
 		<tr>
 			<td>TA office hours</td>
@@ -212,7 +212,7 @@ Fall 2024
         <tr>
             <td>15</td>
             <td>10-16 W</td>
-            <td>Contemporary LLM topics (guest lecture, Lorraine Li)</td>
+            <td>Contemporary LLM topics (guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a>)</td>
             <td><em>TBD</em></td>
             <td></td>
         </tr>
