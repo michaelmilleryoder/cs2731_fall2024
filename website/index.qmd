@@ -46,7 +46,7 @@ Fall 2024
 		</tr>
 		<tr>
 			<td>TA</td>
-			<td><i>TBD</i></td>
+			<td><i>Jayden Serenari</i></td>
 		</tr>
 		<tr>
 			<td>TA office hours</td>
@@ -61,7 +61,7 @@ Fall 2024
 
 
 # Schedule
-*Subject to change. Last revised 2024-08-02. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2024-08-28. All due dates are at 11:59pm ET except when indicated.*
 
 <!-- Should convert this to quarto markdown-->
 <table class="schedule">
@@ -90,8 +90,7 @@ Fall 2024
         <tr>
             <td>2</td>
             <td>08-28 W</td>
-            <td>Text normalization</td>
-            <!--<td><a href="slides/session2_cs2731_spring2024.pdf">Text normalization</a></td>-->
+            <td><a href="slides/session2_cs2731_fall2024.pdf">Text normalization</a></td>
             <td>J+M 2-2.3, 2.5-2.7</td>
             <td></td>
         </tr>
@@ -213,7 +212,7 @@ Fall 2024
         <tr>
             <td>15</td>
             <td>10-16 W</td>
-            <td>Contemporary LLM topics</td>
+            <td>Contemporary LLM topics (guest lecture, Lorraine Li)</td>
             <td><em>TBD</em></td>
             <td></td>
         </tr>
@@ -437,6 +436,7 @@ The instructor reserves the right to change the grading scale depending on class
 ## Late work policy
 Students are granted 5 total late days across all homework assignments without penalty. After those five late days, you will be penalized 20% for each day that your submission is late except in extreme unforeseen circumstances.
 Group project work will be penalized 20% for each day late. No late work will be accepted for the final project report.
+Late days cannot be used for reading quizzes, as no late work is accepted for reading quizzes.
 
 ## Assignment resubmission policy
 If you are unsatisfied with your grade on an assignment and wish to resubmit work, talk with the instructor. 
