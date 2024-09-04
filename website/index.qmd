@@ -54,7 +54,7 @@ Fall 2024
 		</tr>
 		<tr>
 			<td>TA office hours</td>
-			<td>Tue 10:30am-12:30pm, or by appointment</td>
+			<td>Tue 10:30am-12:30pm, or by appointment. Location TBD</td>
 		</tr>
 		<tr>
 			<td>Textbook (free online)</td>
@@ -114,7 +114,7 @@ Fall 2024
             <td>Bag-of-words, tf-idf, PPMI</td>
             <!--<td><a href="slides/session3_cs2731_spring2024.pdf">Bag-of-words, tf-idf, PPMI</a></td>-->
             <td>J+M 6.3-6.7</td>
-            <td>Reading quiz due</td>
+            <td>Reading quiz due;<br/>HW1 out 09-05</td>
             <!--<td>Reading quiz due; <br/><a href="hw1">HW1</a> out; <br/><b><a href="https://forms.gle/dtRnWmCpe9C8TXSm9">Project survey</a> due 01-18</b></td>-->
         </tr>
         <tr>
@@ -123,7 +123,7 @@ Fall 2024
             <td>Logistic regression part 1</td>
             <!--<td><a href="slides/session6_cs2731_spring2024.pdf">Logistic regression part 1</a></td>-->
             <td>J+M 5-5.2</td>
-            <td>Reading quiz</td>
+            <td>Reading quiz due</td>
         </tr>
         <tr>
             <td>5</td>
@@ -131,7 +131,7 @@ Fall 2024
             <td>Logistic regression part 2</td>
             <!--<td><a href="slides/session7_cs2731_spring2024.pdf">Logistic regression part 2</a></td>-->
             <td>J+M 5.3-5.9, 5.11</td>
-            <td>Reading quiz;<br />Project pre-proposal form out</td>
+            <td>Reading quiz due;<br/>Project idea submission form out</td>
             <!--<td>Reading quiz;<br /><a href="https://forms.gle/PTgXLUs6WCxLrgFt6">Project pre-proposal form</a> out</td>-->
         </tr>
         <tr>
@@ -149,7 +149,7 @@ Fall 2024
             <td>Vector semantics, word2vec</td>
             <!--<td><a href="slides/session8_cs2731_spring2024.pdf">Vector semantics, word2vec</a></td>-->
             <td>J+M 6-6.2, 6.8-6.13,<br /><a href="https://aclanthology.org/2020.acl-main.485.pdf">Blodgett et al. 2020</a></td>
-            <td>Discussion post due;  <br/><b>HW1 due</b></td>
+            <td>Discussion post due;<br/><strong>HW1 due 09-19;<br/>Project idea submission form due 09-19</strong></td>
             <!--<td>Discussion post due;  <br/><b><a href="hw1">HW1</a> due 02-01</b></td>-->
         </tr>
         <tr>
@@ -158,7 +158,7 @@ Fall 2024
             <td>Feedforward neural networks</td>
             <!--<td><a href="slides/session9_cs2731_spring2024.pdf">Feedforward neural networks</a></td>-->
             <td>J+M 7-7.1, 7.3-7.5, 7.8</td>
-            <td>Reading quiz due<br/><b>Project pre-proposal form due</b></td>
+            <td>Reading quiz due;<br/>Project idea ranking form out</td>
             <!--<td>Reading quiz due<br/><strong><a href="https://forms.gle/PTgXLUs6WCxLrgFt6">Project pre-proposal form</a> due</strong></td>-->
         </tr>
         <tr>
@@ -170,7 +170,7 @@ Fall 2024
             <td>N-gram language models part 1</td>
             <!--<td><a href="slides/session10_cs2731_spring2024.pdf">N-gram language models part 1</a></td>-->
             <td>J+M 3-3.2</td>
-            <td>Reading quiz due</td>
+            <td>Reading quiz due;<br/><strong>Project idea ranking form due 09-26</strong></td>
         </tr>
         <tr>
             <td>10</td>
@@ -186,7 +186,7 @@ Fall 2024
             <td>RNNs part 2, encoder-decoder</td>
             <!--<td><a href="slides/session12_cs2731_spring2024.pdf">RNNs part 2, encoder-decoder</a></td>-->
             <td>J+M 9-9.3, 9.6-9.9</td>
-            <td>Reading quiz due; <br/><b>HW2 due</b></td>
+            <td>Reading quiz due; <br/><b>HW2 due 10-03</b></td>
             <!--<td>Reading quiz due; <br/><b><a href="hw2">HW2</a> due 02-15</b></td>-->
         </tr>
         <tr>
@@ -204,7 +204,7 @@ Fall 2024
             <td>Transformers part 2, pretraining, BERT and GPT</td>
             <!--<td><a href="slides/session14_cs2731_spring2024.pdf">Transformers part 2, pretraining, BERT and GPT</a></td>-->
             <td>J+M 10.7, 11-11.3.2,<br><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023</a></td>
-            <td>Discussion post due;<br/><b>Project proposal and literature review due</b></td>
+            <td>Discussion post due</td>
         </tr>
         <tr style="background-color:#cccccc">
             <td>14</td>
@@ -218,7 +218,7 @@ Fall 2024
             <td>10-16 W</td>
             <td>Contemporary LLM topics (guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a>)</td>
             <td><em>TBD</em></td>
-            <td></td>
+            <td><strong>Project proposal and literature review due 10-17</strong></td>
         </tr>
         <tr>
             <td>16</td>
@@ -263,7 +263,7 @@ Fall 2024
             <td>Dependency parsing</td>
             <!--<td><a href="slides/session21_cs2731_spring2024.pdf">Dependency parsing</a></td>-->
             <td>J+M 18-18.2, 18.4-18.5</td>
-            <td>Reading quiz due; <br/><strong>HW4 due</strong></td>
+            <td>Reading quiz due</td>
             <!--<td>Reading quiz due; <br/><strong><a href="hw4">HW4</a> due</strong></td>-->
         </tr>
         <tr>
@@ -275,7 +275,7 @@ Fall 2024
             <td>Machine translation part 1</td>
             <!--<td><a href="slides/session22_cs2731_spring2024.pdf">Machine translation part 1</a></td>-->
             <td>J+M 13-13.2,<br/><a href="https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/">Bender 2019</a></td>
-            <td>Reading quiz due;<br/><b>Project peer review due</b></td>
+            <td>Reading quiz due; <br/><strong>HW4 due 11-07</strong>;<br/><b>Project peer review due 11-07</b></td>
             <!--<td>Reading quiz due;<br/><strong><a href="https://forms.gle/F8fhBkUpgCSJDTNA9">Project peer review due</a></strong></td>-->
         </tr>
         <tr>
@@ -292,7 +292,7 @@ Fall 2024
             <td>Speech technologies, ASR, TTS</td>
             <!--<td><a href="slides/session24_cs2731_spring2024.pdf">Speech technologies, ASR, TTS</a></td>-->
             <td>J+M 16-16.3, 16.5-16.8</td>
-            <td><b>Project basic working systems due 11-14</b></td>
+            <td><b>Project progress report due 11-14</b></td>
         </tr>
         <tr>
             <td>24</td>
