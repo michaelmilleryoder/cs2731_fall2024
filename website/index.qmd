@@ -65,7 +65,7 @@ Fall 2024
 
 
 # Schedule
-*Subject to change. Last revised 2024-08-28. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2024-09-04. All due dates are at 11:59pm ET except when indicated.*
 
 <!-- Should convert this to quarto markdown-->
 <table class="schedule">
