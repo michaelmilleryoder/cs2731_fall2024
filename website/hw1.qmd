@@ -17,7 +17,9 @@ After completing this assignments, you will be able to:
 ## Datasets and skeleton code
 Here are the materials to download for use in this assignment:
 
-* [Skeleton Python code](hw1/skeleton.py "download"). You will need to have a Python environment with scipy and numpy packages. Some functions are stubs in the python code. You will need to fill them out.
+<!--* [Skeleton Python code](hw1/skeleton.py). You will need to have a Python environment with scipy and numpy packages. Some functions are stubs in the python code. You will need to fill them out.-->
+<!--* <a id="raw-url" href="https://raw.githubusercontent.com/michaelmilleryoder/cs2731_fall2024/main/docs/hw1/skeleton.py">Skeleton Python code</a>. You will need to have a Python environment with scipy and numpy packages. Some functions are stubs in the python code. You will need to fill them out.-->
+* <a href="hw1/skeleton.py" download="download">Skeleton Python code</a>. You will need to have a Python environment with scipy and numpy packages. Some functions are stubs in the python code. You will need to fill them out.
 * [CSV of the complete works of Shakespeare](hw1/shakespeare_plays.csv)
 * [Vocab of the complete works of Shakespeare](hw1/vocab.txt)
 * [List of all plays in the dataset](hw1/play_names.txt)
