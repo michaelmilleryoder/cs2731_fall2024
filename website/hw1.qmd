@@ -17,15 +17,13 @@ After completing this assignments, you will be able to:
 ## Datasets and skeleton code
 Here are the materials to download for use in this assignment:
 
-<!--* [Skeleton Python code](hw1/skeleton.py). You will need to have a Python environment with scipy and numpy packages. Some functions are stubs in the python code. You will need to fill them out.-->
-<!--* <a id="raw-url" href="https://raw.githubusercontent.com/michaelmilleryoder/cs2731_fall2024/main/docs/hw1/skeleton.py">Skeleton Python code</a>. You will need to have a Python environment with scipy and numpy packages. Some functions are stubs in the python code. You will need to fill them out.-->
 * <a href="hw1/skeleton.py" download>Skeleton Python code</a>. You will need to have a Python environment with scipy and numpy packages. Some functions are stubs in the python code. You will need to fill them out.
 * [CSV of the complete works of Shakespeare](hw1/shakespeare_plays.csv)
-* [Vocab of the complete works of Shakespeare](hw1/vocab.txt)
-* [List of all plays in the dataset](hw1/play_names.txt)
+* <a href="hw1/vocab.txt" download>Vocab of the complete works of Shakespeare</a>
+* <a href="hw1/play_names.txt">List of all plays in the dataset</a>
 * [SNLI corpus](hw1/snli.csv)
 	* This corpus is selections from SNLI, a corpus used for the NLP task of "natural language inference" (see [Bowman et al. 2015 dataset paper](https://aclanthology.org/D15-1075/)). Each line contains a sentence that is either a "premise" (an image caption) or a "hypothesis" produced by annotators to be in a certain logical relation with the associated premise (entailment, neutral, contradiction). You don't need to worry about these details, but the `sentenceID` column is a unique index for each sentence and `captionID` is an ID for all sentences associated with same caption/premise.
-* [List of identity labels](hw1/identity_labels.txt) from [Rudinger et al. 2017](https://aclanthology.org/W17-1609/)
+* <a href="hw1/identity_labels.txt">List of identity labels</a> from [Rudinger et al. 2017](https://aclanthology.org/W17-1609/)
 
 ## Part 1: Vector spaces
 
