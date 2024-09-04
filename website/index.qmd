@@ -111,8 +111,7 @@ Fall 2024
         <tr>
             <td>3</td>
             <td>09-04 W</td>
-            <td>Bag-of-words, tf-idf, PPMI</td>
-            <!--<td><a href="slides/session3_cs2731_spring2024.pdf">Bag-of-words, tf-idf, PPMI</a></td>-->
+            <td><a href="slides/session3_cs2731_fall2024.pdf">Bag-of-words, tf-idf, PPMI</a></td>
             <td>J+M 6.3-6.7</td>
             <td>Reading quiz due;<br/>HW1 out 09-05</td>
             <!--<td>Reading quiz due; <br/><a href="hw1">HW1</a> out; <br/><b><a href="https://forms.gle/dtRnWmCpe9C8TXSm9">Project survey</a> due 01-18</b></td>-->
