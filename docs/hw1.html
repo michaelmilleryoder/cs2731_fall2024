@@ -141,18 +141,15 @@ window.Quarto = {
   <li><a href="#datasets-and-skeleton-code" id="toc-datasets-and-skeleton-code" class="nav-link" data-scroll-target="#datasets-and-skeleton-code">Datasets and skeleton code</a></li>
   <li><a href="#part-1-vector-spaces" id="toc-part-1-vector-spaces" class="nav-link" data-scroll-target="#part-1-vector-spaces">Part 1: Vector spaces</a>
   <ul class="collapse">
-  <li><a href="#term-document-matrix" id="toc-term-document-matrix" class="nav-link" data-scroll-target="#term-document-matrix">1.1 Term-document matrix</a></li>
-  <li><a href="#term-context-matrix" id="toc-term-context-matrix" class="nav-link" data-scroll-target="#term-context-matrix">1.2 Term-Context Matrix</a></li>
-  <li><a href="#evaluating-vector-spaces" id="toc-evaluating-vector-spaces" class="nav-link" data-scroll-target="#evaluating-vector-spaces">1.3 Evaluating vector spaces</a></li>
-  <li><a href="#weighting-terms-with-tf-idf-and-ppmi" id="toc-weighting-terms-with-tf-idf-and-ppmi" class="nav-link" data-scroll-target="#weighting-terms-with-tf-idf-and-ppmi">1.4 Weighting terms with tf-idf and PPMI</a></li>
+  <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation">Implementation</a></li>
+  <li><a href="#questions-for-the-report" id="toc-questions-for-the-report" class="nav-link" data-scroll-target="#questions-for-the-report">Questions for the report</a></li>
   </ul></li>
   <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
   <ul class="collapse">
-  <li><a href="#find-words-associated-with-identity-labels-in-snli" id="toc-find-words-associated-with-identity-labels-in-snli" class="nav-link" data-scroll-target="#find-words-associated-with-identity-labels-in-snli">2.1 Find words associated with identity labels in SNLI</a></li>
-  <li><a href="#qualitative-analysis" id="toc-qualitative-analysis" class="nav-link" data-scroll-target="#qualitative-analysis">2.2 Qualitative analysis</a></li>
+  <li><a href="#implementation-1" id="toc-implementation-1" class="nav-link" data-scroll-target="#implementation-1">Implementation</a></li>
+  <li><a href="#questions-for-the-report-1" id="toc-questions-for-the-report-1" class="nav-link" data-scroll-target="#questions-for-the-report-1">Questions for the report</a></li>
   </ul></li>
   <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
   </ul>
 </nav>
@@ -179,7 +176,7 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Due 2024-09-19, 11:59pm</strong>. <em>Instructions last updated 2024-09-04.</em></p>
+<p><strong>Due 2024-09-19, 11:59pm</strong>. <em>Instructions last updated 2024-09-05.</em></p>
 <p>In this assignment, you’ll build representations for documents and words based on the bag-of-words model. You’ll implement 2 popular weighting schemes for these vectors: tf-idf and PPMI, both discussed in Chapter 6 of the <a href="https://web.stanford.edu/~jurafsky/slp3/">textbook</a>. Then you’ll compare these weighting schemes on learning word similarity and apply one of them, PPMI, to examine social bias in an NLP corpus.</p>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
@@ -198,24 +195,28 @@ window.Quarto = {
 <li><a href="hw1/skeleton.py" download="">Skeleton Python code</a>. You will need to have a Python environment with scipy and numpy packages. Some functions are stubs in the python code. You will need to fill them out.</li>
 <li><a href="hw1/shakespeare_plays.csv">CSV of the complete works of Shakespeare</a></li>
 <li><a href="hw1/vocab.txt" download="">Vocab of the complete works of Shakespeare</a></li>
-<li><a href="hw1/play_names.txt">List of all plays in the dataset</a></li>
+<li><a href="hw1/play_names.txt" download="">List of all plays in the dataset</a></li>
+<li><a href="hw1/identity_labels.txt" download="">List of identity labels</a> from <a href="https://aclanthology.org/W17-1609/">Rudinger et al.&nbsp;2017</a></li>
 <li><a href="hw1/snli.csv">SNLI corpus</a>
 <ul>
 <li>This corpus is selections from SNLI, a corpus used for the NLP task of “natural language inference” (see <a href="https://aclanthology.org/D15-1075/">Bowman et al.&nbsp;2015 dataset paper</a>). Each line contains a sentence that is either a “premise” (an image caption) or a “hypothesis” produced by annotators to be in a certain logical relation with the associated premise (entailment, neutral, contradiction). You don’t need to worry about these details, but the <code>sentenceID</code> column is a unique index for each sentence and <code>captionID</code> is an ID for all sentences associated with same caption/premise.</li>
 </ul></li>
-<li><a href="hw1/identity_labels.txt">List of identity labels</a> from <a href="https://aclanthology.org/W17-1609/">Rudinger et al.&nbsp;2017</a></li>
 </ul>
 </section>
 <section id="part-1-vector-spaces" class="level2">
 <h2 class="anchored" data-anchor-id="part-1-vector-spaces">Part 1: Vector spaces</h2>
-<section id="term-document-matrix" class="level3">
-<h3 class="anchored" data-anchor-id="term-document-matrix">1.1 Term-document matrix</h3>
-Write code to compile a term-document matrix for Shakespeare’s plays, following the description in the textbook:
+<section id="implementation" class="level3">
+<h3 class="anchored" data-anchor-id="implementation">Implementation</h3>
+<p>Open up the <code>skeleton.py</code> file. Complete the function stubs using the information below.</p>
+<section id="term-document-matrix" class="level4">
+<h4 class="anchored" data-anchor-id="term-document-matrix">Term-document matrix</h4>
+Write code to compile a term-document matrix for Shakespeare’s plays in the function stub&nbsp;<code>create_term_document_matrix</code>. Follow the description in the textbook:
 <blockquote class="blockquote">
 <p>
 In a<span>&nbsp;</span><em>term-document matrix</em>, each row represents a word in the vocabulary and each column represents a document from some collection. The figure below shows a small selection from a term-document matrix showing the occurrence of four words in four plays by Shakespeare. Each cell in this matrix represents the number of times a particular word (defined by the row) occurs in a particular document (defined by the column). Thus<span>&nbsp;</span><strong>clown</strong><span>&nbsp;</span>appeared 117 times in <strong>Twelfth Night</strong>
 </p>
 </blockquote>
+Here is an example of a term-document matrix (you will build a different one in the homework):
 <table>
 <thead>
 <tr>
@@ -307,53 +308,50 @@ Henry V
 </tr>
 </tbody>
 </table>
-<p>The dimensions of your term-document matrix will be the number of documents&nbsp;<span class="math display">\[D\]</span>&nbsp;(in this case, the number of Shakespeare’s plays that we give you in the corpus) by the number of unique word types <span class="math display">\[\vert V \vert\]</span> in that collection. The columns represent the documents, and the rows represent the words, and each cell represents the frequency of that word in that document.</p>
-<section id="tasks-for-section-1.1" class="level4">
-<h4 class="anchored" data-anchor-id="tasks-for-section-1.1">Tasks for section 1.1</h4>
-<ul>
-<li>Fill out the function stub&nbsp;<code>create_term_document_matrix</code>. Write this code from scratch. You can use packages like NumPy as helper packages, but do not use packages that directly do this computation for you (like scikit-learn or gensim).</li>
-</ul>
+<p>The dimensions of your term-document matrix will be the number of documents&nbsp;<span class="math inline">\(D\)</span>&nbsp;(in this case, the number of Shakespeare’s plays that we give you in the corpus) by the number of unique word types <span class="math inline">\(\vert V \vert\)</span> in that collection. The columns represent the documents, and the rows represent the words, and each cell represents the frequency of that word in that document.</p>
+<p>Write this code from scratch. You can use packages like NumPy as helper packages, but do not use packages that directly do this computation for you (like scikit-learn or gensim).</p>
 </section>
+<section id="term-context-matrix" class="level4">
+<h4 class="anchored" data-anchor-id="term-context-matrix">Term-Context Matrix</h4>
+<p>Instead of using a term-document matrix, a more common way of computing word similarity is by constructing a term-context matrix (also called a term-term or word-word matrix), where columns are labeled by words rather than documents. The dimensionality of this kind of a matrix is <span class="math inline">\(\vert V \vert\)</span>&nbsp;by&nbsp;<span class="math inline">\(\vert V \vert\)</span>. Each cell represents how often the word in the row (the target word) co-occurs with the word in the column (the context) in a training corpus. You can decide when it makes sense for a word to co-occur with itself in the term-context matrix. That is, will the cell for when the same word is target and context always stay 0? Note that there may be vectors where all elements are 0 if a word only appears in documents where it is the only word in the document.</p>
+<p>Specifically, implement the&nbsp;<code>create_term_context_matrix</code>&nbsp;function. This function specifies the size of the word window around the target word that you will use to gather its contexts. For instance, if you set that variable to be 4, then you will use 4 words to the left of the target word, and 4 words to its right for the context. In this case, the cell represents the number of times in Shakespeare’s plays the column word occurs in +/-4 word window around the row word.</p>
+<p>Write this code from scratch, i.e.&nbsp;do not use additional packages that directly compute these matrices.</p>
 </section>
-<section id="term-context-matrix" class="level3">
-<h3 class="anchored" data-anchor-id="term-context-matrix">1.2 Term-Context Matrix</h3>
-<p>Instead of using a term-document matrix, a more common way of computing word similarity is by constructing a term-context matrix (also called a term-term or word-word matrix), where columns are labeled by words rather than documents. The dimensionality of this kind of a matrix is <span class="math display">\[\vert V \vert\]</span>&nbsp;by&nbsp;<span class="math display">\[\vert V \vert\]</span>. Each cell represents how often the word in the row (the target word) co-occurs with the word in the column (the context) in a training corpus. You can decide when it makes sense for a word to co-occur with itself in the term-context matrix. That is, will the cell for when the same word is target and context always stay 0? Note that there may be vectors where all elements are 0 if a word only appears in documents where it is the only word in the document.</p>
-<section id="tasks-for-section-1.2" class="level4">
-<h4 class="anchored" data-anchor-id="tasks-for-section-1.2">Tasks for section 1.2</h4>
-<ul>
-<li>Implement the&nbsp;<code>create_term_context_matrix</code>&nbsp;function. This function specifies the size of the word window around the target word that you will use to gather its contexts. For instance, if you set that variable to be 4, then you will use 4 words to the left of the target word, and 4 words to its right for the context. In this case, the cell represents the number of times in Shakespeare’s plays the column word occurs in +/-4 word window around the row word. Write this code from scratch, i.e.&nbsp;do not use additional packages that directly compute these matrices.</li>
-</ul>
+<section id="evaluating-vector-spaces" class="level4">
+<h4 class="anchored" data-anchor-id="evaluating-vector-spaces">Evaluating vector spaces</h4>
+<p>So far we have created 2 vector spaces for the words in Shakespeare, one with a dimension of <span class="math inline">\(D\)</span> and another of dimension <span class="math inline">\(\vert V \vert\)</span>. Now we will try to evaluate how good our vector spaces are. We can do this with an intrinsic evaluation approach by seeing what words within the vocab are most similar to each other/are synonyms with each other and assessing if the output is reasonable.</p>
+<p>Implement the <code>rank_words</code> function, which will take a target word index and return a list sorted from most similar to least similar using the cosine similarity metric. For the purposes of the assignment, let’s just look at the top 10 words that are most similar to a target word between both the term-document matrix and the term-context matrix (with a window size of your choice). Are those 10 words good synonyms? The skeleton code provides an example of using <code>rank_words</code> and looking at similar words using the word ‘juliet’.</p>
+<p>Write this code from scratch, i.e.&nbsp;do not use additional packages that directly compute these matrices.</p>
 </section>
-</section>
-<section id="evaluating-vector-spaces" class="level3">
-<h3 class="anchored" data-anchor-id="evaluating-vector-spaces">1.3 Evaluating vector spaces</h3>
-<p>So far we have created 2 vector spaces for the words in Shakespeare, one with a dimension of <span class="math display">\[D\]</span> and another of dimension <span class="math display">\[\vert V \vert\]</span>. Now we will try to evaluate how good our vector spaces are. We can do this with an intrinsic evaluation approach by seeing what words within the vocab are most similar to each other/are synonyms with each other and assessing if the output is reasonable. Implement the <code>rank_words</code> function which will take a target word index and return a list sorted from most similar to least similar using the cosine similarity metric. For the purposes of the assignment, let’s just look at the top 10 words that are most similar to a target word between both the term-document matrix and the term-context matrix (with a window size of your choice). Are those 10 words good synonyms? The skeleton code provides an example of using <code>rank_words</code> and looking at similar words using the word ‘juliet’. One example won’t be enough so pick out at least 4 more words from the vocab as you answer these questions.</p>
-<section id="tasks-for-section-1.3" class="level4">
-<h4 class="anchored" data-anchor-id="tasks-for-section-1.3">Tasks for section 1.3</h4>
-<ul>
-<li>Implement <code>rank_words</code></li>
-</ul>
-<p><em>For the report:</em><br> <strong>1.3.1.</strong> In our term-document matrix, the rows are word vectors of <span class="math display">\[D\]</span>&nbsp;dimensions. Do you think that’s enough to represent the meaning of words?<br> <strong>1.3.2.</strong> Provide the top 10 associated words (the output from <code>rank_words</code>) with <code>juliet</code> and at least 2 other target words of your choice for both term-document and term-context vector spaces.<br> <strong>1.3.3.</strong> Which vector space (term-document or term-context) produce similar words that make more sense than others and why do you think that is the case? Back up your conclusions by referring to the top associated term lists you provided.<br> <strong>1.3.4.</strong> Consider any decisions you made in the prior sections when implementing your functions, such as whether you allowed a target word to co-occur with itself as a context word, and which window size you chose for the term-context matrix. How might any decisions you make impact our results now?<br></p>
-</section>
-</section>
-<section id="weighting-terms-with-tf-idf-and-ppmi" class="level3">
-<h3 class="anchored" data-anchor-id="weighting-terms-with-tf-idf-and-ppmi">1.4 Weighting terms with tf-idf and PPMI</h3>
+<section id="weighting-terms-with-tf-idf-and-ppmi" class="level4">
+<h4 class="anchored" data-anchor-id="weighting-terms-with-tf-idf-and-ppmi">Weighting terms with tf-idf and PPMI</h4>
 <p>Your term-context matrix contains the raw frequency of the co-occurrence of two words in each cell and your term-document matrix contains the raw frequency of words in each of the documents. Raw frequency turns out not to be the best way of measuring the association between words. There are several methods for weighting words so that we get better results.</p>
-<section id="tasks-for-section-1.4" class="level4">
-<h4 class="anchored" data-anchor-id="tasks-for-section-1.4">Tasks for section 1.4</h4>
-<ul>
-<li>Take your term-document matrix and implement the weighting schemes <em>Term frequency inverse document frequency (tf-idf)</em> and <em>Positive pointwise mutual information</em> which are defined in Sections 6.5-6.6 of the textbook. These are the function stubs <code>create_tf_idf_matrix</code> and <code>create_ppmi_matrix</code>. Write this code from scratch, i.e.&nbsp;do not use additional packages that directly compute these matrices.</li>
-</ul>
-<p><em>For the report:</em><br> <strong>1.4.1.</strong> Provide the top 10 associated words (the output from <code>rank_words</code>) with <code>juliet</code> and at least 2 other target words of your choice for tf-idf-weighted term-document matrices and PPMI-weighted term-context matrices. <br> <strong>1.4.2.</strong> How does weighting with tf-idf compare to using the unweighted term-document matrix? <br> <strong>1.4.3.</strong> How does weighting with PPMI compare with using the unweighted term-context matrix? <br> <strong>1.4.4.</strong> How does term-context/PPMI compare to term-document/TF-IDF? <br> <strong>1.4.5.</strong> Overall, do some approaches appear to work better than others, i.e produce better synonyms? Do any interesting patterns emerge? Discuss and point to specific examples. <br></p>
+<p>Take your term-document matrix and implement the weighting schemes <em>Term frequency inverse document frequency (tf-idf)</em> and <em>Positive pointwise mutual information</em> which are defined in Sections 6.5-6.6 of the textbook. These are the function stubs <code>create_tf_idf_matrix</code> and <code>create_ppmi_matrix</code>.</p>
 </section>
+</section>
+<section id="questions-for-the-report" class="level3">
+<h3 class="anchored" data-anchor-id="questions-for-the-report">Questions for the report</h3>
+<p><strong>1.1.</strong> In our term-document matrix, the rows are word vectors of <span class="math inline">\(D\)</span>&nbsp;dimensions. Do you think that’s enough to represent the meaning of words? Why or why not?</p>
+<p><strong>1.2.</strong> Provide the top 10 associated words and cosine similarities (the output from <code>rank_words</code>) with <code>juliet</code> and at least 2 other target words of your choice for both term-document and term-context vector spaces.</p>
+<p><strong>1.3.</strong> Just considering the term-document and term-context matrices without any tf-idf or PPMI weighting, which do you think produces similar words that make more sense than others? Why do you think that is the case? Back up your conclusions by referring to the top associated term lists you provided.</p>
+<p><strong>1.4.</strong> Explain any decisions you made in implementing your functions, such as whether you allowed a target word to co-occur with itself as a context word, and which window size you chose for the term-context matrix. How might any decisions you make impact our results now?</p>
+<p><strong>1.5.</strong> Provide the top 10 associated words (the output from <code>rank_words</code>) with <code>juliet</code> and at least 2 other target words of your choice for tf-idf-weighted term-document matrices and PPMI-weighted term-context matrices.</p>
+<p><strong>1.6.</strong> Compare the ranked word similarities between weighting with tf-idf and using the unweighted term-document matrix. Which do you think produces similar words that make more sense? Back up your conclusions with specific examples.</p>
+<p><strong>1.7.</strong> Compare the ranked word similarities between weighting with PPMI and using an unweighted term-context matrix. Which do you think produces similar words that make more sense? Back up your conclusions with specific examples.</p>
+<p><strong>1.8.</strong> Overall, do some approaches appear to work better than others, i.e produce better synonyms? Do any interesting patterns emerge? Discuss and point to specific examples.</p>
 </section>
 </section>
 <section id="part-2" class="level2">
 <h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
-<p>In this part, you will measure associations between words in a commonly used NLP corpus, SNLI, and comment on the potential for encoding problematic social biases. There is no skeleton code for this section, but you can reuse code from Part 1.</p>
-<section id="find-words-associated-with-identity-labels-in-snli" class="level3">
-<h3 class="anchored" data-anchor-id="find-words-associated-with-identity-labels-in-snli">2.1 Find words associated with identity labels in SNLI</h3>
-Here you will examine which words are highly associated with identity labels in SNLI with PPMI. You will look for any associations that may reflect social stereotypes or possible <em>representational harms</em> in machine learning, defined below from <a href="https://aclanthology.org/2020.acl-main.485/">Blodgett et al.&nbsp;2020</a>:
+<p>In this part, you will measure associations between words in a commonly used NLP corpus, SNLI, and comment on the potential for encoding problematic social biases.</p>
+<section id="implementation-1" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-1">Implementation</h3>
+<p>There is no skeleton code for this section, but you can reuse code from Part 1.</p>
+<p>First, write a loader for text from the SNLI corpus into a similar format as the Shakespeare corpus was loaded. You can use the <code>sentenceID</code> column as the document name, though this will not be as important since you’ll only be building a term-context matrix. You’ll still want to tokenize and lowercase the input as was done with the Shakespeare corpus.</p>
+<p>Then, build a term-context matrix in a similar fashion as with the Shakespeare corpus and apply PPMI weighting. You can choose the size of the context window. You can also use the whole sentence as the context. If this matrix is too big or taking too long to calculate, filter to just words that occur over some frequency threshold in the entire corpus.</p>
+<section id="find-words-associated-with-identity-labels-in-snli" class="level4">
+<h4 class="anchored" data-anchor-id="find-words-associated-with-identity-labels-in-snli">Find words associated with identity labels in SNLI</h4>
+Now you will use the list of identity terms provided above in the ‘Datasets and skeleton code’ section. Examine which words are highly associated with selected identity labels in the SNLI corpus with PPMI using the <code>rank_words</code> function. Choose identity labels that are related, such as multiple terms for gender, multiple terms for race/ethnicity, or other relations. Look for any associations that may reflect social stereotypes or possible <em>representational harms</em> in machine learning, defined below from <a href="https://aclanthology.org/2020.acl-main.485/">Blodgett et al.&nbsp;2020</a>:
 <blockquote class="blockquote">
 Representational harms arise when a system (e.g., a search engine) represents some social groups in a less favorable light than others, demeans them, or fails to recognize their existence altogether.
 </blockquote>
@@ -364,23 +362,22 @@ Types of representational harms from <a href="https://aclanthology.org/2020.acl-
 <li>Differences in system performance for different social groups, language that misrepresents the distribution of different social groups in the population, or language that is denigrating to particular social groups.</li>
 </ol>
 </blockquote>
-<section id="tasks-for-section-2.1" class="level4">
-<h4 class="anchored" data-anchor-id="tasks-for-section-2.1">Tasks for section 2.1</h4>
+</section>
+<section id="qualitative-analysis-of-word-contexts" class="level4">
+<h4 class="anchored" data-anchor-id="qualitative-analysis-of-word-contexts">Qualitative analysis of word contexts</h4>
+<p>Now you will explore the contexts in the dataset that lead to high PMI association with context words, especially for any words that show social bias (if you found any). <em>1st-order similarity</em> is when a target word (in this, case, an identity label) occurs in the same document with a top-associated term. This might not be very informative to see how these words are related in the dataset. If not, look at <em>2nd-order similarity</em>, in which the two words occur with similar context words. This can also be examined by looking at the target vectors for the identity term and the highly associated other term in the term-context matrix. These vectors may share high values in dimensions that correspond to certain context words.</p>
+</section>
+</section>
+<section id="questions-for-the-report-1" class="level3">
+<h3 class="anchored" data-anchor-id="questions-for-the-report-1">Questions for the report</h3>
+<p><strong>2.1</strong> Provide the top 10 associated context words (by PPMI, in the SNLI corpus) for at least 4 identity labels of your choice. Choose identity labels that are related, such as multiple terms for gender, multiple terms for race/ethnicity, or other relations.</p>
+<p><strong>2.2.</strong> Do you see any associations learned by this bag-of-words model on the SNLI corpus that be representational harms, such as negative social stereotypes? Compare the top PPMI words for certain identity terms with other related ones (such as men compared with women). Discuss and provide selected results. If you don’t find any representational harms (that’s okay), provide examples of what you examined and how you interpreted those associations. If you do find problematic associations, specify how they could be harmful.</p>
+<p><strong>2.3.</strong> For at least 4 pairs of identity terms and highly associated words, provide the document contexts in the SNLI dataset that contribute to this association. Provide actual sentences from the SNLI corpus where either:</p>
 <ul>
-<li><p>First, write a loader for text from the SNLI corpus into a similar format as the Shakespeare corpus was loaded. You can use the <code>sentenceID</code> column as the document name, though this will not be as important since you’ll only be building a term-context matrix. You’ll still want to tokenize and lowercase the input as was done with the Shakespeare corpus.</p></li>
-<li><p>Build a term-context matrix in a similar fashion as with the Shakespeare corpus and apply PPMI weighting. You can choose the size of the context window. You can also use the whole sentence as the context. If this matrix is too big or taking too long to calculate, filter to just words that occur over some frequency threshold in the entire corpus.</p></li>
-<li><p>With your PPMI-weighted term-context matrix of SNLI, find the target word vectors corresponding to identity labels in the provided list.</p></li>
+<li>an identity term occurs together with the associated word you found (1st-order similarity) or</li>
+<li>an identity term occurs separately from the associated word, but occurs with similar context words (2nd-order similarity). You’ll want to compare values of dimensions in the vectors for both words in this case.</li>
 </ul>
-<p><em>For the report:</em><br> <strong>2.1.1.</strong> Provide the top 10 associated context words (by PPMI) for at least 4 identity labels of your choice.<br> <strong>2.1.2.</strong> Do you see any associations that may reflect social stereotypes? It is helpful to compare the top PMI words for certain identity terms with other related ones (such as men compared with women). Discuss and provide selected results. If you don’t find any social stereotypes (that’s okay), provide examples of what you examined and how you interpreted those associations.<br> <strong>2.1.3.</strong> Do you see any associations that could be defined as representational harms (see below) learned by a bag-of-words model of this SNLI corpus? If so, which type do you see? Provide examples that support your conclusions. If you don’t find any potential harms, provide examples of what you examined and how you interpreted those associations.<br></p>
-</section>
-</section>
-<section id="qualitative-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="qualitative-analysis">2.2 Qualitative analysis</h3>
-<p>In this section, you will explore the contexts in the dataset that lead to high PMI association with context words, especially for any words that show social bias (if you found any). <em>1st-order similarity</em> is when a target word (in this, case, an identity label) occurs in the same document with a top-associated term. This might not be very informative to see how these words are related in the dataset. If not, look at <em>2nd-order similarity</em>, in which the two words occur with similar context words. This can also be examined by looking at the vectors for the identity term and the highly associated other term in the term-context matrix. These vectors may share high values in dimensions that correspond to certain context words.</p>
-<section id="tasks-for-section-2.2" class="level4">
-<h4 class="anchored" data-anchor-id="tasks-for-section-2.2">Tasks for section 2.2</h4>
-<p><em>For the report:</em><br> <strong>2.2.1.</strong> For at least 4 pairs of identity terms and highly associated words, provide the document contexts in the SNLI dataset in which they occur together (1st-order similarity) or occur separately with similar context words (2nd-order similarity). Provide selected results and discuss findings.</p>
-</section>
+<p>Discuss any findings, particularly related to any associations you found to represent harmful stereotypes.</p>
 </section>
 </section>
 <section id="deliverables" class="level2">
@@ -401,11 +398,9 @@ Types of representational harms from <a href="https://aclanthology.org/2020.acl-
 <li>any unresolved issues or problems</li>
 </ul></li>
 </ul>
-<p>Please submit all of this material on Canvas as individual files. Do <strong>not</strong> submit a zip file. Only files with .pdf, .txt, or .py file extensions will be accepted. We will grade your report and look over your code.</p>
-</section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<p>See rubric on Canvas. This assignment is worth 56 points.</p>
+<p>Please submit all of this material on Canvas as individual files. Do <strong>not</strong> submit a zip file. Only files with .pdf, .txt, or .py file extensions will be accepted. If you used Jupyter Notebook to complete the assignment, please download it as a .py script. We will grade your report and look over your code.</p>
+<!--## Grading
+See rubric on Canvas. This assignment is worth 56 points.-->
 </section>
 <section id="acknowledgments" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
