@@ -113,8 +113,7 @@ Fall 2024
             <td>09-04 W</td>
             <td><a href="slides/session3_cs2731_fall2024.pdf">Bag-of-words, tf-idf, PPMI</a></td>
             <td>J+M 6.3-6.7</td>
-            <td>Reading quiz due;<br/>HW1 out 09-05</td>
-            <!--<td>Reading quiz due; <br/><a href="hw1">HW1</a> out; <br/><b><a href="https://forms.gle/dtRnWmCpe9C8TXSm9">Project survey</a> due 01-18</b></td>-->
+            <td>Reading quiz due; <br/><a href="hw1">HW1</a> out 09-05</td>
         </tr>
         <tr>
             <td>4</td>
@@ -148,8 +147,7 @@ Fall 2024
             <td>Vector semantics, word2vec</td>
             <!--<td><a href="slides/session8_cs2731_spring2024.pdf">Vector semantics, word2vec</a></td>-->
             <td>J+M 6-6.2, 6.8-6.13,<br /><a href="https://aclanthology.org/2020.acl-main.485.pdf">Blodgett et al. 2020</a></td>
-            <td>Discussion post due;<br/><strong>HW1 due 09-19;<br/>Project idea submission form due 09-19</strong></td>
-            <!--<td>Discussion post due;  <br/><b><a href="hw1">HW1</a> due 02-01</b></td>-->
+            <td>Discussion post due;<br/><strong><a href="hw1">HW1</a> due 09-19;<br/>Project idea submission form due 09-19</strong></td>
         </tr>
         <tr>
             <td>8</td>

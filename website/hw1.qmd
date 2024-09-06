@@ -96,6 +96,7 @@ Write this code from scratch, i.e. do not use additional packages that directly 
 So far we have created 2 vector spaces for the words in Shakespeare, one with a dimension of $D$ and another of dimension $\vert V \vert$. Now we will try to evaluate how good our vector spaces are. We can do this with an intrinsic evaluation approach by seeing what words within the vocab are most similar to each other/are synonyms with each other and assessing if the output is reasonable. 
 
 Implement the `rank_words` function, which will take a target word index and return a list sorted from most similar to least similar using the cosine similarity metric. For the purposes of the assignment, let's just look at the top 10 words that are most similar to a target word between both the term-document matrix and the term-context matrix (with a window size of your choice). Are those 10 words good synonyms? The skeleton code provides an example of using `rank_words` and looking at similar words using the word 'juliet'. 
+It is okay if the top ranked word is the word itself, with a cosine similarity of 1.
 
 Write this code from scratch, i.e. do not use additional packages that directly compute these matrices.
 
@@ -128,7 +129,7 @@ In this part, you will measure associations between words in a commonly used NLP
 ### Implementation
 There is no skeleton code for this section, but you can reuse code from Part 1.
 
-First, write a loader for text from the SNLI corpus into a similar format as the Shakespeare corpus was loaded. You can use the `sentenceID` column as the document name, though this will not be as important since you'll only be building a term-context matrix. You'll still want to tokenize and lowercase the input as was done with the Shakespeare corpus. 
+First, write a loader for text from the SNLI corpus into a similar format as the Shakespeare corpus was loaded. You can use the `sentenceID` column as the document name, though this will not be as important since you'll only be building a term-context matrix. You'll still want to tokenize and lowercase the input as was done with the Shakespeare corpus. It is also encouraged to remove stopwords (such as with a list from the NLTK package) and remove low-frequency terms from the vocabulary.
 
 Then, build a term-context matrix in a similar fashion as with the Shakespeare corpus and apply PPMI weighting. You can choose the size of the context window. You can also use the whole sentence as the context. If this matrix is too big or taking too long to calculate, filter to just words that occur over some frequency threshold in the entire corpus.
 
