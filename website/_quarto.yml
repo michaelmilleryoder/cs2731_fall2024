@@ -8,6 +8,8 @@ website:
     left:
       - href: project.qmd
         text: Project
+      - href: hw1.qmd
+        text: HW1
 
 format:
   html:

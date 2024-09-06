@@ -178,8 +178,8 @@ Discuss any findings, particularly related to any associations you found to repr
 Please submit all of this material on Canvas as individual files. Do **not** submit a zip file. Only files with .pdf, .txt, or .py file extensions will be accepted. If you used Jupyter Notebook to complete the assignment, please download it as a .py script. We will grade your report and look over your code.
 
 
-<!--## Grading
-See rubric on Canvas. This assignment is worth 56 points.-->
+## Grading
+See rubric on Canvas. This assignment is worth 56 points.
 
 ## Acknowledgments
 This assignment is adapted from Prof. Diane Litman and Prof. Mark Yatskar, as well from [Rudinger et al. 2017](https://aclanthology.org/W17-1609/).
