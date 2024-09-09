@@ -2,7 +2,7 @@
 title: "Homework 1: Vector space word similarity"
 ---
 
-**Due 2024-09-19, 11:59pm**. *Instructions last updated 2024-09-05.*
+**Due 2024-09-19, 11:59pm**. *Instructions last updated 2024-09-09.*
 
 In this assignment, you'll build representations for documents and words based on the bag-of-words model. You'll implement 2 popular weighting schemes for these vectors: tf-idf and PPMI, both discussed in Chapter 6 of the [textbook](https://web.stanford.edu/~jurafsky/slp3/). Then you'll compare these weighting schemes on learning word similarity and apply one of them, PPMI, to examine social bias in an NLP corpus.
 
@@ -85,7 +85,7 @@ Write this code from scratch. You can use packages like NumPy as helper packages
 
 #### Term-Context Matrix
 
-Instead of using a term-document matrix, a more common way of computing word similarity is by constructing a term-context matrix (also called a term-term or word-word matrix), where columns are labeled by words rather than documents. The dimensionality of this kind of a matrix is $\vert V \vert$ by $\vert V \vert$. Each cell represents how often the word in the row (the target word) co-occurs with the word in the column (the context) in a training corpus. You can decide when it makes sense for a word to co-occur with itself in the term-context matrix. That is, will the cell for when the same word is target and context always stay 0? Note that there may be vectors where all elements are 0 if a word only appears in documents where it is the only word in the document.
+Instead of using a term-document matrix, a more common way of computing word similarity is by constructing a term-context matrix (also called a term-term or word-word matrix), where columns are labeled by words rather than documents. The dimensionality of this kind of a matrix is $\vert V \vert$ by $\vert V \vert$. Each cell represents how often the word in the row (the target word) co-occurs with the word in the column (the context) in a training corpus. You get to decide what are considered units that form boundaries of that context. For example, do two words have to co-occur within a close window in the same line of the play, or just in the same play? You also can decide when it makes sense for a word to co-occur with itself in the term-context matrix. That is, will the cell for when the same word is target and context always stay 0? Note that there may be vectors where all elements are 0 if a word only appears in documents where it is the only word in the document.
 
 Specifically, implement the `create_term_context_matrix` function. This function specifies the size of the word window around the target word that you will use to gather its contexts. For instance, if you set that variable to be 4, then you will use 4 words to the left of the target word, and 4 words to its right for the context. In this case, the cell represents the number of times in Shakespeare’s plays the column word occurs in +/-4 word window around the row word.
 

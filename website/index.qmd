@@ -350,9 +350,9 @@ Description | Points | Percentage of final grade
 **Homework assignments total** | **224** | **44.8**
 &ensp;Each homework of 4 total | 56 | 11.2
 **[Final project](project) total** | **203** | **40.6**
-&ensp;[Survey](https://forms.gle/PTgXLUs6WCxLrgFt6) response | 5 | 1.0
-&ensp;[Project pre-proposal form](https://forms.gle/PTgXLUs6WCxLrgFt6) | 10 | 2.0
-&ensp;Proposal and literature review | 35 | 7.0
+&ensp;Project idea submission response | 5 | 1.0
+&ensp;Project idea ranking response | 5 | 1.0
+&ensp;Proposal and literature review | 40 | 8.0
 &ensp;Peer review | 2 | 0.4
 &ensp;Basic working system report | 30 | 6.0
 &ensp;Final report | 121 | 24.2
