@@ -26,7 +26,7 @@ Fall 2024
 	<tbody style="text-align:left">
 		<tr>
 			<td>Time</td>
-			<td>Mon, Wed 2:30-3:45pm</td>
+			<td>MW 2:30-3:45pm</td>
 		</tr>
 		<tr>
 			<td>Location</td>
@@ -118,8 +118,7 @@ Fall 2024
         <tr>
             <td>4</td>
             <td>09-09 M</td>
-            <td>Logistic regression part 1</td>
-            <!--<td><a href="slides/session6_cs2731_spring2024.pdf">Logistic regression part 1</a></td>-->
+            <td><a href="slides/session4_cs2731_fall2024.pdf">Logistic regression part 1</a></td>
             <td>J+M 5-5.2</td>
             <td>Reading quiz due</td>
         </tr>
