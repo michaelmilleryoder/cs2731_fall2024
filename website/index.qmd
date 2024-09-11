@@ -127,7 +127,7 @@ Fall 2024
             <td>09-11 W</td>
             <td><a href="slides/session5_cs2731_fall2024.pdf">Logistic regression part 2</a></td>
             <td>J+M 5.3-5.9, 5.11</td>
-            <td>Reading quiz due;<br/>Project idea submission form out</td>
+            <td>Reading quiz due;<br/><a href="https://forms.office.com/r/ZkMKpcSfhw">Project idea submission form</a> out</td>
         </tr>
         <tr>
             <td>6</td>
@@ -144,7 +144,7 @@ Fall 2024
             <td>Vector semantics, word2vec</td>
             <!--<td><a href="slides/session8_cs2731_spring2024.pdf">Vector semantics, word2vec</a></td>-->
             <td>J+M 6-6.2, 6.8-6.13,<br /><a href="https://aclanthology.org/2020.acl-main.485.pdf">Blodgett et al. 2020</a></td>
-            <td>Discussion post due;<br/><strong><a href="hw1">HW1</a> due 09-19;<br/>Project idea submission form due 09-19</strong></td>
+            <td>Discussion post due;<br/><strong><a href="hw1">HW1</a> due 09-19;<br/><a href="https://forms.office.com/r/ZkMKpcSfhw">Project idea submission form</a> due 09-19</strong></td>
         </tr>
         <tr>
             <td>8</td>
@@ -348,7 +348,7 @@ Description | Points | Percentage of final grade
 **Homework assignments total** | **224** | **44.8**
 &ensp;Each homework of 4 total | 56 | 11.2
 **[Final project](project) total** | **203** | **40.6**
-&ensp;Project idea submission response | 5 | 1.0
+&ensp;[Project idea submission](https://forms.office.com/r/ZkMKpcSfhw) response | 5 | 1.0
 &ensp;Project idea ranking response | 5 | 1.0
 &ensp;Proposal and literature review | 40 | 8.0
 &ensp;Peer review | 2 | 0.4

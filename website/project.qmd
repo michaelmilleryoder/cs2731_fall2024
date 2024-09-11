@@ -2,7 +2,7 @@
 title: "Project"
 ---
 
-*Last revised 2024-09-10.*
+*Last revised 2024-09-11.*
 
 A major component of this course is a hands-on final project guided by students' own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.
 
@@ -10,7 +10,7 @@ A major component of this course is a hands-on final project guided by students'
 Projects will be done in groups of 2-4 students. Groups will be assigned by teaching staff based on interests, skills, and group preferences from students.
 
 ## Deliverables
-1. **Project idea submission form**. *Due 09-19*. With this form, you can fill out potential project ideas you might be interested in working on. You can fill out ideas from the example projects listed on this website, ideas you have from research you are a part of, interesting text datasets you'd like to work on, really anything! You can fill out as many ideas as you'd like in this form. Ideas do not have to be fully sketched out. Submitting an idea does mean you will necessarily work on it. These ideas will be presented to all students **anonymously**. Each student must submit at least one idea for credit on this assignment, even if it's just chosen from the example projects.
+1. **[Project idea submission form](https://forms.office.com/r/ZkMKpcSfhw)**. *Due 09-19*. With this form, you can fill out potential project ideas you might be interested in working on. You can fill out ideas from the example projects listed on this website, ideas you have from research you are a part of, interesting text datasets you'd like to work on, really anything! You can fill out as many ideas as you'd like in this form. Ideas do not have to be fully sketched out. Submitting an idea does mean you will necessarily work on it. These ideas will be presented to all students **anonymously**. Each student must submit at least one idea for credit on this assignment, even if it's just chosen from the example projects.
 1. **Project idea ranking and survey**. *Due 09-26*. In a form, students will rank which project ideas they would prefer to work on, as well as list any personnel preferences, interests and skills you have. Teaching staff will take all of this information into account when assigning groups.
 3. **Project proposal and literature review**. *Due 10-17*. Please submit one per group on Canvas. This proposal will be a report with answers to the following questions:
 	1. What type of contribution are you making?
