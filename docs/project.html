@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>Last revised 2024-09-05.</em></p>
+<p><em>Last revised 2024-09-10.</em></p>
 <p>A major component of this course is a hands-on final project guided by students’ own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.</p>
 <section id="groups" class="level2">
 <h2 class="anchored" data-anchor-id="groups">Groups</h2>
@@ -221,26 +221,43 @@ Here is the rubric that will be used in grading:
 <p>Data is at the heart of machine learning and NLP systems; it enables further modeling and encapsulates what NLP systems “know”.</p>
 <section id="example-project-ideas" class="level4">
 <h4 class="anchored" data-anchor-id="example-project-ideas">Example project ideas</h4>
+<!--* Hate speech is often expressed in a "joking" manner, yet hate speech classifiers struggle to identify hate speech in irony and humor. Build a dataset of hate speech in jokes ("light talk") to aid future NLP classifiers. This dataset could be collected from sites that are known for both hateful content and a "humorous" tone, and portions could be annotated for hate speech and/or types of humor. This could be an expansion of prior work that provides a dataset of offense in humor: [https://competitions.codalab.org/competitions/27446](https://competitions.codalab.org/competitions/27446) -->
 <ul>
-<li>Hate speech is often expressed in a “joking” manner, yet hate speech classifiers struggle to identify hate speech in irony and humor. Build a dataset of hate speech in jokes (“light talk”) to aid future NLP classifiers. This dataset could be collected from sites that are known for both hateful content and a “humorous” tone, and portions could be annotated for hate speech and/or types of humor. This could be an expansion of prior work that provides a dataset of offense in humor: <a href="https://competitions.codalab.org/competitions/27446">https://competitions.codalab.org/competitions/27446</a></li>
 <li>Hate speech is culturally specific, yet the majority of NLP work focuses on English in North American and European contexts. A quantitative analysis of different features of datasets annotated for hate speech in multiple languages and from multiple cultural contexts would illuminate global similarities and culturally specific contexts.</li>
 <li>Build a dataset of text from different personas from fiction roleplaying sites (“language cosplaying” in China). This could be useful for dialogue systems that adopt personas, or for story generation.</li>
-</ul>
-</section>
-<section id="example-projects" class="level4">
-<h4 class="anchored" data-anchor-id="example-projects">Example projects</h4>
-<ul>
-<li><a href="https://aclanthology.org/I17-1076.pdf">Newell et al.&nbsp;2017</a>: “Verifiability” of claims made in news. New datasets often accompany the introduction of a new NLP task, which could be a previously unstudied phenomenon like verifiability in this one.</li>
 </ul>
 </section>
 </section>
 <section id="new-approach-or-application" class="level3">
 <h3 class="anchored" data-anchor-id="new-approach-or-application">2. New approach or application</h3>
-<p>This is perhaps the most common sort of NLP research contribution, in which a new method or algorithm for approaching a task (which could be a new task) is presented. Applying an existing method in a new context or task (as might be necessary in an industry setting) would also fit within this contribution.</p>
+<p>This is perhaps the most common sort of NLP research contribution, in which a new method or algorithm for approaching a task (which could be a new task) is presented. Applying an existing method in a new context or task, as might be necessary in an industry setting, would also fit within this contribution.</p>
 <section id="example-project-ideas-1" class="level4">
 <h4 class="anchored" data-anchor-id="example-project-ideas-1">Example project ideas</h4>
-<p>New tasks and applications: <!-- Balancing targeted identities in hate speech datasets/auditing the identity distribution of commonly used hate speech datasets--> * New identity terms are commonly developed in online communities, some of them hateful. Develop methods to find in-group hate jargon and identity terms. * Hate speech identification without the text: Identify the discourse contexts in which hate speech is likely to occur, without allowing classifiers to look at the exact text of the hate speech. * Stancetaking, a concept from sociolinguistics, is when sepakers take an evaluative position toward the concept (which are often nuanced, e.g.&nbsp;“No, I actually don’t like Taylor Swift’s music that much, but she’s great as a person”). Develop automated methods for identifying the “stance object”, who the speaker is evaluating, likely from Reddit data that would be provided by the instructor. * From a set of descriptions of characters, develop a classifier to predict which ones will generate the most fanfiction. This could be a lens into online community and media norms. * Examine the framing of different entities in police Facebook posts from the <a href="https://www.plainviewproject.org/">Plain View Project</a></p>
-<p>Existing tasks (some ideas are pulled from Graham Neubig’s Advanced NLP class): * Lexicons are often used to identify emotional language or other concepts text analysts may be interested in measuring in large corpora. Develop and evaluate approaches for expanding lexicons to specific contexts. This could be applied to expand lists of identity terms in a variety of online communities, with data supplied by the instructor. * Any of the <a href="https://semeval.github.io/SemEval2021/tasks">SemEval 2021 tasks</a> * <a href="https://x-factr.github.io/">X-FACTR multilingual knowledge probing in QA</a> * <a href="https://github.com/google-research/google-research/tree/master/goemotions">GoEmotions Fine-grained Emotion Detection Dataset</a> * <a href="https://github.com/allenai/SciREX">SciREX Scientific Information Extraction</a> * <a href="https://github.com/elisaF/subjective_discourse">Subjective Intent Classification in Discourse</a> * <a href="http://statmt.org/wmt21/unsup_and_very_low_res.html">Very Low Resource machine translation</a> * Predict the points at which speakers switch languages when code-switching * Sign language translation * Develop best approaches for training hate speech classifiers that generalize across targeted identities. Data would be provided by the instructor * Style transfer of offensive language into inoffensive language. See <a href="https://aclanthology.org/2022.coling-1.530.pdf">existing paper</a> and <a href="https://github.com/sabithsn/APPDIA-Discourse-Style-Transfer">dataset+code</a>. * Develop new approaches for hate speech detection by comparing with knowledge bases or pretrained models of stereotypes from a stereotype dataset * Cross-lingual emotion detection. See <a href="https://aclanthology.org/2022.lrec-1.751/">existing paper</a>. * Multilingual content moderation on Reddit. See <a href="https://aclanthology.org/2023.eacl-main.276/">existing paper</a> and <a href="https://github.com/mye1225/multilingual_content_mod">dataset</a>.</p>
+<p>New tasks and applications:</p>
+<ul>
+<li>New identity terms are commonly developed in online communities, some of them hateful. Develop methods to find in-group hate jargon and identity terms.</li>
+<li>Hate speech identification without the text: Identify the discourse contexts in which hate speech is likely to occur, without allowing classifiers to look at the exact text of the hate speech.</li>
+<li>Stancetaking, a concept from sociolinguistics, is when sepakers take an evaluative position toward the concept (which are often nuanced, e.g.&nbsp;“No, I actually don’t like Taylor Swift’s music that much, but she’s great as a person”). Develop automated methods for identifying the “stance object”, who the speaker is evaluating, likely from Reddit data.</li>
+<li>From a set of descriptions of characters, develop a classifier to predict which ones will generate the most fanfiction. This could be a lens into online community and media norms.</li>
+<li>Examine the framing of different entities in police Facebook posts from the <a href="https://www.plainviewproject.org/">Plain View Project</a></li>
+</ul>
+<p>Existing tasks to work on (some ideas are drawn from Graham Neubig’s Advanced NLP class):</p>
+<ul>
+<li><a href="https://codalab.lisn.upsaclay.fr/competitions/18810">WASSA Shared Task on Empathy Detection and Emotion Classification and Personality Detection in Interaction</a></li>
+<li>Lexicons are often used to identify emotional language or other concepts text analysts may be interested in measuring in large corpora. Develop and evaluate approaches for expanding lexicons to specific contexts. This could be applied to expand lists of identity terms in a variety of online communities, with data supplied by the instructor.</li>
+<li>Any of the <a href="https://semeval.github.io/SemEval2021/tasks">SemEval 2021 tasks</a></li>
+<li><a href="https://x-factr.github.io/">X-FACTR multilingual knowledge probing in QA</a></li>
+<li><a href="https://github.com/google-research/google-research/tree/master/goemotions">GoEmotions Fine-grained Emotion Detection Dataset</a></li>
+<li><a href="https://github.com/allenai/SciREX">SciREX Scientific Information Extraction</a></li>
+<li><a href="https://github.com/elisaF/subjective_discourse">Subjective Intent Classification in Discourse</a></li>
+<li><a href="http://statmt.org/wmt21/unsup_and_very_low_res.html">Very Low Resource machine translation</a></li>
+<li>Predict the points at which speakers switch languages when code-switching</li>
+<li>Sign language translation</li>
+<li>Develop best approaches for training hate speech classifiers that generalize across targeted identities. Data would be provided by the instructor</li>
+<li>Style transfer of offensive language into inoffensive language. See <a href="https://aclanthology.org/2022.coling-1.530.pdf">existing paper</a> and <a href="https://github.com/sabithsn/APPDIA-Discourse-Style-Transfer">dataset+code</a>.</li>
+<li>Develop new approaches for hate speech detection by comparing with knowledge bases or pretrained models of stereotypes from a stereotype dataset</li>
+<li>Cross-lingual emotion detection. See <a href="https://aclanthology.org/2022.lrec-1.751/">existing paper</a>.</li>
+</ul>
 </section>
 </section>
 <section id="new-survey-or-position-paper" class="level3">
@@ -253,34 +270,6 @@ Here is the rubric that will be used in grading:
 <li>Computational social science using NLP generally relies on data from online communities. But this is missing non-online interactions and the practices of those who are not active online. Survey datasets and approaches that use quantitative and computational techniques on recordings of offline linguistic interaction.</li>
 <li>A growing area of research in computational social science aims to capture the framing and portrayal of entities across large text corpora (such as in <a href="https://ojs.aaai.org/index.php/ICWSM/article/download/3358/3226/">news media</a>). Survey existing approaches and challenges.</li>
 </ul>
-<!--
-## NLP research areas
-Early on, groups will select an NLP research area to focus their project on (or multiple areas, if applicable). Here is a list of NLP research areas in alphabetical order, drawn from the [ACL Rolling Review list](https://aclrollingreview.org/cfp). You can also pursue a project in a different area with instructor permission.
-
-* *Computational Social Science and Cultural Analytics*. Using NLP to study societies and cultural texts, as well as developing tools that process language in social context. This is the instructor's main research area and many of the example project ideas focusing on hate speech would fit within this area.
-* *Dialogue and Interactive Systems*. NLP systems that interact conversationally, as well as systems that analyze human conversation.
-* *Discourse and Pragmatics*. Discourse here refers to linguistic structure beyond the a sentence level. This includes predicting the coherence of different sentences together (discourse coherence) and the relations between sentences (discourse relations). It also includes parsing rhetorical structures of texts such as essays.
-* *Efficient/Low-Resource Methods for NLP*. This includes computational and energy efficiency. How do we get similar performance with models with fewer parameters and less demanding computational requirements?
-* *Ethics, Bias, and Fairness*. There's a lot of focus on this area with LLMs right now.
-* *Generation*. This includes language and code generation, as well as interesting applications like story and narrative generation.
-* *Information Extraction*. This includes extracting and linking events and particular types of entities, timelines, and locations.
-* *Information Retrieval and Text Mining*. This includes searching for particular kinds of information from large text corpora.
-* *Interpretability and Analysis of Models for NLP*. Many NLP and ML models are quite uninterpretable; this area addresses this.
-* *Linguistic theories, Cognitive Modeling and Psycholinguistics*. This area includes work that applies or evaluates linguistic and cognitive theories of language with computational models.
-* *Machine Learning for NLP*. This area includes core ML improvements for NLP, as well as applying new ML methods to language.
-* *Machine Translation*. Automatic translation between languages.
-* *Multilinguality and Language Diversity*. Too much NLP work is solely in English or other "high-resource" languages. This area addresses this problem and also handles language diversity such as code-switching.
-* *Multimodality and Language Grounding to Vision, Robotics and Beyond*. Language is often used by humans in tandem with vision and motion. NLP models within this area take this into account.
-* *NLP Applications*. This area would include applications such as educational applications (like automated essay grading) or in areas such as human rights (see aporaphobia paper) or industry settings.
-* *Phonology, Morphology and Word Segmentation*. This area includes linguistic areas that study how sounds and parts of words fit together to produce meaning. Computational approaches from NLP can extract and model this subword information at scale.
-* *Question Answering*. Automatically answering questions posed by humans.
-* *Semantics: Lexical*. Approaches that model word meanings and semantic relationships between words.
-* *Semantics: Sentence-level Semantics, Textual Inference and Other areas*. This area includes tasks of natural language inference and coreference resolution.
-* *Sentiment Analysis, Stylistic Analysis, and Argument Mining*. Extracting and analyzing sentiments (pro vs con), styles, and arguments.
-* *Speech recognition, text-to-speech and spoken language understanding*.
-* *Summarization*. Automatic approaches to summarizing texts.
-* *Syntax: Tagging, Chunking and Parsing*. Computational approaches to extracting grammatical structure from text, including part-of-speech tagging, dependency parsing, and constituency parsing.
--->
 </section>
 </section>
 </section>

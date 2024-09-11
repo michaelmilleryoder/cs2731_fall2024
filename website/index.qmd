@@ -125,11 +125,9 @@ Fall 2024
         <tr>
             <td>5</td>
             <td>09-11 W</td>
-            <td>Logistic regression part 2</td>
-            <!--<td><a href="slides/session7_cs2731_spring2024.pdf">Logistic regression part 2</a></td>-->
+            <td><a href="slides/session5_cs2731_spring2024.pdf">Logistic regression part 2</a></td>
             <td>J+M 5.3-5.9, 5.11</td>
             <td>Reading quiz due;<br/>Project idea submission form out</td>
-            <!--<td>Reading quiz;<br /><a href="https://forms.gle/PTgXLUs6WCxLrgFt6">Project pre-proposal form</a> out</td>-->
         </tr>
         <tr>
             <td>6</td>
