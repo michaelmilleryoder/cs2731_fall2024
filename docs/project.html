@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#groups" id="toc-groups" class="nav-link active" data-scroll-target="#groups">Groups</a></li>
   <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
-  <li><a href="#types-of-contributions" id="toc-types-of-contributions" class="nav-link" data-scroll-target="#types-of-contributions">Types of contributions</a>
+  <li><a href="#example-projects" id="toc-example-projects" class="nav-link" data-scroll-target="#example-projects">Example projects</a>
   <ul class="collapse">
   <li><a href="#new-dataset-annotations-or-analysis-of-existing-datasets" id="toc-new-dataset-annotations-or-analysis-of-existing-datasets" class="nav-link" data-scroll-target="#new-dataset-annotations-or-analysis-of-existing-datasets">New dataset, annotations, or analysis of existing datasets</a></li>
   <li><a href="#new-approach-or-application" id="toc-new-approach-or-application" class="nav-link" data-scroll-target="#new-approach-or-application">New approach or application</a></li>
@@ -213,9 +213,9 @@ Here is the rubric that will be used in grading:
 |***Grand total*** | ***140***|
 -->
 </section>
-<section id="types-of-contributions" class="level2">
-<h2 class="anchored" data-anchor-id="types-of-contributions">Types of contributions</h2>
-<p>Your goal is to make a contribution, even a small one, to NLP research or practice. You can select from the following types of contributions, combine multiple of them, or define a different type of contribution with instructor approval. Example project ideas and projects are provided (with a bias toward computational social science and hate speech, the instructor’s research area). You are also encouraged to come up with their own ideas! Is there a text dataset in a field or your industry that you are familiar with that has not been analyzed? Projects can be related to students’ research, but should not be projects for other classes.</p>
+<section id="example-projects" class="level2">
+<h2 class="anchored" data-anchor-id="example-projects">Example projects</h2>
+<p>Your goal is to make a contribution, even a small one, to NLP research or practice. You can select from the following types of contributions, combine multiple of them, or define a different type of contribution with instructor approval. Example project ideas and projects are provided (with a bias toward computational social science and hate speech, the instructor’s research area). You are also encouraged to come up with your own ideas, too! Is there a text dataset in a field or your industry that you are familiar with that has not been analyzed? Projects can be related to students’ research, but should not be projects for other classes.</p>
 <section id="new-dataset-annotations-or-analysis-of-existing-datasets" class="level3">
 <h3 class="anchored" data-anchor-id="new-dataset-annotations-or-analysis-of-existing-datasets">New dataset, annotations, or analysis of existing datasets</h3>
 <p>Data is at the heart of machine learning and NLP systems; it enables further modeling and encapsulates what NLP systems “know”.</p>
@@ -223,6 +223,7 @@ Here is the rubric that will be used in grading:
 <h4 class="anchored" data-anchor-id="example-project-ideas">Example project ideas</h4>
 <!--* Hate speech is often expressed in a "joking" manner, yet hate speech classifiers struggle to identify hate speech in irony and humor. Build a dataset of hate speech in jokes ("light talk") to aid future NLP classifiers. This dataset could be collected from sites that are known for both hateful content and a "humorous" tone, and portions could be annotated for hate speech and/or types of humor. This could be an expansion of prior work that provides a dataset of offense in humor: [https://competitions.codalab.org/competitions/27446](https://competitions.codalab.org/competitions/27446) -->
 <ul>
+<li>Build a dataset of social media posts and ads discussing prescription drugs and natural medications for comparison, with Prof.&nbsp;Ryan Shi and a collaborator in Pitt Family Medicine.</li>
 <li>Hate speech is culturally specific, yet the majority of NLP work focuses on English in North American and European contexts. A quantitative analysis of different features of datasets annotated for hate speech in multiple languages and from multiple cultural contexts would illuminate global similarities and culturally specific contexts.</li>
 <li>Build a dataset of text from different personas from fiction roleplaying sites (“language cosplaying” in China). This could be useful for dialogue systems that adopt personas, or for story generation.</li>
 </ul>
@@ -237,15 +238,28 @@ Here is the rubric that will be used in grading:
 <ul>
 <li>New identity terms are commonly developed in online communities, some of them hateful. Develop methods to find in-group hate jargon and identity terms.</li>
 <li>Hate speech identification without the text: Identify the discourse contexts in which hate speech is likely to occur, without allowing classifiers to look at the exact text of the hate speech.</li>
-<li>Stancetaking, a concept from sociolinguistics, is when sepakers take an evaluative position toward the concept (which are often nuanced, e.g.&nbsp;“No, I actually don’t like Taylor Swift’s music that much, but she’s great as a person”). Develop automated methods for identifying the “stance object”, who the speaker is evaluating, likely from Reddit data.</li>
 <li>From a set of descriptions of characters, develop a classifier to predict which ones will generate the most fanfiction. This could be a lens into online community and media norms.</li>
-<li>Examine the framing of different entities in police Facebook posts from the <a href="https://www.plainviewproject.org/">Plain View Project</a></li>
+<li>Fanfiction, online writing by fans of media works, is known for celebrating queer identity but still may center the experiences of white authors and characters. Use <a href="https://github.com/michaelmilleryoder/fanfiction-nlp/tree/main">FanfictionNLP</a> to compare representations of characters of color to white characters in fanfiction at scale.</li>
+<li>Quantitative analysis of hateful, white supremacist narratives usually centers on contemporary online discourse. Yet many white supremacist language and narratives has its roots before online discourse. Compare narratives, topics and themes presented in historic and contemporary white supremacist discourse with data provided by the instructor.</li>
+<li>Evaluate LLMs for their factuality in summarization of class reflections using a dataset provided by the instructor and Prof.&nbsp;Diane Litman.</li>
+<li>Evaluate the fairness of quality scores automatically assigned to sutdent reflections using a dataset provided by the instructor and Prof.&nbsp;Diane Litman.</li>
+<li>Build networks of charaters and predict relations among characters in fiction using this <a href="https://github.com/dbamman/characterRelations">dataset</a>.</li>
+<li>Stancetaking, a concept from sociolinguistics, is when sepakers take an evaluative position toward the concept (which are often nuanced, e.g.&nbsp;“No, I actually don’t like Taylor Swift’s music that much, but she’s great as a person”). Develop automated methods for identifying the “stance object”, who the speaker is evaluating, likely from Reddit data.</li>
+<li>Automatically summarize movies based on their subtitles from this <a href="https://github.com/VeerabadraLokesh/moviesubsummarize">dataset</a> developed by former students in the class.</li>
+<li>Predict “speech acts”, intentions behind utterances, based on emojis with a dataset assembled by former students in the class.</li>
+<li>Explore similarities and differences between language in podcasts and Reddit communities based on those podcasts using a <a href="https://github.com/FishOfPitt116/CS2731Project/tree/main">dataset</a> assembled by former students in the class.</li>
+<li>Computational analysis of Nakba narratives. See <a href="https://sina.birzeit.edu/nakba-nlp/">workshop</a> and <a href="https://t.ly/00Ul6">datasets</a>.</li>
+<li>Examine the framing of different entities in police Facebook posts from the <a href="https://www.plainviewproject.org/">Plain View Project</a>.</li>
 </ul>
 <p>Existing tasks to work on (some ideas are drawn from Graham Neubig’s Advanced NLP class):</p>
 <ul>
-<li><a href="https://codalab.lisn.upsaclay.fr/competitions/18810">WASSA Shared Task on Empathy Detection and Emotion Classification and Personality Detection in Interaction</a></li>
 <li>Lexicons are often used to identify emotional language or other concepts text analysts may be interested in measuring in large corpora. Develop and evaluate approaches for expanding lexicons to specific contexts. This could be applied to expand lists of identity terms in a variety of online communities, with data supplied by the instructor.</li>
+<li><a href="https://codalab.lisn.upsaclay.fr/competitions/18810">WASSA Shared Task on Empathy Detection and Emotion Classification and Personality Detection in Interaction</a></li>
+<li><a href="https://lt3.ugent.be/exalt/">WASSA Shared Task on Explainability for Cross-Lingual Emotion in Tweets</a></li>
+<li>Semantic pleonasm detection with LLMs, on a <a href="https://pleonasm.cs.pitt.edu">dataset</a> developed here at Pitt</li>
+<li><a href="https://genai-content-detection.gitlab.io/">Shared tasks</a> in identifying AI-generated content</li>
 <li>Any of the <a href="https://semeval.github.io/SemEval2021/tasks">SemEval 2021 tasks</a></li>
+<li><a href="http://nlp.uned.es/exist2024/">Sexism identification in social networks shared task</a></li>
 <li><a href="https://x-factr.github.io/">X-FACTR multilingual knowledge probing in QA</a></li>
 <li><a href="https://github.com/google-research/google-research/tree/master/goemotions">GoEmotions Fine-grained Emotion Detection Dataset</a></li>
 <li><a href="https://github.com/allenai/SciREX">SciREX Scientific Information Extraction</a></li>
