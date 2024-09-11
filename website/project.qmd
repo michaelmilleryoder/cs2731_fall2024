@@ -67,7 +67,7 @@ Here is the rubric that will be used in grading:
 ## Types of contributions
 Your goal is to make a contribution, even a small one, to NLP research or practice. You can select from the following types of contributions, combine multiple of them, or define a different type of contribution with instructor approval. Example project ideas and projects are provided (with a bias toward computational social science and hate speech, the instructor's research area). You are also encouraged to come up with their own ideas! Is there a text dataset in a field or your industry that you are familiar with that has not been analyzed? Projects can be related to students' research, but should not be projects for other classes.
 
-### 1. New dataset, annotations, or analysis of existing datasets
+### New dataset, annotations, or analysis of existing datasets
 Data is at the heart of machine learning and NLP systems; it enables further modeling and encapsulates what NLP systems "know".
 
 #### Example project ideas
@@ -75,7 +75,7 @@ Data is at the heart of machine learning and NLP systems; it enables further mod
 * Hate speech is culturally specific, yet the majority of NLP work focuses on English in North American and European contexts. A quantitative analysis of different features of datasets annotated for hate speech in multiple languages and from multiple cultural contexts would illuminate global similarities and culturally specific contexts.
 * Build a dataset of text from different personas from fiction roleplaying sites ("language cosplaying" in China). This could be useful for dialogue systems that adopt personas, or for story generation.
 
-### 2. New approach or application 
+### New approach or application 
 This is perhaps the most common sort of NLP research contribution, in which a new method or algorithm for approaching a task (which could be a new task) is presented. Applying an existing method in a new context or task, as might be necessary in an industry setting, would also fit within this contribution.
 
 #### Example project ideas
@@ -105,7 +105,7 @@ Existing tasks to work on (some ideas are drawn from Graham Neubig's Advanced NL
 * Cross-lingual emotion detection. See [existing paper](https://aclanthology.org/2022.lrec-1.751/).
 
 
-### 4. New survey or position paper
+### New survey or position paper
 Surveys are especially needed for new, emerging research areas. All projects will require a literature review, but a survey paper would be both broader and deeper. It would summarize key approaches and key challenges and present lines for future work. Some sort of implementation is necessary for this type of contribution as well, such as applying multiple established methods to a new dataset or in a new context to show challenges that need to be addressed. Position papers argue for a certain viewpoint or shortcoming of existing approaches, e.g. arguing for the utility of techniques from a discipline outside NLP in NLP tasks.
 
 #### Example project ideas
