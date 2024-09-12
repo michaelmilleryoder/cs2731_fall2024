@@ -2,7 +2,7 @@
 title: "Project"
 ---
 
-*Last revised 2024-09-11.*
+*Last revised 2024-09-12.*
 
 A major component of this course is a hands-on final project guided by students' own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.
 
@@ -88,6 +88,7 @@ New tasks and applications:
 * From a set of descriptions of characters, develop a classifier to predict which ones will generate the most fanfiction. This could be a lens into online community and media norms.
 * Fanfiction, online writing by fans of media works, is known for celebrating queer identity but still may center the experiences of white authors and characters. Use [FanfictionNLP](https://github.com/michaelmilleryoder/fanfiction-nlp/tree/main) to compare representations of characters of color to white characters in fanfiction at scale.
 * Analyze how different newspapers cover topics differently in English-language editorials from Sri Lankan newspapers. Data is provided by the instructor and a collaborator at Carnegie Mellon University.
+* Predict arch support, comfort and durability of shoes from Amazon reviews, with a collaborator in Pitt Engineering.
 * Quantitative analysis of hateful, white supremacist narratives usually centers on contemporary online discourse. Yet many white supremacist language and narratives has its roots before online discourse. Compare narratives, topics and themes presented in historic and contemporary white supremacist discourse with data provided by the instructor.
 * Evaluate LLMs for their factuality in summarization of class reflections using a dataset provided by the instructor and Prof. Diane Litman.
 * Evaluate the fairness of quality scores automatically assigned to sutdent reflections using a dataset provided by the instructor and Prof. Diane Litman.
