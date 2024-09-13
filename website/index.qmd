@@ -135,7 +135,7 @@ Fall 2024
             <td>Classifier evaluation</td>
             <!--<td><a href="slides/session5_cs2731_fall2024.pdf">Classifier evaluation</a></td>-->
             <td>J+M 4 (intro), 4.7-4.10,<br /><a href="https://aclanthology.org/Q18-1041.pdf">Bender & Friedman 2018</a><br /><a href="https://arxiv.org/pdf/1810.03993.pdf">Mitchell et al. 2019</a></td>
-            <td>Reading quiz due; <br />HW2 out</td>
+            <td>Reading quiz due</td>
             <!--<td>Discussion post due; <br /><a href="hw2">HW2</a> out 01-30</td>-->
         </tr>
         <tr>
@@ -144,7 +144,7 @@ Fall 2024
             <td>Vector semantics, word2vec</td>
             <!--<td><a href="slides/session8_cs2731_spring2024.pdf">Vector semantics, word2vec</a></td>-->
             <td>J+M 6-6.2, 6.8-6.13,<br /><a href="https://aclanthology.org/2020.acl-main.485.pdf">Blodgett et al. 2020</a></td>
-            <td>Discussion post due;<br/><strong><a href="hw1">HW1</a> due 09-19;<br/><a href="https://forms.office.com/r/ZkMKpcSfhw">Project idea submission form</a> due 09-19</strong></td>
+            <td>Discussion post due;<br/><strong><a href="hw1">HW1</a> due 09-19;<br/><a href="https://forms.office.com/r/ZkMKpcSfhw">Project idea submission form</a> due 09-19;</strong><br/>HW2 out</td>
         </tr>
         <tr>
             <td>8</td>
