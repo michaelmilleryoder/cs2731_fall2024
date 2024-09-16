@@ -65,7 +65,7 @@ Fall 2024
 
 
 # Schedule
-*Subject to change. Last revised 2024-09-10. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2024-09-16. All due dates are at 11:59pm ET except when indicated.*
 
 <!-- Should convert this to quarto markdown-->
 <table class="schedule">
@@ -144,7 +144,7 @@ Fall 2024
             <td>Vector semantics, word2vec</td>
             <!--<td><a href="slides/session8_cs2731_spring2024.pdf">Vector semantics, word2vec</a></td>-->
             <td>J+M 6-6.2, 6.8-6.13,<br /><a href="https://aclanthology.org/2020.acl-main.485.pdf">Blodgett et al. 2020</a></td>
-            <td>Discussion post due;<br/><strong><a href="hw1">HW1</a> due 09-19;<br/><a href="https://forms.office.com/r/ZkMKpcSfhw">Project idea submission form</a> due 09-19;</strong><br/>HW2 out</td>
+            <td>Discussion post due;<br/><strong><a href="hw1">HW1</a> due 09-19;<br/><a href="https://forms.office.com/r/ZkMKpcSfhw">Project idea submission form</a> due 09-20;</strong><br/>HW2 out</td>
         </tr>
         <tr>
             <td>8</td>
