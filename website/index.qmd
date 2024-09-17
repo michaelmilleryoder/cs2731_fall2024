@@ -65,7 +65,7 @@ Fall 2024
 
 
 # Schedule
-*Subject to change. Last revised 2024-09-16. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2024-09-17. All due dates are at 11:59pm ET except when indicated.*
 
 <!-- Should convert this to quarto markdown-->
 <table class="schedule">
@@ -208,16 +208,16 @@ Fall 2024
         <tr>
             <td>15</td>
             <td>10-16 W</td>
-            <td>Contemporary LLM topics (guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a>)</td>
-            <td><em>TBD</em></td>
+            <td>Project proposal presentations</td>
+            <!--<td><a href="slides/session16_cs2731.pdf">Project proposal presentations</a></td>-->
+            <td></td>
             <td><strong>Project proposal and literature review due 10-17</strong></td>
         </tr>
         <tr>
             <td>16</td>
             <td>10-21 M</td>
-            <td>Project proposal presentations</td>
-            <!--<td><a href="slides/session16_cs2731.pdf">Project proposal presentations</a></td>-->
-            <td></td>
+            <td>Contemporary LLM topics (guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a>)</td>
+            <td><em>TBD</em></td>
             <td>HW4 out</td>
             <!--<td><a href="hw4">HW4</a> out 03-05</td>-->
         </tr>
