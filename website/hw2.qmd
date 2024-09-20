@@ -69,7 +69,7 @@ In the report, please provide:
 	1. Describe your motivation for including the feature
 	1. Discussion of results: Did it improve performance or not? (Either result is fine. It is not necessary to beat logistic regression with unigram features. This is a very difficult task.)
 1. For a feature-based model of your choice:
-	1. Extract and discuss the most informative features that are mostly strongly positively and negatively associated with politeness. Discuss if you find these surprising and any other comments you might have. You may adapt code provided by the instructor in the Naive Bayes example (notebook [here](https://colab.research.google.com/drive/1J-FcHTFYXTsNgcEB19kQcqJnE8CsbSe7?usp=sharing)), use another source online, or write your own. Give specific informative features, such as particular words (e.g. "actually") for bag-of-words features, instead of sets of features like "tf-idf unigram features".
+	1. Extract and discuss the most informative features that are mostly strongly positively and negatively associated with politeness. Report the 5 features with the highest weights and 5 features with the lowest (negative) weights. Discuss how these may or may not make sense for this task. You may adapt code provided by the instructor in the Naive Bayes example (notebook [here](https://colab.research.google.com/drive/1J-FcHTFYXTsNgcEB19kQcqJnE8CsbSe7?usp=sharing)), use another source online, or write your own. Give specific informative features, such as particular words (e.g. "actually") for bag-of-words features, instead of sets of features like "tf-idf unigram features".
 	1. Do an error analysis. Provide a confusion matrix, sample examples from both false negatives and false positives and present a few of them in the report. Do you see any patterns in these errors? How might these errors be addressed with different features or if the system could understand something else? (You don’t have to implement these, just speculate.)
 
 ## 2.2 Neural network-based approaches
@@ -96,10 +96,12 @@ Optionally, you can submit your classifier to run on a hidden held-out test set 
 * 1 bonus point for submitting any system (either logistic regression or neural network)
 
 ### How to submit your classifier
-There are two Kaggle competitions: one for logistic regression and one for neural network-based classifiers. **Check back on this page for links to those when they are released.**
-<!--Please see the **NEED TO UPDATE** [Kaggle competition page](https://www.kaggle.com/t/2ee28c56ec2d43beb8f75f54a277f2c4) for instructions on how to submit for the challenge competition.
+There are two Kaggle competitions. See these pages for instructions on how to submit: 
 
-You will need to create a Kaggle account to submit. Please provide your Kaggle username used in the competition in your report so we can assign any bonus points. Note that this username will be visible in a leaderboard to other challenge competition participants.-->
+* [Logistic regression Kaggle competition](https://www.kaggle.com/t/8212bf24f3764f00a400b1d33f6585e9)
+* [Neural network Kaggle competition](https://www.kaggle.com/t/8d83a90ef8a94dbca5b257424eecd13e)
+
+You will need to create a Kaggle account to submit. Please provide your Kaggle username used in the competition in your report so we can assign any bonus points. Note that this username will be visible in a leaderboard to other challenge competition participants.
 
 ## Notes
 
@@ -123,12 +125,10 @@ You will need to create a Kaggle account to submit. Please provide your Kaggle u
 	* any generative AI tool used, and how it was used
 	* any unresolved issues or problems
 
-Please submit all of this material on Canvas. We will grade your report and look over your code.
+Please submit all of this material on Canvas. Do **not** zip all files. We will grade your report and look over your code.
 
-<!--
 ## Grading
 See rubric on Canvas.
--->
 
 ## Acknowledgments
 This assignment is inspired from a homework assignment by Prof. Diane Litman. Data is from [Peskov et al. 2020](https://aclanthology.org/2020.acl-main.353/).
