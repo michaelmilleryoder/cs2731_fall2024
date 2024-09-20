@@ -2,7 +2,7 @@
 title: "Project"
 ---
 
-*Last revised 2024-09-17.*
+*Last revised 2024-09-18.*
 
 A major component of this course is a hands-on final project guided by students' own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.
 
@@ -105,6 +105,7 @@ Existing tasks to work on (some ideas are drawn from Graham Neubig's Advanced NL
 * Lexicons are often used to identify emotional language or other concepts text analysts may be interested in measuring in large corpora. Develop and evaluate approaches for expanding lexicons to specific contexts. This could be applied to expand lists of identity terms in a variety of online communities, with data supplied by the instructor.
 * [WASSA Shared Task on Empathy Detection and Emotion Classification and Personality Detection in Interaction](https://codalab.lisn.upsaclay.fr/competitions/18810)
 * [WASSA Shared Task on Explainability for Cross-Lingual Emotion in Tweets](https://lt3.ugent.be/exalt/)
+* [SemEval Multilingual characterization and extraction of narratives from online news](https://propaganda.math.unipd.it/semeval2025task10/)
 * Information retrieval from regulatory documents in a [shared task](https://www.codabench.org/competitions/3527/) and [RegNLP](https://regnlp.github.io/) workshop
 * Semantic pleonasm detection with LLMs, on a [dataset](https://pleonasm.cs.pitt.edu) developed here at Pitt
 * [Shared tasks](https://genai-content-detection.gitlab.io/) in identifying AI-generated content

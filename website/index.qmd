@@ -46,15 +46,15 @@ Fall 2024
 		</tr>
 		<tr>
 			<td>TA</td>
-			<td>Jayden Serenari</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>TA contact</td>
-			<td><a href="mailto:jserenari@pitt.edu">jserenari@pitt.edu</a></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>TA office hours</td>
-			<td>Tue 10:30am-12:30pm, or by appointment. Location TBD</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>Textbook (free online)</td>
@@ -141,7 +141,7 @@ Fall 2024
             <td>09-18 W</td>
             <td><a href="slides/session7_cs2731_fall2024.pdf">Vector semantics, word2vec</a></td>
             <td>J+M 6-6.2, 6.8-6.13,<br /><a href="https://aclanthology.org/2020.acl-main.485.pdf">Blodgett et al. 2020</a></td>
-            <td><strong><a href="hw1">HW1</a> due 09-19;</strong><br/>HW2 out 09-19;<br/><strong><a href="https://forms.office.com/r/ZkMKpcSfhw">Project idea submission form</a> due 09-20</strong></td>
+            <td><strong><a href="hw1">HW1</a> due 09-19;</strong><br/><a href="hw2">HW2</a> out 09-19;<br/><strong><a href="https://forms.office.com/r/ZkMKpcSfhw">Project idea submission form</a> due 09-20</strong></td>
         </tr>
         <tr>
             <td>8</td>
@@ -177,8 +177,7 @@ Fall 2024
             <td>RNNs part 2, encoder-decoder</td>
             <!--<td><a href="slides/session12_cs2731_spring2024.pdf">RNNs part 2, encoder-decoder</a></td>-->
             <td>J+M 9-9.3, 9.6-9.9</td>
-            <td>Reading quiz due; <br/><b>HW2 due 10-03</b></td>
-            <!--<td>Reading quiz due; <br/><b><a href="hw2">HW2</a> due 02-15</b></td>-->
+            <td>Reading quiz due; <br/><b><a href="hw2">HW2</a> due 10-03</b></td>
         </tr>
         <tr>
             <td>12</td>
