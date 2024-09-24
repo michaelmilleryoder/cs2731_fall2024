@@ -46,15 +46,15 @@ Fall 2024
 		</tr>
 		<tr>
 			<td>TA</td>
-			<td></td>
+			<td>Dhanush Binu</td>
 		</tr>
 		<tr>
 			<td>TA contact</td>
-			<td></td>
+			<td><a href="mailto:dhb51@pitt.edu">dhb51@pitt.edu</a></td>
 		</tr>
 		<tr>
 			<td>TA office hours</td>
-			<td></td>
+			<td>By appointment</td>
 		</tr>
 		<tr>
 			<td>Textbook (free online)</td>
