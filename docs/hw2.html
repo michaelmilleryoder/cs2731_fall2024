@@ -193,7 +193,7 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Due 2024-10-03, 11:59pm</strong>. <em>Instructions last updated 2024-09-20.</em></p>
+<p><strong>Due 2024-10-03, 11:59pm</strong>. <em>Instructions last updated 2024-09-30.</em></p>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
 <p>After completing this assignment, students will be able to:</p>
@@ -269,7 +269,7 @@ window.Quarto = {
 <li>Describe your motivation for including the feature</li>
 <li>Discussion of results: Did it improve performance or not? (Either result is fine. It is not necessary to beat logistic regression with unigram features. This is a very difficult task.)</li>
 </ol></li>
-<li>For a feature-based model of your choice:
+<li>For a feature-based model of your choice (not a neural model):
 <ol type="1">
 <li>Extract and discuss the most informative features that are mostly strongly positively and negatively associated with deception. Report the 5 features with the highest weights and 5 features with the lowest (negative) weights. Discuss how these may or may not make sense for this task. You may adapt code provided by the instructor in the Naive Bayes example (notebook <a href="https://colab.research.google.com/drive/1J-FcHTFYXTsNgcEB19kQcqJnE8CsbSe7?usp=sharing">here</a>), use another source online, or write your own. Give specific informative features, such as particular words (e.g.&nbsp;“actually”) for bag-of-words features, instead of sets of features like “tf-idf unigram features”.</li>
 <li>Do an error analysis. Provide a confusion matrix, sample examples from both false negatives and false positives and present a few of them in the report. Do you see any patterns in these errors? How might these errors be addressed with different features or if the system could understand something else? (You don’t have to implement these, just speculate.)</li>
@@ -279,7 +279,7 @@ window.Quarto = {
 </section>
 <section id="neural-network-based-approaches" class="level2">
 <h2 class="anchored" data-anchor-id="neural-network-based-approaches">2.2 Neural network-based approaches</h2>
-<p>In this section, you will build and evaluate neural network-based classifier on deception classification. For example, you could implement a feedforward neural network that uses pre-trained static word embeddings (word2vec, GloVe, FastText, etc) as input. To represent the document, you could take the average word embeddings of the input sentence or choose another function. You can choose which activation function to use and other hyperparameters. You are also welcome to try other methods we haven’t yet covered in class, such as LSTMs, convolutional neural networks, BERT, or other LLMs. As long as the technique uses neural networks at some point in its architecture and involves some sort of training or fine-tuning of a model, it will be accepted. Simply prompting a pre-trained LLM to classify the instances (“zero-shot” or “in-context” learning) will not be sufficient. You can also incorporate any non-text metadata features in this part. If you have questions about what is acceptable, ask the instructor or TA.</p>
+<p>In this section, you will build and evaluate neural network-based classifier on deception classification. For example, you could implement a feedforward neural network that uses pre-trained static word embeddings (word2vec, GloVe, FastText, etc) as input. You can download these pre-trained word embeddings from wherever you like (you don’t have to train your own). To represent the document, you could take the average word embeddings of the input sentence or choose another function. You can choose which activation function to use and other hyperparameters. You are also welcome to try other methods we haven’t yet covered in class, such as LSTMs, convolutional neural networks, BERT, or other LLMs. As long as the technique uses neural networks at some point in its architecture and involves some sort of training or fine-tuning of a model, it will be accepted. Simply prompting a pre-trained LLM to classify the instances (“zero-shot” or “in-context” learning) will not be sufficient. You can also incorporate any non-text metadata features in this part. If you have questions about what is acceptable, ask the instructor or TA.</p>
 <p>You will again use 5-fold cross validation on the dataset. There is no need for this model to outperform the logistic regression model you made.</p>
 <section id="tasks-for-section-2.2" class="level3">
 <h3 class="anchored" data-anchor-id="tasks-for-section-2.2">Tasks for section 2.2</h3>
@@ -328,7 +328,7 @@ window.Quarto = {
 <li>If participating in the challenge, the Kaggle username you used to submit your predictions</li>
 <li>If participating in the challenge, your code used for that in a file named <code>hw2_{your pitt email id}_test.py</code>.</li>
 </ul></li>
-<li>Your code used to train models and estimate performance with cross-validation in a file named <code>hw2_{your pitt email id}_train.py</code>.</li>
+<li>Your code used to train models and estimate performance with cross-validation in a file named <code>hw2_{your pitt email id}_cv.py</code>.</li>
 <li>A <code>README.txt</code> file explaining
 <ul>
 <li>how to run the code you used to train your models and estimate cross-validation performance</li>

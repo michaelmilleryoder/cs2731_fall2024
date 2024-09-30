@@ -2,7 +2,7 @@
 title: "Homework 2: Text classification"
 ---
 
-**Due 2024-10-03, 11:59pm**. *Instructions last updated 2024-09-20.*
+**Due 2024-10-03, 11:59pm**. *Instructions last updated 2024-09-30.*
 
 ## Learning objectives
 After completing this assignment, students will be able to:
@@ -68,12 +68,12 @@ In the report, please provide:
 1. For each feature or change in input text processing:
 	1. Describe your motivation for including the feature
 	1. Discussion of results: Did it improve performance or not? (Either result is fine. It is not necessary to beat logistic regression with unigram features. This is a very difficult task.)
-1. For a feature-based model of your choice:
+1. For a feature-based model of your choice (not a neural model):
 	1. Extract and discuss the most informative features that are mostly strongly positively and negatively associated with deception. Report the 5 features with the highest weights and 5 features with the lowest (negative) weights. Discuss how these may or may not make sense for this task. You may adapt code provided by the instructor in the Naive Bayes example (notebook [here](https://colab.research.google.com/drive/1J-FcHTFYXTsNgcEB19kQcqJnE8CsbSe7?usp=sharing)), use another source online, or write your own. Give specific informative features, such as particular words (e.g. "actually") for bag-of-words features, instead of sets of features like "tf-idf unigram features".
 	1. Do an error analysis. Provide a confusion matrix, sample examples from both false negatives and false positives and present a few of them in the report. Do you see any patterns in these errors? How might these errors be addressed with different features or if the system could understand something else? (You don’t have to implement these, just speculate.)
 
 ## 2.2 Neural network-based approaches
-In this section, you will build and evaluate neural network-based classifier on deception classification. For example, you could implement a feedforward neural network that uses pre-trained static word embeddings (word2vec, GloVe, FastText, etc) as input. To represent the document, you could take the average word embeddings of the input sentence or choose another function. You can choose which activation function to use and other hyperparameters. You are also welcome to try other methods we haven't yet covered in class, such as LSTMs, convolutional neural networks, BERT, or other LLMs. As long as the technique uses neural networks at some point in its architecture and involves some sort of training or fine-tuning of a model, it will be accepted. Simply prompting a pre-trained LLM to classify the instances ("zero-shot" or "in-context" learning) will not be sufficient. You can also incorporate any non-text metadata features in this part. If you have questions about what is acceptable, ask the instructor or TA.
+In this section, you will build and evaluate neural network-based classifier on deception classification. For example, you could implement a feedforward neural network that uses pre-trained static word embeddings (word2vec, GloVe, FastText, etc) as input. You can download these pre-trained word embeddings from wherever you like (you don't have to train your own). To represent the document, you could take the average word embeddings of the input sentence or choose another function. You can choose which activation function to use and other hyperparameters. You are also welcome to try other methods we haven't yet covered in class, such as LSTMs, convolutional neural networks, BERT, or other LLMs. As long as the technique uses neural networks at some point in its architecture and involves some sort of training or fine-tuning of a model, it will be accepted. Simply prompting a pre-trained LLM to classify the instances ("zero-shot" or "in-context" learning) will not be sufficient. You can also incorporate any non-text metadata features in this part. If you have questions about what is acceptable, ask the instructor or TA.
 
 You will again use 5-fold cross validation on the dataset. There is no need for this model to outperform the logistic regression model you made.
 
@@ -115,7 +115,7 @@ You will need to create a Kaggle account to submit. Please provide your Kaggle u
 * Your report with results and answers to questions in Part 1 and Part 2, named `hw2_{your pitt email id}.pdf`. No need to include @pitt.edu, just use the email ID before that part. For example: `report_mmyoder_hw2.pdf`.
 	* If participating in the challenge, the Kaggle username you used to submit your predictions
 	* If participating in the challenge, your code used for that in a file named `hw2_{your pitt email id}_test.py`. 
-* Your code used to train models and estimate performance with cross-validation in a file named `hw2_{your pitt email id}_train.py`.
+* Your code used to train models and estimate performance with cross-validation in a file named `hw2_{your pitt email id}_cv.py`.
 * A `README.txt` file explaining
 	* how to run the code you used to train your models and estimate cross-validation performance
 	* the computing environment you used, including the names and versions of programming languages and packages used, in case we replicate your experiments. A `requirements.txt` file for setting up the environment is useful if there are many packages.
