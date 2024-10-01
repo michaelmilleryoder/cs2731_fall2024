@@ -42,7 +42,7 @@ Fall 2024
 		</tr>
 		<tr>
 			<td style="width:200px">Instructor office hours</td>
-			<td>By appointment in person at Sennott Square 6309 or on Zoom<br/>[Book an appointment](https://outlook-sdf.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)</td>
+			<td>By appointment in person at IS 604B or on Zoom<br/>[Book an appointment](https://outlook-sdf.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)</td>
 		</tr>
 		<tr>
 			<td>TA</td>
