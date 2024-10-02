@@ -2,7 +2,7 @@
 title: "Project"
 ---
 
-*Last revised 2024-09-18.*
+*Last revised 2024-10-01.*
 
 A major component of this course is a hands-on final project guided by students' own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.
 
@@ -16,7 +16,7 @@ Projects will be done in groups of 2-4 students. Groups will be assigned by teac
 	1. What type of contribution are you making?
 	2. What is the problem or task you are focusing on?
 	3. What is the nature of your contribution? That is, what is the expected output of your project? This could be a new approach and its evaluation, a new dataset, or new analysis.
-	4. How does your contribution build on or extend prior work? This literature review will be of at least 4 papers relevant to your project area. It will group and summarize relevant papers into types of tasks, datasets, and/or approaches. Good places to look for NLP papers include the [ACL Anthology](https://aclanthology.org/), [Semantic Scholar](https://www.semanticscholar.org/), and [Google Scholar](https://scholar.google.com/?inst=3203679203499159833).
+	4. How does your contribution build on or extend prior work? This literature review will be of at least 3 papers relevant to your project area. It will group and summarize relevant papers into types of tasks, datasets, and/or approaches. Good places to look for NLP papers include the [ACL Anthology](https://aclanthology.org/), [Semantic Scholar](https://www.semanticscholar.org/), and [Google Scholar](https://scholar.google.com/?inst=3203679203499159833).
 	5. What data are you using (or contributing)?
 	6. What algorithm or approach are you taking to address the task?
 	7. How are you evaluating your contribution? What performance metrics are you going to use?
