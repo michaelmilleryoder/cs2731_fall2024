@@ -170,8 +170,7 @@ Fall 2024
         <tr>
             <td>11</td>
             <td>10-02 W</td>
-            <td>RNNs part 2, encoder-decoder</td>
-            <!--<td><a href="slides/session12_cs2731_spring2024.pdf">RNNs part 2, encoder-decoder</a></td>-->
+            <td><a href="slides/session11_cs2731_fall2024.pdf">RNNs part 2, encoder-decoder</a></td>
             <td>J+M 8.3, 8.6-8.9</td>
             <td>Reading quiz due; <br/><b><a href="hw2">HW2</a> due 10-03</b></td>
         </tr>
