@@ -177,7 +177,7 @@ Fall 2024
         <tr>
             <td>12</td>
             <td>10-07 M</td>
-            <td><a href="slides/session12_cs2731_fall2024.pdf">Transformers, LLMs part 1</a></td>
+            <td><a href="slides/session12_cs2731_fall2024.pdf">Transformers</a></td>
             <td>J+M 9, 10-10.1</td>
             <td>Reading quiz due;<br/>HW3 out 10-08</td>
             <!--<td>Reading quiz due;<br/><a href="hw3">HW3</a> out 02-20</td>-->
@@ -185,20 +185,20 @@ Fall 2024
         <tr>
             <td>13</td>
             <td>10-09 W</td>
-            <td>LLMs part 2, BERT and GPT</td>
+            <td>LLMs, BERT and GPT</td>
             <!--<td><a href="slides/session14_cs2731_spring2024.pdf">Transformers part 2, pretraining, BERT and GPT</a></td>-->
             <td>J+M 10.2-10.3, 10.5.3-10.7, 11-11.4</td>
             <td>Reading quiz due</td>
         </tr>
         <tr style="background-color:#cccccc">
-            <td>14</td>
+            <td></td>
             <td>10-14 M</td>
             <td style="font:italic">Fall Break. No class.</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>15</td>
+            <td>14</td>
             <td>10-16 W</td>
             <td>Project proposal presentations</td>
             <!--<td><a href="slides/session16_cs2731.pdf">Project proposal presentations</a></td>-->
@@ -206,7 +206,7 @@ Fall 2024
             <td><strong>Project proposal and literature review due 10-17</strong></td>
         </tr>
         <tr>
-            <td>16</td>
+            <td>15</td>
             <td>10-21 M</td>
             <td>Contemporary LLM topics (guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a>)</td>
             <td><em>TBD</em></td>
@@ -214,7 +214,7 @@ Fall 2024
             <!--<td><a href="hw4">HW4</a> out 03-05</td>-->
         </tr>
         <tr>
-            <td>17</td>
+            <td>16</td>
             <td>10-23 W</td>
             <td>BERT/LLMs discussion and lab day</td>
             <!--<td><a href="slides/session15_cs2731_spring2024.pdf">BERT/LLMs discussion and lab day</a></td>-->
@@ -226,7 +226,7 @@ Fall 2024
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Sequence labeling and parsing</td>
         </tr>
         <tr>
-            <td>18</td>
+            <td>17</td>
             <td>10-28 M</td>
             <td>POS tagging, NER, HMMs part 1</td>
             <!--<td><a href="slides/session18_cs2731_spring2024.pdf">POS tagging, NER, HMMs part 1</a></td>-->
@@ -234,7 +234,7 @@ Fall 2024
             <td>Reading quiz due</td>
         </tr>
         <tr>
-            <td>19</td>
+            <td>18</td>
             <td>10-30 W</td>
             <td>HMMs part 2, Viterbi alg, neural sequence labeling</td>
             <!--<td><a href="slides/session19_cs2731_spring2024.pdf">HMMs part 2, Viterbi alg, neural sequence labeling</a></td>-->
@@ -242,7 +242,7 @@ Fall 2024
             <td>Reading quiz due</td>
         </tr>
         <tr>
-            <td>20</td>
+            <td>19</td>
             <td>11-04 M</td>
             <td>Dependency parsing</td>
             <!--<td><a href="slides/session21_cs2731_spring2024.pdf">Dependency parsing</a></td>-->
@@ -254,7 +254,7 @@ Fall 2024
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 5: Application areas</td>
         </tr>
         <tr>
-            <td>21</td>
+            <td>20</td>
             <td>11-06 W</td>
             <td>Machine translation part 1</td>
             <!--<td><a href="slides/session22_cs2731_spring2024.pdf">Machine translation part 1</a></td>-->
@@ -263,7 +263,7 @@ Fall 2024
             <!--<td>Reading quiz due;<br/><strong><a href="https://forms.gle/F8fhBkUpgCSJDTNA9">Project peer review due</a></strong></td>-->
         </tr>
         <tr>
-            <td>22</td>
+            <td>21</td>
             <td>11-11 M</td>
             <td>Machine translation part 2</td>
             <!--<td><a href="slides/session23_cs2731_spring2024.pdf">Machine translation part 2</a></td>-->
@@ -271,7 +271,7 @@ Fall 2024
             <td></td>
         </tr>
         <tr>
-            <td>23</td>
+            <td>22</td>
             <td>11-13 W</td>
             <td>Speech technologies, ASR, TTS</td>
             <!--<td><a href="slides/session24_cs2731_spring2024.pdf">Speech technologies, ASR, TTS</a></td>-->
@@ -279,7 +279,7 @@ Fall 2024
             <td><b>Project progress report due 11-14</b></td>
         </tr>
         <tr>
-            <td>24</td>
+            <td>23</td>
             <td>11-18 M</td>
             <td>Dialogue, chatbots part 1</td>
             <!--<td><a href="slides/session25_cs2731_spring2024.pdf">Dialogue, chatbots part 1</a></td>-->
@@ -287,7 +287,7 @@ Fall 2024
             <td></td>
         </tr>
         <tr>
-            <td>25</td>
+            <td>24</td>
             <td>11-20 W</td>
             <td>Dialogue, chatbots part 2</td>
             <!--<td><a href="slides/session26_cs2731_spring2024.pdf">Dialogue, chatbots part 2</a></td>-->
@@ -298,21 +298,21 @@ Fall 2024
             <td colspan=5 style="text-align:center; font:italic">Thanksgiving Break 11-24 to 12-01</td>
         </tr>
         <tr>
-            <td>26</td>
+            <td>25</td>
             <td>12-02 M</td>
             <td>Information retrieval, RAG</td>
             <td><em>TBD</em></td>
             <td></td>
         </tr>
         <tr>
-            <td>27</td>
+            <td>26</td>
             <td>12-04 W</td>
             <td>Project work time</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>28</td>
+            <td>27</td>
             <td>12-11 W</td>
             <td>Final project presentations</td>
             <!--<td><a href="slides/session28_cs2731_spring2024.pdf">Final project presentations</a></td>-->
