@@ -1,0 +1,225 @@
+---
+title: "Homework 3: Character-level language modeling"
+---
+
+**Due 2024-10-24, 11:59pm**. *Instructions last updated 2024-10-08.*
+
+Language modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next *character* in a sequence given the previous characters.
+You will build character-level n-gram language models as well as train an LLM (GPT-2) to do character-level language modeling using Hugging Face.
+You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data.
+
+## Learning objectives
+After completing this assignment, students will be able to:
+
+* Understand how to compute n-gram language model probabilities using maximum likelihood estimation.
+* Use n-gram and transformer-based language models to probabilistically generate texts.
+* Intuitively understanding of how perplexity will estimate language model performance on unseen texts.
+* Gain familiarity with training LLMs using Hugging Face
+
+
+# Data
+Download the following datasets for this assignment:
+
+* <a href="hw3/shakespeare_input.txt" download>Shakespeare training data</a>
+* [Test data](hw3/test_data.zip) of *New York Times* articles and several of Shakespeare's sonnets
+
+# Part 1. Train character-level n-gram language models
+In this section, you will fill in the following skeleton Python script:
+
+* [N-gram skeleton script](hw3/ngram_skeleton.py)
+
+## 1.1 Extract character n-grams
+First, fill out the `ngrams(c, text)` function that produces a list of all n-grams of that use `c` elements of context from the input text. Each n-gram should consist of a 2-element tuple `(context, char)`, where the context is itself a `c`-length string comprised of the `c` characters preceding the current character. If `c == 1`, then produce bigrams, if `c == 2`, trigrams. The sentence should be padded with `c` `~` characters at the beginning (we’ve provided you with `start_pad(c)` for this purpose). If `c == 0`, all contexts should be empty strings. You may assume that `c ≥ 0`.
+Here is some example output from such a function:
+
+```
+>>> ngrams(1, 'abc')
+[('~', 'a'), ('a', 'b'), ('b', 'c')]
+
+>>> ngrams(2, 'abc')
+[('~~', 'a'), ('~a', 'b'), ('ab', 'c')]
+```
+
+We’ve also given you the function `create_ngram_model(model_class, path, c, k)` that will create and return an n-gram model trained on the entire file path provided.
+
+## 1.2 Build n-gram language models
+In this section, you will build a simple n-gram language model that can be used to generate random text resembling a source document. 
+
+In the `NgramModel class`, write an initialization method `__init__(self, c, k)` which stores the context length `c` of the model and initializes any necessary internal variables. Then write a method `get_vocab(self)` that returns the vocab (this is the set of all characters used by this model).
+
+Write a method `update(self, text)` which computes the n-grams for the input sentence and updates the internal counts. Also, write a method `prob(self, context, char)` which accepts a `c`-length string representing a context and a character, and returns the probability of that character occurring, given the preceding context. If you encounter a novel context, the probability of any given char should be $1/V$ where $V$ is the size of the vocab.
+
+```
+ >>> m = NgramModel(1, 0)
+ >>> m.update('abab')
+ >>> m.get_vocab()
+ {'b', 'a'}
+ >>> m.update('abcd')
+ >>> m.get_vocab()
+ {'b', 'a', 'c', 'd'}
+ >>> m.prob('a', 'b')
+ 1.0
+ >>> m.prob('~', 'c')
+ 0.0
+ >>> m.prob('b', 'c')
+ 0.5
+```
+
+Write a method `random_char(self, context)` which returns a random character according to the probability distribution determined by the given context. 
+<!--Specifically, let
+ be the vocab, sorted according to Python’s natural lexicographic ordering, and let  be a random number between 0 and 1. Your method should return the character vi
+
+ such that
+
+You should use a single call to the random.random() function to generate
+
+    .
+
+.-->
+
+```
+     >>> m = NgramModel(0, 0)
+     >>> m.update('abab')
+     >>> m.update('abcd')
+     >>> random.seed(1)
+     >>> [m.random_char('') for i in range(10)]
+     ['a', 'c', 'c', 'a', 'b', 'b', 'b', 'c', 'a', 'a']
+```
+
+In the NgramModel class, write a method `random_text(self, length)` which returns a string of characters chosen at random using the `random_char(self, context)` method. Your starting context should always be `c` `~` characters, and the context should be updated as characters are generated. If `c == 0`, your context should always be the empty string. You should continue generating characters until you’ve produced the specified number of random characters, then return the full string.
+
+```
+     >>> m = NgramModel(1, 0)
+     >>> m.update('abab')
+     >>> m.update('abcd')
+     >>> random.seed(1)
+     >>> m.random_text(10)
+     abcdbabcda
+```
+
+## 1.3 Generating Shakespeare with character-level n-gram language models
+
+Now you can train a language model using the training corpus of Shakespeare. Afterward, try generating some Shakespeare with different order character n-gram models. For example, you can try using different n by running the following commands:
+
+```
+>>> m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 2)
+>>> m.random_text(250)
+
+>>> m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 3)
+>>> m.random_text(250)
+
+>>> m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 4)
+>>> m.random_text(250)
+
+>>> m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 7)
+>>> m.random_text(250)
+```
+
+You may make any additional assumptions and design decisions, but state them in your report (see below). For example, some design choices that could be made are how you want to handle uppercase and lowercase letters or how you want to handle digits. The choice made is up to you, we only require that you detail these decisions in your report and consider any implications of them in your results. There is no wrong choice here, and these decisions are typically made by NLP researchers when pre-processing data.
+
+You are allowed to use any resources or packages to extract the character ngrams from text, such as scikit-learn or NLTK. You may not use any package to directly train/compute language model probabilities; that portion of the program should be from scratch.
+
+## 1.4 Laplace smoothing
+
+Laplace smoothing adds one to each count (hence its alternate name add-one smoothing). Since there are $V$ characters in the vocabulary and each one was incremented, we also need to adjust the denominator of $N$ tokens to take into account the extra $V$ observations.
+
+$$ P_{Laplace}(w) = \frac{count_w + 1}{N + |V|}$$
+
+Implement Laplace add-1 smoothing in the `NgramModel` class. Note that, you need to report perplexity scores for each sentence (i.e., line) in the test document, as well as the document average.
+
+```
+# Examples to run your code
+>>> m = NgramModel(1, 1)
+>>> m.update('abab')
+>>> m.update('abcd')
+>>> m.prob('a', 'a')
+0.14285714285714285
+>>> m.prob('a', 'b')
+0.5714285714285714
+>>> m.prob('c', 'd')
+0.4
+>>> m.prob('d', 'a')
+0.25
+```
+
+## 1.5 Estimate perplexity of test documents
+Implement the `perplexity(self, text)` function in `NgramModel`.
+The perplexity of a language model on a test set is the inverse probability of the test set, normalized by the number of characters.
+
+
+Here is some reference code for perplexity that you can adapt:
+
+```
+import math
+
+def perplexity(text, model, n):
+""" Args:
+            text: a string of characters
+            model: a matrix or df of the probabilities with rows as prefixes, columns as suffixes.
+			You can modify this depending on how you set up your model.
+            n: n-gram order of the model
+
+        Acknowledgment: 
+	  https://towardsdatascience.com/perplexity-intuition-and-derivation-105dd481c8f3 
+	  https://courses.cs.washington.edu/courses/csep517/18au/
+	  ChatGPT with GPT-3.5
+    """
+
+    # FILL IN: Remove any unseen characters from the text that have no unigram probability in the language
+
+    N = len(text)
+    char_probs = []
+    for i in range(n-1, N):
+	prefix = text[i-n+1:i]
+	suffix = text[i]
+	# FILL IN: look up the probability in the model of the suffix given the prefix
+	prob = 
+	char_probs.append(math.log2(prob))
+    neg_log_lik = -1 * sum(char_probs) # negative log-likelihood of the text
+    ppl = 2 ** (neg_log_lik/(N - n + 1)) # 2 to the power of the negative log likelihood of the words divided by #ngrams
+    return ppl
+```
+
+## Deliverables for part 1
+In your report, include:
+
+1. A description of how you wrote your program, including all assumptions and design decisions
+2. Perplexity values for bigram, trigram and fourgram character-level language models, with add-one Laplace smoothing, on each test file (*New York Times* article and Shakespeare sonnets). For each file, calculate the perplexity for each line and report the average across all lines in the document.
+3. What does your perplexity indicate in different test data? What does a comparison of different n (grams) in terms of perplexity tell you about? Which performs best? Why do you think your models performed the way they did?
+
+# Part 2: Train a GPT-2 character-level language model
+In this section, you will train an LLM-based model (GPT-2) on the same task: character-level language modeling.
+You will use the Hugging Face set of packages.
+You will then generate from your trained LLM and compare the output against the character n-gram models.
+
+To do so, run each cell and fill out the missing code sections in the following Google Colab notebook: [hw3_char_llm_skeleton.ipynb](https://colab.research.google.com/drive/11vBArw3Z2vabGim4y2Bkp3sjtWsBnBvg?usp=sharing)
+
+Note that training the model will take 30 minutes minimum, so make sure you schedule enough time for this part.
+
+## Deliverables for part 2
+In your report, include
+
+1. What settings you used for sampling. Did you experiment with different settings, such as the *k* in top-*k* sampling?
+1. Perplexity on both test documents. Does this model perform better than character-level n-gram language models?
+1. A comparison of the generated output between character n-gram approaches and the GPT-2 version. Does one have more understandable words than the other? Are there any other differences you notice? Please point to specific examples.
+
+
+# Submission
+Please submit the following items on Canvas:
+
+* Your report with results and answers to questions in Part 1 and Part 2, named `report_{your pitt email id}_hw3.pdf`. No need to include @pitt.edu, just use the email ID before that part. For example: `report_mmyoder_hw3.pdf`.
+* The code of your program for part 1
+* A link to your Google Colab file for part 2
+* A `README.txt` file explaining
+	* the computing environment you used; what programming language and version you used; what packages did you use in case we replicate your experiments (a `requirements.txt` file for setting up the environment may be useful if there are many packages).
+	* any additional resources, references, or web pages you've consulted
+	* any person with whom you've discussed the assignment and describe the nature of your discussions
+	* any generative AI tool used, and how it was used
+	* any unresolved issues or problems
+
+# Grading
+This homework assignment is worth 56 points. The grading rubric will be posted on Canvas.
+
+
+## Acknowledgments
+Part 1 of this assignment is based on a homework assignment by Prof. Diane Litman and Prof. Mark Yatskar. [Shakespeare data](https://cs.stanford.edu/people/karpathy/char-rnn/shakespeare_input.txt) is from Andrej Karpathy.
