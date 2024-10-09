@@ -207,14 +207,14 @@ Fall 2024
             <td>15</td>
             <td>10-21 M</td>
             <td>Contemporary LLM topics (guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a>)</td>
-            <td><em>J+M 12</em></td>
+            <td>J+M 12</td>
             <td>HW4 out</td>
             <!--<td><a href="hw4">HW4</a> out 03-05</td>-->
         </tr>
         <tr>
             <td>16</td>
             <td>10-23 W</td>
-            <td>BERT/LLMs discussion and lab day</td>
+            <td>LLM discussion and lab day</td>
             <!--<td><a href="slides/session15_cs2731_spring2024.pdf">BERT/LLMs discussion and lab day</a></td>-->
             <td><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023</a></td>
             <td>Discussion post due 1pm;<br/>Bring a laptop to class; <br/><b><a href="hw3">HW3</a> due 10-24</b></td>
