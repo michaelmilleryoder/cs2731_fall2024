@@ -2,7 +2,7 @@
 title: "Project"
 ---
 
-*Last revised 2024-10-01.*
+*Last revised 2024-10-09.*
 
 A major component of this course is a hands-on final project guided by students' own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.
 
@@ -18,17 +18,17 @@ Projects will be done in groups of 2-4 students. Groups will be assigned by teac
 	1. What data you are planning to use
 	1. What approach/methods will you be taking
 	1. Evaluation of your approach (or dataset, if it’s a dataset contribution)
-3. **Project proposal and literature review**. *Due 10-17*. Please submit one per group on Canvas. This proposal will be a report with answers to the following questions:
-	1. What type of contribution are you making?
+3. **Project proposal and literature review**. *Due 10-17*. Please submit one per group on Canvas. There is no required length or format for this report, but it is recommended to use the ACL format that the final report will be formatted in. This proposal will be a report with answers to the following questions:
+	1. Will you be making a contribution of a new dataset, new application, new approach, combination of these or some other type of contribution?
 	2. What is the problem or task you are focusing on?
 	3. What is the nature of your contribution? That is, what is the expected output of your project? This could be a new approach and its evaluation, a new dataset, or new analysis.
 	4. How does your contribution build on or extend prior work? This literature review will be of at least 3 papers relevant to your project area. It will group and summarize relevant papers into types of tasks, datasets, and/or approaches. Good places to look for NLP papers include the [ACL Anthology](https://aclanthology.org/), [Semantic Scholar](https://www.semanticscholar.org/), and [Google Scholar](https://scholar.google.com/?inst=3203679203499159833).
-	5. What data are you using (or contributing)?
+	5. What data are you using (or contributing)? Please explain where these datasets are from and how they were constructed.
 	6. What algorithm or approach are you taking to address the task?
 	7. How are you evaluating your contribution? What performance metrics are you going to use?
 	8. What kinds of ethical issues may be raised by your model or data?
 	9. What are the proposed steps needed for completion of the project?
-	10. What are roles and tasks of each person in the group? Though group members will contribute in various capacities, it is best if each person is responsible for at least one aspect of the project.<br /><br />It is recommended to start on the literature review early on, since existing work will inform your specific direction (somebody may have already tried your idea!). The instructor and TA will provide feedback on this proposal and a meeting in office hours if needed. There is no required length or format for this report, but it is recommended to use the ACL format that the final report will be formatted in. Proposals will be submitted through Canvas (one per group is fine).<br />
+	10. What are roles and tasks of each person in the group? Though group members will contribute in various capacities, it is best if each person is responsible for at least one aspect of the project.<br />
 3. **Project peer review**. *Due 11-07*. In a form, you will rate your own performance and the performance of other group members. This feedback will not be used for grading, but to identify any workload distribution issues early on and assign roles accordingly.
 5. **Progress report**. *Due 11-14*. A brief (max 3 pages) progress report of a basic working system. Not everything needs to be done or fully functional, but there needs to be some sort of basic functionality. Also list any questions you have or resources you will need to successfully complete the project by the final deadline. This report should be in the ACL format that the final report will be in.
 6. **Final presentation**. *In class on 12-11*. Groups will present their finished work to the group, with Q&A and feedback opportunities from students. Please prepare a maximum 5-minute presentation in which you can divide up speaking responsibilities however you see fit, though having more than one group member is encouraged. Cover at least these key points:
