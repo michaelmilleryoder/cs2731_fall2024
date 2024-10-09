@@ -256,7 +256,7 @@
     "href": "hw3.html",
     "title": "Homework 3: Character-level language modeling",
     "section": "",
-    "text": "Due 2024-10-24, 11:59pm. Instructions last updated 2024-10-08.\nLanguage modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next character in a sequence given the previous characters. You will build character-level n-gram language models as well as train an LLM (GPT-2) to do character-level language modeling using Hugging Face. You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data."
+    "text": "Due 2024-10-24, 11:59pm. Instructions last updated 2024-10-09.\nLanguage modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next character in a sequence given the previous characters. You will build character-level n-gram language models as well as train an LLM (GPT-2) to do character-level language modeling using Hugging Face. You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data."
   },
   {
     "objectID": "hw3.html#learning-objectives",
@@ -305,7 +305,7 @@
     "href": "hw3.html#deliverables-for-part-1",
     "title": "Homework 3: Character-level language modeling",
     "section": "Deliverables for part 1",
-    "text": "Deliverables for part 1\nIn your report, include:\n\nA description of how you wrote your program, including all assumptions and design decisions\nPerplexity values for bigram, trigram and fourgram character-level language models, with add-one Laplace smoothing, on each test file (New York Times article and Shakespeare sonnets). For each file, calculate the perplexity for each line and report the average across all lines in the document.\nWhat does your perplexity indicate in different test data? What does a comparison of different n (grams) in terms of perplexity tell you about? Which performs best? Why do you think your models performed the way they did?"
+    "text": "Deliverables for part 1\nIn your report, include:\n\nA description of how you wrote your program, including all assumptions and design decisions\nWhat do you notice about the short passages you’ve generated from n-gram models with different n? Are they as good as 1000 monkeys working at 1000 typewriters? Are there patterns in what models generate first? Report some of your generated text and discuss.\nPerplexity values for bigram, trigram and fourgram character-level language models, with add-one Laplace smoothing, on each test file (New York Times article and Shakespeare sonnets). For each file, calculate the perplexity for each line and report the average across all lines in the document.\nWhat does your perplexity indicate in different test data? What does a comparison of different n (grams) in terms of perplexity tell you about? Which performs best? Why do you think your models performed the way they did?"
   },
   {
     "objectID": "hw3.html#deliverables-for-part-2",

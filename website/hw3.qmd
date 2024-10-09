@@ -2,7 +2,7 @@
 title: "Homework 3: Character-level language modeling"
 ---
 
-**Due 2024-10-24, 11:59pm**. *Instructions last updated 2024-10-08.*
+**Due 2024-10-24, 11:59pm**. *Instructions last updated 2024-10-09.*
 
 Language modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next *character* in a sequence given the previous characters.
 You will build character-level n-gram language models as well as train an LLM (GPT-2) to do character-level language modeling using Hugging Face.
@@ -184,6 +184,7 @@ def perplexity(text, model, n):
 In your report, include:
 
 1. A description of how you wrote your program, including all assumptions and design decisions
+2. What do you notice about the short passages you've generated from n-gram models with different *n*? Are they as good as [1000 monkeys working at 1000 typewriters](https://www.youtube.com/watch?v=no_elVGGgW8)? Are there patterns in what models generate first? Report some of your generated text and discuss.
 2. Perplexity values for bigram, trigram and fourgram character-level language models, with add-one Laplace smoothing, on each test file (*New York Times* article and Shakespeare sonnets). For each file, calculate the perplexity for each line and report the average across all lines in the document.
 3. What does your perplexity indicate in different test data? What does a comparison of different n (grams) in terms of perplexity tell you about? Which performs best? Why do you think your models performed the way they did?
 
