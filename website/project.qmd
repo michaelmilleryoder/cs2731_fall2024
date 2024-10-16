@@ -18,7 +18,7 @@ Projects will be done in groups of 2-4 students. Groups will be assigned by teac
 	1. What data you are planning to use
 	1. What approach/methods will you be taking
 	1. Evaluation of your approach (or dataset, if it’s a dataset contribution)
-3. **Project proposal and literature review**. *Due 10-17*. Please submit one per group on Canvas. There is no required length or format for this report, but it is recommended to use the ACL format that the final report will be formatted in. This proposal will be a report with answers to the following questions:
+3. **Project proposal and literature review**. *Due 10-18*. Please submit one per group on Canvas. There is no required length or format for this report, but it is recommended to use the ACL format that the final report will be formatted in. This proposal will be a report with answers to the following questions:
 	1. Will you be making a contribution of a new dataset, new application, new approach, combination of these or some other type of contribution?
 	2. What is the problem or task you are focusing on?
 	3. What is the expected output of your project? This could be a new approach and its evaluation on particular datasets. It could be a new dataset with a particular format, or new analysis. In any of these cases, please describe the format of your desired output.
