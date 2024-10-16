@@ -156,8 +156,7 @@ window.Quarto = {
   <li><a href="#extract-character-n-grams" id="toc-extract-character-n-grams" class="nav-link" data-scroll-target="#extract-character-n-grams">1.1 Extract character n-grams</a></li>
   <li><a href="#build-n-gram-language-models" id="toc-build-n-gram-language-models" class="nav-link" data-scroll-target="#build-n-gram-language-models">1.2 Build n-gram language models</a></li>
   <li><a href="#generating-shakespeare-with-character-level-n-gram-language-models" id="toc-generating-shakespeare-with-character-level-n-gram-language-models" class="nav-link" data-scroll-target="#generating-shakespeare-with-character-level-n-gram-language-models">1.3 Generating Shakespeare with character-level n-gram language models</a></li>
-  <li><a href="#laplace-smoothing" id="toc-laplace-smoothing" class="nav-link" data-scroll-target="#laplace-smoothing">1.4 Laplace smoothing</a></li>
-  <li><a href="#estimate-perplexity-of-test-documents" id="toc-estimate-perplexity-of-test-documents" class="nav-link" data-scroll-target="#estimate-perplexity-of-test-documents">1.5 Estimate perplexity of test documents</a></li>
+  <li><a href="#estimate-perplexity-of-test-documents" id="toc-estimate-perplexity-of-test-documents" class="nav-link" data-scroll-target="#estimate-perplexity-of-test-documents">1.4 Estimate perplexity of test documents</a></li>
   <li><a href="#deliverables-for-part-1" id="toc-deliverables-for-part-1" class="nav-link" data-scroll-target="#deliverables-for-part-1">Deliverables for part 1</a></li>
   </ul></li>
   <li><a href="#part-2-train-a-gpt-2-character-level-language-model" id="toc-part-2-train-a-gpt-2-character-level-language-model" class="nav-link" data-scroll-target="#part-2-train-a-gpt-2-character-level-language-model">Part 2: Train a GPT-2 character-level language model</a>
@@ -194,7 +193,7 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Due 2024-10-24, 11:59pm</strong>. <em>Instructions last updated 2024-10-09.</em></p>
+<p><strong>Due 2024-10-24, 11:59pm</strong>. <em>Instructions last updated 2024-10-16.</em></p>
 <p>Language modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next <em>character</em> in a sequence given the previous characters. You will build character-level n-gram language models as well as train an LLM (GPT-2) to do character-level language modeling using Hugging Face. You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data.</p>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
@@ -288,28 +287,34 @@ You should use a single call to the random.random() function to generate
 &gt;&gt;&gt; m.random_text(250)</code></pre>
 <p>You may make any additional assumptions and design decisions, but state them in your report (see below). For example, some design choices that could be made are how you want to handle uppercase and lowercase letters or how you want to handle digits. The choice made is up to you, we only require that you detail these decisions in your report and consider any implications of them in your results. There is no wrong choice here, and these decisions are typically made by NLP researchers when pre-processing data.</p>
 <p>You are allowed to use any resources or packages to extract the character ngrams from text, such as scikit-learn or NLTK. You may not use any package to directly train/compute language model probabilities; that portion of the program should be from scratch.</p>
-</section>
-<section id="laplace-smoothing" class="level2">
-<h2 class="anchored" data-anchor-id="laplace-smoothing">1.4 Laplace smoothing</h2>
-<p>Laplace smoothing adds one to each count (hence its alternate name add-one smoothing). Since there are <span class="math inline">\(V\)</span> characters in the vocabulary and each one was incremented, we also need to adjust the denominator of <span class="math inline">\(N\)</span> tokens to take into account the extra <span class="math inline">\(V\)</span> observations.</p>
-<p><span class="math display">\[ P_{Laplace}(w) = \frac{count_w + 1}{N + |V|}\]</span></p>
-<p>Implement Laplace add-1 smoothing in the <code>NgramModel</code> class. Note that, you need to report perplexity scores for each sentence (i.e., line) in the test document, as well as the document average.</p>
-<pre><code># Examples to run your code
-&gt;&gt;&gt; m = NgramModel(1, 1)
-&gt;&gt;&gt; m.update('abab')
-&gt;&gt;&gt; m.update('abcd')
-&gt;&gt;&gt; m.prob('a', 'a')
+<!--
+## 1.4 Laplace smoothing
+
+Laplace smoothing adds one to each count (hence its alternate name add-one smoothing). Since there are $V$ characters in the vocabulary and each one was incremented, we also need to adjust the denominator of $N$ tokens to take into account the extra $V$ observations.
+
+$$ P_{Laplace}(w) = \frac{count_w + 1}{N + |V|}$$
+
+Implement Laplace add-1 smoothing in the `NgramModel` class. 
+
+```
+# Examples to run your code
+>>> m = NgramModel(1, 1)
+>>> m.update('abab')
+>>> m.update('abcd')
+>>> m.prob('a', 'a')
 0.14285714285714285
-&gt;&gt;&gt; m.prob('a', 'b')
+>>> m.prob('a', 'b')
 0.5714285714285714
-&gt;&gt;&gt; m.prob('c', 'd')
+>>> m.prob('c', 'd')
 0.4
-&gt;&gt;&gt; m.prob('d', 'a')
-0.25</code></pre>
+>>> m.prob('d', 'a')
+0.25
+```
+-->
 </section>
 <section id="estimate-perplexity-of-test-documents" class="level2">
-<h2 class="anchored" data-anchor-id="estimate-perplexity-of-test-documents">1.5 Estimate perplexity of test documents</h2>
-<p>Implement the <code>perplexity(self, text)</code> function in <code>NgramModel</code>. The perplexity of a language model on a test set is the inverse probability of the test set, normalized by the number of characters.</p>
+<h2 class="anchored" data-anchor-id="estimate-perplexity-of-test-documents">1.4 Estimate perplexity of test documents</h2>
+<p>Implement the <code>perplexity(self, text)</code> function in <code>NgramModel</code>. The perplexity of a language model on a test set is the inverse probability of the test set, normalized by the number of characters. Note that you need to report perplexity scores for each sentence (i.e., line) in the test document, as well as the document average.</p>
 <p>Here is some reference code for perplexity that you can adapt:</p>
 <pre><code>import math
 
