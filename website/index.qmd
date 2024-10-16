@@ -198,8 +198,7 @@ Fall 2024
         <tr>
             <td>14</td>
             <td>10-16 W</td>
-            <td><a href="https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EZ-R5EtO8uBIiPfiAhdqOdYBSzH011O79AnfIODMJ0Q9qQ?e=VmKgkU">Project proposal presentations</a></td>
-            <!--<td><a href="slides/session16_cs2731.pdf">Project proposal presentations</a></td>-->
+            <td><a href="slides/session14_cs2731_fall2024.pdf">Project proposal presentations</a></td>
             <td></td>
             <td><strong>Project proposal and literature review due 10-18</strong></td>
         </tr>
