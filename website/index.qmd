@@ -217,7 +217,7 @@ Fall 2024
             <td>LLM discussion and lab day</td>
             <!--<td><a href="slides/session15_cs2731_spring2024.pdf">BERT/LLMs discussion and lab day</a></td>-->
             <td><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023</a></td>
-            <td>Discussion post due 1pm;<br/>Bring a laptop to class; <br/><b><a href="hw3">HW3</a> due 10-24</b></td>
+            <td>Discussion post due 1pm;<br/>Bring a laptop to class;</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Sequence labeling and parsing</td>
@@ -228,7 +228,7 @@ Fall 2024
             <td>POS tagging, NER, HMMs part 1</td>
             <!--<td><a href="slides/session18_cs2731_spring2024.pdf">POS tagging, NER, HMMs part 1</a></td>-->
             <td>J+M 8-8.4.4</td>
-            <td>Reading quiz due</td>
+            <td>Reading quiz due; <br/><b><a href="hw3">HW3</a> due</b></td>
         </tr>
         <tr>
             <td>18</td>

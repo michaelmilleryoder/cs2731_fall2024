@@ -193,7 +193,7 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Due 2024-10-24, 11:59pm</strong>. <em>Instructions last updated 2024-10-16.</em></p>
+<p><strong>Due 2024-10-28, 11:59pm</strong>. <em>Instructions last updated 2024-10-16.</em></p>
 <p>Language modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next <em>character</em> in a sequence given the previous characters. You will build character-level n-gram language models as well as train an LLM (GPT-2) to do character-level language modeling using Hugging Face. You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data.</p>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
@@ -351,8 +351,8 @@ def perplexity(text, model, n):
 <ol type="1">
 <li>A description of how you wrote your program, including all assumptions and design decisions</li>
 <li>What do you notice about the short passages you’ve generated from n-gram models with different <em>n</em>? Are they as good as <a href="https://www.youtube.com/watch?v=no_elVGGgW8">1000 monkeys working at 1000 typewriters</a>? Are there patterns in what models generate first? Report some of your generated text and discuss.</li>
-<li>Perplexity values for bigram, trigram and fourgram character-level language models, with add-one Laplace smoothing, on each test file (<em>New York Times</em> article and Shakespeare sonnets). For each file, calculate the perplexity for each line and report the average across all lines in the document.</li>
-<li>What does your perplexity indicate in different test data? What does a comparison of different n (grams) in terms of perplexity tell you about? Which performs best? Why do you think your models performed the way they did?</li>
+<li>Perplexity values for bigram, trigram and fourgram character-level language models, on each test file (<em>New York Times</em> article and Shakespeare sonnets). For each file, calculate the perplexity for each line and report the average across all lines in the document.</li>
+<li>What does your perplexity indicate in different test data? What does a comparison of different <em>n</em> in the n-grams in terms of perplexity tell you? Which performs best? Why do you think your models performed the way they did?</li>
 </ol>
 </section>
 </section>
