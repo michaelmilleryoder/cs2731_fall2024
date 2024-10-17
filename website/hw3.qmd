@@ -125,7 +125,8 @@ You may make any additional assumptions and design decisions, but state them in 
 
 ## 1.4 Calculate perplexity of test documents
 Using the `perplexity` method, calculate the perplexity of each test document.
-For each file in the test data (`nytimes_article.txt` and `shakespeare_sonnets.txt`), calculate the perplexity for each **non-blank** line and the average across all lines in the document for trigram, 4-gram and 7-gram character-level language models trained on Shakespeare plays (`shakespeare_input.txt`).
+For each file in the test data (`nytimes_article.txt` and `shakespeare_sonnets.txt`), calculate the perplexity for each **non-blank** line and the average across all lines in the document.
+Do this for trigram, 4-gram and 7-gram character-level language models trained on Shakespeare plays (`shakespeare_input.txt`).
 
 <!--
 ## 1.4 Laplace smoothing
