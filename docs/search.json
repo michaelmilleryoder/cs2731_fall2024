@@ -287,13 +287,6 @@
     "text": "1.3 Generating Shakespeare with character-level n-gram language models\nNow you can train a language model using the training corpus of Shakespeare. Afterward, try generating some Shakespeare with different order character n-gram models. For example, you can try using different n by running the following commands:\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 2)\n&gt;&gt;&gt; m.random_text(250)\n\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 3)\n&gt;&gt;&gt; m.random_text(250)\n\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 4)\n&gt;&gt;&gt; m.random_text(250)\n\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 7)\n&gt;&gt;&gt; m.random_text(250)\nYou may make any additional assumptions and design decisions, but state them in your report (see below). For example, some design choices that could be made are how you want to handle uppercase and lowercase letters or how you want to handle digits. The choice made is up to you, we only require that you detail these decisions in your report and consider any implications of them in your results. There is no wrong choice here, and these decisions are typically made by NLP researchers when pre-processing data."
   },
   {
-    "objectID": "hw3.html#estimate-perplexity-of-test-documents",
-    "href": "hw3.html#estimate-perplexity-of-test-documents",
-    "title": "Homework 3: Character-level language modeling",
-    "section": "1.4 Estimate perplexity of test documents",
-    "text": "1.4 Estimate perplexity of test documents\nImplement the perplexity(self, text) function in NgramModel. The perplexity of a language model on a test set is the inverse probability of the test set, normalized by the number of characters. Note that you need to report perplexity scores for each sentence (i.e., line) in the test document, as well as the document average.\nHere is some reference code for perplexity that you can adapt:\nimport math\n\ndef perplexity(text, model, n):\n\"\"\" Args:\n            text: a string of characters\n            model: a matrix or df of the probabilities with rows as prefixes, columns as suffixes.\n            You can modify this depending on how you set up your model.\n            n: n-gram order of the model\n\n        Acknowledgment: \n      https://towardsdatascience.com/perplexity-intuition-and-derivation-105dd481c8f3 \n      https://courses.cs.washington.edu/courses/csep517/18au/\n      ChatGPT with GPT-3.5\n    \"\"\"\n\n    # FILL IN: Remove any unseen characters from the text that have no unigram probability in the language\n\n    N = len(text)\n    char_probs = []\n    for i in range(n-1, N):\n    prefix = text[i-n+1:i]\n    suffix = text[i]\n    # FILL IN: look up the probability in the model of the suffix given the prefix\n    prob = \n    char_probs.append(math.log2(prob))\n    neg_log_lik = -1 * sum(char_probs) # negative log-likelihood of the text\n    ppl = 2 ** (neg_log_lik/(N - n + 1)) # 2 to the power of the negative log likelihood of the words divided by #ngrams\n    return ppl"
-  },
-  {
     "objectID": "hw3.html#deliverables-for-part-1",
     "href": "hw3.html#deliverables-for-part-1",
     "title": "Homework 3: Character-level language modeling",
@@ -305,7 +298,7 @@
     "href": "hw3.html#deliverables-for-part-2",
     "title": "Homework 3: Character-level language modeling",
     "section": "Deliverables for part 2",
-    "text": "Deliverables for part 2\nIn your report, include\n\nWhat settings you used for sampling. Did you experiment with different settings, such as the k in top-k sampling?\nPerplexity on both test documents. Does this model perform better than character-level n-gram language models?\nA comparison of the generated output between character n-gram approaches and the GPT-2 version. Does one have more understandable words than the other? Are there any other differences you notice? Please point to specific examples."
+    "text": "Deliverables for part 2\nIn your report, include\n\nWhat settings you used for sampling. Did you experiment with different settings, such as the k in top-k sampling?\nA comparison of the generated output between character n-gram approaches and the GPT-2 version. Does one have more understandable words than the other? Are there any other differences you notice? Please point to specific examples."
   },
   {
     "objectID": "hw3.html#acknowledgments",

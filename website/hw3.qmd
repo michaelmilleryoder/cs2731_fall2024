@@ -148,43 +148,6 @@ Implement Laplace add-1 smoothing in the `NgramModel` class.
 ```
 -->
 
-## 1.4 Estimate perplexity of test documents
-Implement the `perplexity(self, text)` function in `NgramModel`.
-The perplexity of a language model on a test set is the inverse probability of the test set, normalized by the number of characters.
-Note that you need to report perplexity scores for each sentence (i.e., line) in the test document, as well as the document average.
-
-Here is some reference code for perplexity that you can adapt:
-
-```
-import math
-
-def perplexity(text, model, n):
-""" Args:
-            text: a string of characters
-            model: a matrix or df of the probabilities with rows as prefixes, columns as suffixes.
-			You can modify this depending on how you set up your model.
-            n: n-gram order of the model
-
-        Acknowledgment: 
-	  https://towardsdatascience.com/perplexity-intuition-and-derivation-105dd481c8f3 
-	  https://courses.cs.washington.edu/courses/csep517/18au/
-	  ChatGPT with GPT-3.5
-    """
-
-    # FILL IN: Remove any unseen characters from the text that have no unigram probability in the language
-
-    N = len(text)
-    char_probs = []
-    for i in range(n-1, N):
-	prefix = text[i-n+1:i]
-	suffix = text[i]
-	# FILL IN: look up the probability in the model of the suffix given the prefix
-	prob = 
-	char_probs.append(math.log2(prob))
-    neg_log_lik = -1 * sum(char_probs) # negative log-likelihood of the text
-    ppl = 2 ** (neg_log_lik/(N - n + 1)) # 2 to the power of the negative log likelihood of the words divided by #ngrams
-    return ppl
-```
 
 ## Deliverables for part 1
 In your report, include:
@@ -207,7 +170,6 @@ Note that training the model will take 30 minutes minimum, so make sure you sche
 In your report, include
 
 1. What settings you used for sampling. Did you experiment with different settings, such as the *k* in top-*k* sampling?
-1. Perplexity on both test documents. Does this model perform better than character-level n-gram language models?
 1. A comparison of the generated output between character n-gram approaches and the GPT-2 version. Does one have more understandable words than the other? Are there any other differences you notice? Please point to specific examples.
 
 
