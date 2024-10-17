@@ -1,10 +1,8 @@
 import math, random
 
 ################################################################################
-# Part 0: Utility Functions
+# Utility Functions
 ################################################################################
-
-COUNTRY_CODES = ['af', 'cn', 'de', 'fi', 'fr', 'in', 'ir', 'pk', 'za']
 
 def start_pad(c):
     ''' Returns a padding string of length n to append to the front of text
@@ -16,22 +14,22 @@ def ngrams(c, text):
         the length-n context and the second is the character '''
     pass
 
-def create_ngram_model(model_class, path, c=2, k=0):
+def create_ngram_model(model_class, path, c=2):
     ''' Creates and returns a new n-gram model '''
-    model = model_class(c, k)
+    model = model_class(c)
     with open(path, encoding='utf-8', errors='ignore') as f:
         model.update(f.read())
     return model
 
 
 ################################################################################
-# Part 1: Basic N-Gram Model
+# Basic N-Gram Model
 ################################################################################
 
 class NgramModel(object):
-    ''' A basic n-gram model using add-k smoothing '''
+    ''' A basic n-gram model without smoothing '''
 
-    def __init__(self, c, k):
+    def __init__(self, c):
         pass
 
     def get_vocab(self):
@@ -58,24 +56,24 @@ class NgramModel(object):
 
     def perplexity(self, text):
         ''' Returns the perplexity of text based on the n-grams learned by
-            this model '''
-        pass
+            this model
 
-################################################################################
-# Part 2: N-Gram Model with Interpolation
-################################################################################
+        Acknowledgment: 
+          https://towardsdatascience.com/perplexity-intuition-and-derivation-105dd481c8f3 
+          https://courses.cs.washington.edu/courses/csep517/18au/
+          ChatGPT with GPT-3.5
+        '''
+        
+        # Remove any unseen characters
+        text = ''.join([c for c in text if c in self.vocab])
+        N = len(text)
+        
+        # Calculate product of the inverse probabilities of the text according to the model
+        char_probs = []
+        for i in range(self.c, N):
+            context = text[i-self.c+2:i]
+            char = text[i]
+            char_probs.append(math.log2(self.prob(context, char)))
+        ppl = 2 ** (-1 * sum(char_probs) / (N - self.c + 2))
 
-class NgramModelWithInterpolation(NgramModel):
-    ''' An n-gram model with interpolation '''
-
-    def __init__(self, c, k):
-        pass
-
-    def get_vocab(self):
-        pass
-
-    def update(self, text):
-        pass
-
-    def prob(self, context, char):
-        pass
+        return ppl

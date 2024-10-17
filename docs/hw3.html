@@ -151,7 +151,7 @@ window.Quarto = {
   <ul>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#part-1.-train-character-level-n-gram-language-models" id="toc-part-1.-train-character-level-n-gram-language-models" class="nav-link" data-scroll-target="#part-1.-train-character-level-n-gram-language-models">Part 1. Train character-level n-gram language models</a>
+  <li><a href="#part-1-train-character-level-n-gram-language-models" id="toc-part-1-train-character-level-n-gram-language-models" class="nav-link" data-scroll-target="#part-1-train-character-level-n-gram-language-models">Part 1: Train character-level n-gram language models</a>
   <ul class="collapse">
   <li><a href="#extract-character-n-grams" id="toc-extract-character-n-grams" class="nav-link" data-scroll-target="#extract-character-n-grams">1.1 Extract character n-grams</a></li>
   <li><a href="#build-n-gram-language-models" id="toc-build-n-gram-language-models" class="nav-link" data-scroll-target="#build-n-gram-language-models">1.2 Build n-gram language models</a></li>
@@ -193,7 +193,7 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Due 2024-10-28, 11:59pm</strong>. <em>Instructions last updated 2024-10-16.</em></p>
+<p><strong>Due 2024-10-28, 11:59pm</strong>. <em>Instructions last updated 2024-10-17.</em></p>
 <p>Language modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next <em>character</em> in a sequence given the previous characters. You will build character-level n-gram language models as well as train an LLM (GPT-2) to do character-level language modeling using Hugging Face. You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data.</p>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
@@ -213,15 +213,15 @@ window.Quarto = {
 <li><a href="hw3/test_data.zip">Test data</a> of <em>New York Times</em> articles and several of Shakespeare’s sonnets</li>
 </ul>
 </section>
-<section id="part-1.-train-character-level-n-gram-language-models" class="level1">
-<h1>Part 1. Train character-level n-gram language models</h1>
+<section id="part-1-train-character-level-n-gram-language-models" class="level1">
+<h1>Part 1: Train character-level n-gram language models</h1>
 <p>In this section, you will fill in the following skeleton Python script:</p>
 <ul>
 <li><a href="hw3/ngram_skeleton.py">N-gram skeleton script</a></li>
 </ul>
 <section id="extract-character-n-grams" class="level2">
 <h2 class="anchored" data-anchor-id="extract-character-n-grams">1.1 Extract character n-grams</h2>
-<p>First, fill out the <code>ngrams(c, text)</code> function that produces a list of all n-grams of that use <code>c</code> elements of context from the input text. Each n-gram should consist of a 2-element tuple <code>(context, char)</code>, where the context is itself a <code>c</code>-length string comprised of the <code>c</code> characters preceding the current character. If <code>c == 1</code>, then produce bigrams, if <code>c == 2</code>, trigrams. The sentence should be padded with <code>c</code> <code>~</code> characters at the beginning (we’ve provided you with <code>start_pad(c)</code> for this purpose). If <code>c == 0</code>, all contexts should be empty strings. You may assume that <code>c ≥ 0</code>. Here is some example output from such a function:</p>
+<p>First, fill out the <code>ngrams(c, text)</code> function that produces a list of all n-grams of that use <code>c</code> elements of context from the input text. Each n-gram should consist of a 2-element tuple <code>(context, char)</code>, where the context is itself a <code>c</code>-length string comprised of the <code>c</code> characters preceding the current character. If <code>c == 1</code>, then produce bigrams, if <code>c == 2</code>, trigrams. The sentence should be padded with <code>c</code> <code>~</code> characters at the beginning (we’ve provided you with <code>start_pad(c)</code> for this purpose). If <code>c == 0</code>, all contexts should be empty strings. You may assume that <code>c ≥ 0</code>. You are allowed to use any resources or packages to extract the character ngrams from text, such as scikit-learn or NLTK. Here is some example output from such a function:</p>
 <pre><code>&gt;&gt;&gt; ngrams(1, 'abc')
 [('~', 'a'), ('a', 'b'), ('b', 'c')]
 
@@ -233,21 +233,22 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="build-n-gram-language-models">1.2 Build n-gram language models</h2>
 <p>In this section, you will build a simple n-gram language model that can be used to generate random text resembling a source document.</p>
 <p>In the <code>NgramModel class</code>, write an initialization method <code>__init__(self, c, k)</code> which stores the context length <code>c</code> of the model and initializes any necessary internal variables. Then write a method <code>get_vocab(self)</code> that returns the vocab (this is the set of all characters used by this model).</p>
-<p>Write a method <code>update(self, text)</code> which computes the n-grams for the input sentence and updates the internal counts. Also, write a method <code>prob(self, context, char)</code> which accepts a <code>c</code>-length string representing a context and a character, and returns the probability of that character occurring, given the preceding context. If you encounter a novel context, the probability of any given char should be <span class="math inline">\(1/V\)</span> where <span class="math inline">\(V\)</span> is the size of the vocab.</p>
+<p>Write a method <code>update(self, text)</code> which computes the n-grams for the input sentence and updates the internal counts. Also, write a method <code>prob(self, context, char)</code> which accepts a <code>c</code>-length string representing a context and a character, and returns the probability of that character occurring, given the preceding context. Characters that have never been seen before in a certain context would be assigned a 0 probability. If you encounter a novel context (one that has never been seen before in training data), the probability of any given character should be <span class="math inline">\(1/V\)</span> where <span class="math inline">\(V\)</span> is the size of the vocabulary. See Chapter 3 of the Jurafsky and Martin textbook and Equation 3.12 for calculating probabilities based on observed counts. You may not use any package to directly train/compute language model probabilities; that portion of the program should be from scratch.</p>
 <pre><code> &gt;&gt;&gt; m = NgramModel(1, 0)
  &gt;&gt;&gt; m.update('abab')
  &gt;&gt;&gt; m.get_vocab()
- {'b', 'a'}
+ {'a', 'b'}
  &gt;&gt;&gt; m.update('abcd')
  &gt;&gt;&gt; m.get_vocab()
- {'b', 'a', 'c', 'd'}
+ {'a', 'b', 'c', 'd'}
  &gt;&gt;&gt; m.prob('a', 'b')
  1.0
  &gt;&gt;&gt; m.prob('~', 'c')
  0.0
  &gt;&gt;&gt; m.prob('b', 'c')
  0.5</code></pre>
-<p>Write a method <code>random_char(self, context)</code> which returns a random character according to the probability distribution determined by the given context. <!--Specifically, let
+<p>Write a method <code>random_char(self, context)</code> which returns a random character according to the probability distribution determined by the given context. Just like the <code>prob</code> function, in a novel context assign a probability of any given character <span class="math inline">\(1/V\)</span>, where <span class="math inline">\(V\)</span> is the size of the vocabulary.</p>
+<!--Specifically, let
  be the vocab, sorted according to Python’s natural lexicographic ordering, and let  be a random number between 0 and 1. Your method should return the character vi
 
  such that
@@ -256,7 +257,8 @@ You should use a single call to the random.random() function to generate
 
     .
 
-.--></p>
+.-->
+<p>Here is some example output. Even with setting the random seed, <strong>your output does not need to perfectly match the example output</strong> as there are multiple functions that can perform this task.</p>
 <pre><code>     &gt;&gt;&gt; m = NgramModel(0, 0)
      &gt;&gt;&gt; m.update('abab')
      &gt;&gt;&gt; m.update('abcd')
@@ -264,6 +266,7 @@ You should use a single call to the random.random() function to generate
      &gt;&gt;&gt; [m.random_char('') for i in range(10)]
      ['a', 'c', 'c', 'a', 'b', 'b', 'b', 'c', 'a', 'a']</code></pre>
 <p>In the NgramModel class, write a method <code>random_text(self, length)</code> which returns a string of characters chosen at random using the <code>random_char(self, context)</code> method. Your starting context should always be <code>c</code> <code>~</code> characters, and the context should be updated as characters are generated. If <code>c == 0</code>, your context should always be the empty string. You should continue generating characters until you’ve produced the specified number of random characters, then return the full string.</p>
+<p>Here is some example output. Even with setting the random seed, <strong>your output does not need to perfectly match the example output</strong> as there are multiple functions that can perform this task.</p>
 <pre><code>     &gt;&gt;&gt; m = NgramModel(1, 0)
      &gt;&gt;&gt; m.update('abab')
      &gt;&gt;&gt; m.update('abcd')
@@ -286,7 +289,6 @@ You should use a single call to the random.random() function to generate
 &gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 7)
 &gt;&gt;&gt; m.random_text(250)</code></pre>
 <p>You may make any additional assumptions and design decisions, but state them in your report (see below). For example, some design choices that could be made are how you want to handle uppercase and lowercase letters or how you want to handle digits. The choice made is up to you, we only require that you detail these decisions in your report and consider any implications of them in your results. There is no wrong choice here, and these decisions are typically made by NLP researchers when pre-processing data.</p>
-<p>You are allowed to use any resources or packages to extract the character ngrams from text, such as scikit-learn or NLTK. You may not use any package to directly train/compute language model probabilities; that portion of the program should be from scratch.</p>
 <!--
 ## 1.4 Laplace smoothing
 
@@ -351,8 +353,8 @@ def perplexity(text, model, n):
 <ol type="1">
 <li>A description of how you wrote your program, including all assumptions and design decisions</li>
 <li>What do you notice about the short passages you’ve generated from n-gram models with different <em>n</em>? Are they as good as <a href="https://www.youtube.com/watch?v=no_elVGGgW8">1000 monkeys working at 1000 typewriters</a>? Are there patterns in what models generate first? Report some of your generated text and discuss.</li>
-<li>Perplexity values for bigram, trigram and fourgram character-level language models, on each test file (<em>New York Times</em> article and Shakespeare sonnets). For each file, calculate the perplexity for each line and report the average across all lines in the document.</li>
-<li>What does your perplexity indicate in different test data? What does a comparison of different <em>n</em> in the n-grams in terms of perplexity tell you? Which performs best? Why do you think your models performed the way they did?</li>
+<li>Perplexity values for trigram, 4-gram, and 7-gram character-level language models on each test file (<em>New York Times</em> article and Shakespeare sonnets). For each file, calculate the perplexity for each <strong>non-blank</strong> line and report the average across all lines in the document.</li>
+<li>What does your perplexity indicate across different test documents? What does a comparison of different <em>n</em> in the n-grams in terms of perplexity tell you? Which performs best? Why do you think your models performed the way they did?</li>
 </ol>
 </section>
 </section>
