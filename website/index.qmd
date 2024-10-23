@@ -213,8 +213,7 @@ Fall 2024
         <tr>
             <td>16</td>
             <td>10-23 W</td>
-            <td>LLM discussion and lab day</td>
-            <!--<td><a href="slides/session15_cs2731_spring2024.pdf">BERT/LLMs discussion and lab day</a></td>-->
+            <td><a href="slides/session16_cs2731_fall2024.pdf">LLM discussion and lab day</a></td>
             <td>J+M 12<br/><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023</a></td>
             <td>Discussion post due 1pm;<br/>Bring a laptop to class;<br/>HW4 out 10-24</td>
         </tr>
