@@ -225,7 +225,7 @@ Fall 2024
             <td>10-28 M</td>
             <td>POS tagging, NER, HMMs part 1</td>
             <!--<td><a href="slides/session18_cs2731_spring2024.pdf">POS tagging, NER, HMMs part 1</a></td>-->
-            <td>J+M 8-8.4.4</td>
+            <td>J+M 17-17.4.4</td>
             <td>Reading quiz due; <br/><b><a href="hw3">HW3</a> due</b></td>
         </tr>
         <tr>
@@ -233,7 +233,7 @@ Fall 2024
             <td>10-30 W</td>
             <td>HMMs part 2, Viterbi alg, neural sequence labeling</td>
             <!--<td><a href="slides/session19_cs2731_spring2024.pdf">HMMs part 2, Viterbi alg, neural sequence labeling</a></td>-->
-            <td>J+M 8.4.5-8.4.6, 9.3.1, 11.3.3-11.3.4</td>
+            <td>J+M 17.4.5-17.4.6, 8.3.1, 11.5</td>
             <td>Reading quiz due</td>
         </tr>
         <tr>
@@ -241,7 +241,7 @@ Fall 2024
             <td>11-04 M</td>
             <td>Dependency parsing</td>
             <!--<td><a href="slides/session21_cs2731_spring2024.pdf">Dependency parsing</a></td>-->
-            <td>J+M 18-18.2, 18.4-18.5</td>
+            <td>J+M 19-19.2, 19.4-19.5</td>
             <td>Reading quiz due</td>
             <!--<td>Reading quiz due; <br/><strong><a href="hw4">HW4</a> due</strong></td>-->
         </tr>
@@ -253,7 +253,7 @@ Fall 2024
             <td>11-06 W</td>
             <td>Machine translation part 1</td>
             <!--<td><a href="slides/session22_cs2731_spring2024.pdf">Machine translation part 1</a></td>-->
-            <td>J+M 13-13.2,<br/><a href="https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/">Bender 2019</a></td>
+            <td>J+M 13-13.3,<br/><a href="https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/">Bender 2019</a></td>
             <td>Discussion post due; <br/><strong>HW4 due 11-07</strong>;<br/><b>Project peer review due 11-07</b></td>
             <!--<td>Reading quiz due;<br/><strong><a href="https://forms.gle/F8fhBkUpgCSJDTNA9">Project peer review due</a></strong></td>-->
         </tr>
@@ -262,7 +262,7 @@ Fall 2024
             <td>11-11 M</td>
             <td>Machine translation part 2</td>
             <!--<td><a href="slides/session23_cs2731_spring2024.pdf">Machine translation part 2</a></td>-->
-            <td>J+M 13.3, 13.5-13.8</td>
+            <td>J+M 13.4-13.8</td>
             <td></td>
         </tr>
         <tr>
@@ -296,7 +296,7 @@ Fall 2024
             <td>25</td>
             <td>12-02 M</td>
             <td>Information retrieval, RAG</td>
-            <td><em>TBD</em></td>
+            <td><em>14-14.3.1, 14.5</em></td>
             <td></td>
         </tr>
         <tr>
