@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Homework 2: Text classification – CS 2731 Introduction to Natural Language Processing</title>
+<title>Homework 4: Sequence labeling – CS 2731 Introduction to Natural Language Processing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +126,7 @@ window.Quarto = {
 <span class="menu-text">HW1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./hw2.html" aria-current="page"> 
+    <a class="nav-link" href="./hw2.html"> 
 <span class="menu-text">HW2</span></a>
   </li>  
   <li class="nav-item">
@@ -134,7 +134,7 @@ window.Quarto = {
 <span class="menu-text">HW3</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./hw4.html"> 
+    <a class="nav-link active" href="./hw4.html" aria-current="page"> 
 <span class="menu-text">HW4</span></a>
   </li>  
 </ul>
@@ -153,29 +153,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
-  <li><a href="#part-1-learning-weights-in-logistic-regression" id="toc-part-1-learning-weights-in-logistic-regression" class="nav-link" data-scroll-target="#part-1-learning-weights-in-logistic-regression">Part 1: Learning weights in logistic regression</a>
+  <li><a href="#pos-tagging-with-an-hmm" id="toc-pos-tagging-with-an-hmm" class="nav-link active" data-scroll-target="#pos-tagging-with-an-hmm">1. POS tagging with an HMM</a>
   <ul class="collapse">
-  <li><a href="#deliverables-for-part-1" id="toc-deliverables-for-part-1" class="nav-link" data-scroll-target="#deliverables-for-part-1">Deliverables for Part 1</a></li>
+  <li><a href="#deliverables-for-part-1" id="toc-deliverables-for-part-1" class="nav-link" data-scroll-target="#deliverables-for-part-1">Deliverables for part 1</a></li>
   </ul></li>
-  <li><a href="#part-2-implement-a-deception-classifier" id="toc-part-2-implement-a-deception-classifier" class="nav-link" data-scroll-target="#part-2-implement-a-deception-classifier">Part 2: Implement a deception classifier</a></li>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
-  <li><a href="#feature-based-logistic-regression-models" id="toc-feature-based-logistic-regression-models" class="nav-link" data-scroll-target="#feature-based-logistic-regression-models">2.1 Feature-based logistic regression models</a>
+  <li><a href="#fine-tune-bert-based-models-for-pos-tagging" id="toc-fine-tune-bert-based-models-for-pos-tagging" class="nav-link" data-scroll-target="#fine-tune-bert-based-models-for-pos-tagging">2. Fine-tune BERT-based models for POS tagging</a>
   <ul class="collapse">
-  <li><a href="#tasks-for-section-2.1" id="toc-tasks-for-section-2.1" class="nav-link" data-scroll-target="#tasks-for-section-2.1">Tasks for section 2.1</a></li>
-  </ul></li>
-  <li><a href="#neural-network-based-approaches" id="toc-neural-network-based-approaches" class="nav-link" data-scroll-target="#neural-network-based-approaches">2.2 Neural network-based approaches</a>
-  <ul class="collapse">
-  <li><a href="#tasks-for-section-2.2" id="toc-tasks-for-section-2.2" class="nav-link" data-scroll-target="#tasks-for-section-2.2">Tasks for section 2.2</a></li>
-  </ul></li>
-  <li><a href="#optional-submit-your-classifier-in-the-class-challenge" id="toc-optional-submit-your-classifier-in-the-class-challenge" class="nav-link" data-scroll-target="#optional-submit-your-classifier-in-the-class-challenge">2.3 <em>(Optional)</em> Submit your classifier in the class challenge</a>
-  <ul class="collapse">
-  <li><a href="#how-to-submit-your-classifier" id="toc-how-to-submit-your-classifier" class="nav-link" data-scroll-target="#how-to-submit-your-classifier">How to submit your classifier</a></li>
-  </ul></li>
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
-  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
+  <li><a href="#deliverables-for-part-2" id="toc-deliverables-for-part-2" class="nav-link" data-scroll-target="#deliverables-for-part-2">Deliverables for part 2</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -184,7 +172,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework 2: Text classification</h1>
+<h1 class="title">Homework 4: Sequence labeling</h1>
 </div>
 
 
@@ -201,164 +189,199 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Due 2024-10-03, 11:59pm</strong>. <em>Instructions last updated 2024-09-30.</em></p>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
-<p>After completing this assignment, students will be able to:</p>
-<ul>
-<li>Demonstrate how weights adjust to better fit training input in stochastic gradient descent</li>
-<li>Implement a text classification system using both feature-based and neural network approaches</li>
-<li>Identify informative features in a feature-based text classification system</li>
-<li>Analyze errors in an NLP system</li>
-</ul>
-</section>
-<section id="part-1-learning-weights-in-logistic-regression" class="level2">
-<h2 class="anchored" data-anchor-id="part-1-learning-weights-in-logistic-regression">Part 1: Learning weights in logistic regression</h2>
-<p>You are training a classifier for reviews of a new product recently released by a company. You design a couple of features, <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>. You will be using logistic regression. With an initialization of the weights <span class="math inline">\(w_1\)</span>, <span class="math inline">\(w_2\)</span> and <span class="math inline">\(b\)</span> (the bias) all set = 0 and a learning rate <span class="math inline">\(\eta=0.2\)</span>, calculate the weights after processing each of the following 3 inputs:</p>
+<p><strong>Due 2024-11-07, 11:59pm</strong>. <em>Instructions last updated 2024-10-24.</em></p>
+<p>In this assignment, you will manually decode the highest-probability sequence of part-of-speech tags from a trained HMM using the Viterbi algorithm. You will also fine-tune BERT-based models for part-of-speech (POS) tagging for English and Norwegian.</p>
+<p>The learning goals of this assignment are to: * Demonstrate how the Viterbi algorithm takes into account emission and transmission probabilities to find the highest-probability sequence of hidden states in an HMM * Fine-tune a transformer-based model on sequence labeling * Find and use pretrained models from Hugging Face</p>
+<section id="pos-tagging-with-an-hmm" class="level1">
+<h1>1. POS tagging with an HMM</h1>
+<p>Consider a Hidden Markov Model with the following parameters: postags = {NOUN, AUX, VERB}, words = {‘Patrick’, ‘Cherry’, ‘can’, ‘will’, ‘see’, ‘spot’}</p>
+<p>Initial probabilities:</p>
+<table class="caption-top">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th><span class="math display">\[\pi\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NOUN</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>AUX</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>VERB</td>
+<td>0.2</td>
+</tr>
+</tbody>
+</table>
+<p>Transition probabilities: The format is P(column_tag | row_tag), e.g.&nbsp;P(AUX | NOUN) = 0.3.</p>
+<table class="caption-top">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>NOUN</th>
+<th>AUX</th>
+<th>VERB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NOUN</td>
+<td>0.2</td>
+<td>0.3</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>AUX</td>
+<td>0.4</td>
+<td>0.1</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>VERB</td>
+<td>0.8</td>
+<td>0.1</td>
+<td>0.1</td>
+</tr>
+</tbody>
+</table>
+<p>Emission probabilities:</p>
+<table class="caption-top">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>Patrick</th>
+<th>Cherry</th>
+<th>can</th>
+<th>will</th>
+<th>see</th>
+<th>spot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NOUN</td>
+<td>0.3</td>
+<td>0.2</td>
+<td>0.1</td>
+<td>0.1</td>
+<td>0.1</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>AUX</td>
+<td>0</td>
+<td>0</td>
+<td>0.4</td>
+<td>0.6</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>VERB</td>
+<td>0</td>
+<td>0</td>
+<td>0.1</td>
+<td>0.2</td>
+<td>0.5</td>
+<td>0.2</td>
+</tr>
+</tbody>
+</table>
+<p>See chapter 17 in the Jurafsky &amp; Martin textbook for details on the Viterbi algorithm. Using the Viterbi algorithm and the given HMM, find the most likely tag sequence for the following 2 sentences.</p>
 <ol type="1">
-<li><span class="math display">\[x_1 = 2, x_2 = 1, y = 1\]</span></li>
-<li><span class="math display">\[x_1 = 1, x_2 = 3, y = 0\]</span></li>
-<li><span class="math display">\[x_1 = 0, x_2 = 4, y = 0\]</span></li>
+<li>“Patrick can see Cherry”</li>
+<li>“will Cherry spot Patrick”</li>
 </ol>
-<p>During calculations, keep at least 3 significant digits for values. Points will not be taken off for slight differences due to rounding.</p>
-<section id="deliverables-for-part-1" class="level3">
-<h3 class="anchored" data-anchor-id="deliverables-for-part-1">Deliverables for Part 1</h3>
-<p>In the report:</p>
-<ul>
-<li>Give weights after training on each data point (3 total weight changes, one after each timestep/data point).</li>
-<li>Show your work in calculating the values of the weights after training on each data point.</li>
-<li>Briefly comment on any shift in weights from positive to negative or negative to positive and why this was the case.</li>
-</ul>
+<p>To get you started on the Viterbi tables, here are the first 2 columns for the first sentence with backtraces.</p>
+<table class="caption-top">
+<thead>
+<tr>
+<th>POS state</th>
+<th>Patrick</th>
+<th>can</th>
+<th>see</th>
+<th>Cherry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NOUN</td>
+<td>0.18</td>
+<td>0.0036<br>backtrace:NOUN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AUX</td>
+<td>0</td>
+<td>0.0216<br>backtrace:NOUN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>VERB</td>
+<td>0</td>
+<td>0.009<br>backtrace:NOUN</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>You can do this part by hand. No implementation is required.</p>
+<section id="deliverables-for-part-1" class="level2">
+<h2 class="anchored" data-anchor-id="deliverables-for-part-1">Deliverables for part 1</h2>
+<p>In your report, show your work for calculating the Viterbi tables or lattices for both example sentences. This should include backtraces and calculations for probabilities. Report the most likely tag sequences for these 2 sentences.</p>
 </section>
 </section>
-<section id="part-2-implement-a-deception-classifier" class="level2">
-<h2 class="anchored" data-anchor-id="part-2-implement-a-deception-classifier">Part 2: Implement a deception classifier</h2>
-<p>In this portion, you will design and implement a program to classify if a comment from a player of the <a href="https://en.wikipedia.org/wiki/Diplomacy_(game)">Diplomacy</a> game is truthful or not. You can use any packages you want for this (scikit-learn, spaCy, NLTK, Gensim, code from Homework 1, etc). Any packages used should be specified in the <code>README.txt</code> file, along with version numbers for Python and all packages. If you will be using a language other than Python, please let us know before submitting. Your script should be able to take the filename of a dataset as a single keyword argument.</p>
-</section>
-<section id="dataset" class="level2">
-<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<p>Here is the dataset that you should download for this assignment:</p>
-<ul>
-<li><a href="hw2/diplomacy_cv.csv"><code>diplomacy_cv.csv</code></a>. This dataset has a variety of fields, but the most important are:
-<ul>
-<li><code>text</code>: the text of the comment</li>
-<li><code>intent</code>: 0 for truth, 1 for lie</li>
-</ul></li>
-<li><a href="hw2/diplomacy_test.csv"><code>diplomacy_test.csv</code></a> (only necessary if participating in the optional challenge). This data has the same fields as the training data. You will use this in the optional challenge competition hosted on Kaggle.</li>
-</ul>
-<p>This dataset is from a recording of online players of Diplomacy, as presented in <a href="https://aclanthology.org/2020.acl-main.353/">Peskov et al.&nbsp;2020</a>. Negotiation and back-stabbing are key elements of the Diplomacy game.</p>
-</section>
-<section id="feature-based-logistic-regression-models" class="level2">
-<h2 class="anchored" data-anchor-id="feature-based-logistic-regression-models">2.1 Feature-based logistic regression models</h2>
-<p>In this section, you will build a logistic regression model based on bag-of-word features and/or features of your own design. You can do whatever preprocessing you see fit. You will report performance using 5-fold cross-validation on the <code>diplomacy_cv.csv</code> dataset, which you will set up. Make sure to just extract features (bag-of-words, etc) from the training set and not the test folds within cross-validation.</p>
-<section id="tasks-for-section-2.1" class="level3">
-<h3 class="anchored" data-anchor-id="tasks-for-section-2.1">Tasks for section 2.1</h3>
-<p>Implement and try the following feature and model combinations:</p>
-<ul>
-<li><em>Logistic regression with bag-of-words (unigram) features</em>. Build a logistic regression classifier that uses bag-of-words (unigram) features.</li>
-<li><em>Logistic regression with your own features/change in preprocessing</em>. Design and test at least two modifications (custom features or preprocessing changes) to unweighted unigram features. Note that these features can be used in conjunction with bag-of-words features or by themselves. Possible features/changes to add and test include:
-<ul>
-<li>Tf-idf transformed bag-of-words features</li>
-<li>Changing count bag-of-words features to binary 0 or 1 for the presence of unigrams</li>
-<li>N-gram features (sequences of words) beyond the single words used for the bag-of-words features</li>
-<li>Different preprocessing (stemming, different tokenizations, stopword removal)</li>
-<li>Reducing noisy features with feature selection</li>
-<li>Counts or added weight from custom word lists</li>
-<li>Static word embeddings of your choice (do not use any contextualized word embeddings, such as BERT, for this part)</li>
-<li>Any other custom-designed feature (such as length of input, number of capitalized words, etc)</li>
-</ul></li>
-</ul>
-<p>You will thus have 3 total logistic regression models: one using bag-of-word features and 2 with your own selected features or preprocessing changes.</p>
-<p>In the report, please provide:</p>
+<section id="fine-tune-bert-based-models-for-pos-tagging" class="level1">
+<h1>2. Fine-tune BERT-based models for POS tagging</h1>
+<p>In this section, you will fine-tune pretrained BERT-based models for part-of-speech tagging in English and Norwegian.</p>
+<p>Copy this <a href="https://colab.research.google.com/drive/1tYlzGcBdTKcdjDfB8VyuAvvo4gqbIl-i?usp=sharing">skeleton Colab notebook</a>, run the cells, and fill in the places that are specified.</p>
+<p>If you run out of Google Colab resources, you will have to wait until later to run the notebook. Email Dhanush and/or Michael to ask if you have extension days still available to use as this is the last assignment to use them. If you don’t, we can provide more for this case.</p>
+<section id="deliverables-for-part-2" class="level2">
+<h2 class="anchored" data-anchor-id="deliverables-for-part-2">Deliverables for part 2</h2>
+<p>In your report, include: <!--
+1. The 5 most frequent POS tags for English and Norwegian datasets (specified in the notebook) and how many tokens are tagged with each
+1. For each of the 5 most frequent POS tags for English and Norwegian datasets, provide the 5 most frequent word types annotated with that tag in the training data
+--></p>
 <ol type="1">
-<li>A table of 5-fold cross-validation performance scores for models trained on each set of features. Include accuracy as well as precision, recall, and f1-score for the positive (lying) class. Please average these scores across the 5 folds for each evaluation metric (there is no need to include scores for each fold).</li>
-<li>For each feature or change in input text processing:
-<ol type="1">
-<li>Describe your motivation for including the feature</li>
-<li>Discussion of results: Did it improve performance or not? (Either result is fine. It is not necessary to beat logistic regression with unigram features. This is a very difficult task.)</li>
-</ol></li>
-<li>For a feature-based model of your choice (not a neural model):
-<ol type="1">
-<li>Extract and discuss the most informative features that are mostly strongly positively and negatively associated with deception. Report the 5 features with the highest weights and 5 features with the lowest (negative) weights. Discuss how these may or may not make sense for this task. You may adapt code provided by the instructor in the Naive Bayes example (notebook <a href="https://colab.research.google.com/drive/1J-FcHTFYXTsNgcEB19kQcqJnE8CsbSe7?usp=sharing">here</a>), use another source online, or write your own. Give specific informative features, such as particular words (e.g.&nbsp;“actually”) for bag-of-words features, instead of sets of features like “tf-idf unigram features”.</li>
-<li>Do an error analysis. Provide a confusion matrix, sample examples from both false negatives and false positives and present a few of them in the report. Do you see any patterns in these errors? How might these errors be addressed with different features or if the system could understand something else? (You don’t have to implement these, just speculate.)</li>
-</ol></li>
+<li>The names of the pretrained BERT-based models you chose for both English and Norwegian</li>
+<li>A brief discussion of any choices you made about hyperparameters in training</li>
+<li><em>(Optionally, for extra credit)</em> A description of changes you made or different pretrained models you tried and what accuracy you obtained on the dev set. 1 point of extra credit will be given if any changes result in an improved accuracy on the dev set.</li>
+<li>Accuracy of the fine-tuned models on the test set for both English and Norwegian</li>
+<li>POS tags predicted for the words of a sentence of your choice in both English and Norwegian</li>
+<li>A link to your copied and filled out Colab notebook</li>
 </ol>
 </section>
-</section>
-<section id="neural-network-based-approaches" class="level2">
-<h2 class="anchored" data-anchor-id="neural-network-based-approaches">2.2 Neural network-based approaches</h2>
-<p>In this section, you will build and evaluate neural network-based classifier on deception classification. For example, you could implement a feedforward neural network that uses pre-trained static word embeddings (word2vec, GloVe, FastText, etc) as input. You can download these pre-trained word embeddings from wherever you like (you don’t have to train your own). To represent the document, you could take the average word embeddings of the input sentence or choose another function. You can choose which activation function to use and other hyperparameters. You are also welcome to try other methods we haven’t yet covered in class, such as LSTMs, convolutional neural networks, BERT, or other LLMs. As long as the technique uses neural networks at some point in its architecture and involves some sort of training or fine-tuning of a model, it will be accepted. Simply prompting a pre-trained LLM to classify the instances (“zero-shot” or “in-context” learning) will not be sufficient. You can also incorporate any non-text metadata features in this part. If you have questions about what is acceptable, ask the instructor or TA.</p>
-<p>You will again use 5-fold cross validation on the dataset. There is no need for this model to outperform the logistic regression model you made.</p>
-<section id="tasks-for-section-2.2" class="level3">
-<h3 class="anchored" data-anchor-id="tasks-for-section-2.2">Tasks for section 2.2</h3>
-<p>Implement a neural network-based deception classifier, such as a feedforward neural network with static word embeddings as input.</p>
-<p>In the report, please provide:</p>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>Please submit the following items on Canvas:</p>
 <ul>
-<li>Performance scores for this model. Include accuracy as well as precision, recall, and f1-score for the positive (polite) class. This can be an additional row in the table with other performance scores. It does not need to outperform the logistic regression model.</li>
-<li>Discuss the motivation for any choices you made as far as neural classifier, word embedding types, pretraining dataset, and/or how you represented the document, or if you experimented with multiple of these options.</li>
-<li>Discuss the motivation for any choices you made as far as network architecture (number and dimensions of hidden layers) or hyperparameters (learning rate, number of epochs, etc). Note if you experimented with any of these options.</li>
-</ul>
-</section>
-</section>
-<section id="optional-submit-your-classifier-in-the-class-challenge" class="level2">
-<h2 class="anchored" data-anchor-id="optional-submit-your-classifier-in-the-class-challenge">2.3 <em>(Optional)</em> Submit your classifier in the class challenge</h2>
-<p>Optionally, you can submit your classifier to run on a hidden held-out test set as part of a class competition. Bonus points will be awarded in the competition as follows, as measured by accuracy on our held-out test set.</p>
-<ul>
-<li>4 bonus points for the best-performing logistic regression classifier</li>
-<li>4 bonus points for the best neural network classifier</li>
-<li>2 bonus points for the 2nd best-performing logistic regression classifier</li>
-<li>2 bonus points for the 2nd best-performing neural network classifier</li>
-<li>1 bonus point for submitting any system (either logistic regression or neural network)</li>
-</ul>
-<section id="how-to-submit-your-classifier" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-submit-your-classifier">How to submit your classifier</h3>
-<p>There are two Kaggle competitions. See these pages for instructions on how to submit:</p>
-<ul>
-<li><a href="https://www.kaggle.com/t/8212bf24f3764f00a400b1d33f6585e9">Logistic regression Kaggle competition</a></li>
-<li><a href="https://www.kaggle.com/t/8d83a90ef8a94dbca5b257424eecd13e">Neural network Kaggle competition</a></li>
-</ul>
-<p>You will need to create a Kaggle account to submit. Please provide your Kaggle username used in the competition in your report so we can assign any bonus points. Note that this username will be visible in a leaderboard to other challenge competition participants.</p>
-</section>
-</section>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<ul>
-<li>Don’t feel like you need to write things from scratch; use as many packages as you want. Google and Stack Overflow and NLP/ML software documentation are your friend! Adapting and consulting other approaches is fine and should be noted in comments in the code and/or in the <code>README.txt</code>. Just don’t use complete, fully-formed implementations for this (including from generative AI tools). Use all resources as aids, not as a final product.</li>
-<li>Optionally, you may incorporate any form of regularization that you like</li>
-<li>This homework is designed to be able to be run on a laptop with CPUs, not GPUs. Let the instructor/TA know if you are having difficulty completing it with the resources you have.</li>
-</ul>
-</section>
-<section id="deliverables" class="level2">
-<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
-<ul>
-<li>Your report with results and answers to questions in Part 1 and Part 2, named <code>hw2_{your pitt email id}.pdf</code>. No need to include <span class="citation" data-cites="pitt.edu">@pitt.edu</span>, just use the email ID before that part. For example: <code>report_mmyoder_hw2.pdf</code>.
-<ul>
-<li>If participating in the challenge, the Kaggle username you used to submit your predictions</li>
-<li>If participating in the challenge, your code used for that in a file named <code>hw2_{your pitt email id}_test.py</code>.</li>
-</ul></li>
-<li>Your code used to train models and estimate performance with cross-validation in a file named <code>hw2_{your pitt email id}_cv.py</code>.</li>
+<li>Your report with results and answers to questions in Part 1 and Part 2, named <code>report_{your pitt email id}_hw4.pdf</code>. No need to include <span class="citation" data-cites="pitt.edu">@pitt.edu</span>, just use the email ID before that part. For example: <code>report_mmyoder_hw4.pdf</code>.</li>
 <li>A <code>README.txt</code> file explaining
 <ul>
-<li>how to run the code you used to train your models and estimate cross-validation performance</li>
-<li>the computing environment you used, including the names and versions of programming languages and packages used, in case we replicate your experiments. A <code>requirements.txt</code> file for setting up the environment is useful if there are many packages.</li>
-<li>any additional files needed to run the code, such as the names and versions of pretrained embeddings</li>
 <li>any additional resources, references, or web pages you’ve consulted</li>
 <li>any person with whom you’ve discussed the assignment and describe the nature of your discussions</li>
 <li>any generative AI tool used, and how it was used</li>
 <li>any unresolved issues or problems</li>
 </ul></li>
 </ul>
-<p>Please submit all of this material on Canvas. Do <strong>not</strong> zip all files. We will grade your report and look over your code.</p>
 </section>
 <section id="grading" class="level2">
 <h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<p>See rubric on Canvas.</p>
+<p>This homework assignment is worth 56 points. <!--See rubric on Canvas.--></p>
 </section>
 <section id="acknowledgments" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
-<p>This assignment is inspired from a homework assignment by Prof.&nbsp;Diane Litman. Data is from <a href="https://aclanthology.org/2020.acl-main.353/">Peskov et al.&nbsp;2020</a>.</p>
+<p>Part 1 of this assignment is based on homework assignments by Prof.&nbsp;Hyeju Jang and Prof.&nbsp;Diane Litman. Part 2 is adapted from Jacob Eisenstein and Prof.&nbsp;Yulia Tsvetkov.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

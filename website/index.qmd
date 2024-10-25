@@ -208,14 +208,13 @@ Fall 2024
             <td><a href="slides/session15_cs2731_fall2024.pdf">Probabilistic Commonsense Knowledge Evaluation</a> (guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a>)</td>
             <td><em>Optional:</em><br/> <a href="https://arxiv.org/pdf/2406.04145">Cheng et al. 2024</a><br/> <a href="https://arxiv.org/pdf/2311.08469">Zhao et al. 2024</a></td>
             <td></td>
-            <!--<td><a href="hw4">HW4</a> out 03-05</td>-->
         </tr>
         <tr>
             <td>16</td>
             <td>10-23 W</td>
             <td><a href="slides/session16_cs2731_fall2024.pdf">LLM discussion and lab day</a></td>
             <td>J+M 12<br/><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023</a></td>
-            <td>Discussion post due 1pm;<br/>Bring a laptop to class;<br/>HW4 out 10-24</td>
+            <td>Discussion post due 1pm;<br/>Bring a laptop to class;<br/><a href="hw4">HW4</a> out 10-24</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Sequence labeling and parsing</td>
@@ -242,8 +241,7 @@ Fall 2024
             <td>Dependency parsing</td>
             <!--<td><a href="slides/session21_cs2731_spring2024.pdf">Dependency parsing</a></td>-->
             <td>J+M 19-19.2, 19.4-19.5</td>
-            <td>Reading quiz due</td>
-            <!--<td>Reading quiz due; <br/><strong><a href="hw4">HW4</a> due</strong></td>-->
+            <td>Reading quiz due; <br/><strong><a href="hw4">HW4</a> due</strong></td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 5: Application areas</td>
@@ -296,7 +294,7 @@ Fall 2024
             <td>25</td>
             <td>12-02 M</td>
             <td>Information retrieval, RAG</td>
-            <td>14-14.3.1, 14.5</td>
+            <td>J+M 14-14.3.1, 14.5</td>
             <td></td>
         </tr>
         <tr>

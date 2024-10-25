@@ -175,6 +175,48 @@
     "text": "How your project will be graded\nTo get an A, your group’s project should make progress toward an achievable, concrete contribution specified in your project proposal. The project does not necessarily need to be successful in the sense that it outperforms baselines or contributes to our knowledge of a phenomenon. Sometimes ideas don’t work, and that’s okay. But you need to provide evidence of progress toward that contribution. If you are building a dataset, for example, the dataset needs to be built in some form, even if it is as not as large or as useful as you may have hoped. If you are evaluating a new method for a task, you must have an implementation that tests that method against other baselines, even if it doesn’t perform as well as you would have hoped or you didn’t get to evaluate it against all the baselines you wanted to. If you are doing a survey, you must distill a sufficient number of papers into themes that comprehensively describe a research area, even if you don’t end up finding groundbreaking gaps in knowledge that must be addressed. Feel free to take on more risky ideas, but only if you know you’ll have something to show for it at the end. Teaching staff will guide you toward scoping projects that should fulfill this goal in the planning phase through the proposal."
   },
   {
+    "objectID": "hw4.html",
+    "href": "hw4.html",
+    "title": "Homework 4: Sequence labeling",
+    "section": "",
+    "text": "Due 2024-11-07, 11:59pm. Instructions last updated 2024-10-24.\nIn this assignment, you will manually decode the highest-probability sequence of part-of-speech tags from a trained HMM using the Viterbi algorithm. You will also fine-tune BERT-based models for part-of-speech (POS) tagging for English and Norwegian.\nThe learning goals of this assignment are to: * Demonstrate how the Viterbi algorithm takes into account emission and transmission probabilities to find the highest-probability sequence of hidden states in an HMM * Fine-tune a transformer-based model on sequence labeling * Find and use pretrained models from Hugging Face"
+  },
+  {
+    "objectID": "hw4.html#deliverables-for-part-1",
+    "href": "hw4.html#deliverables-for-part-1",
+    "title": "Homework 4: Sequence labeling",
+    "section": "Deliverables for part 1",
+    "text": "Deliverables for part 1\nIn your report, show your work for calculating the Viterbi tables or lattices for both example sentences. This should include backtraces and calculations for probabilities. Report the most likely tag sequences for these 2 sentences."
+  },
+  {
+    "objectID": "hw4.html#deliverables-for-part-2",
+    "href": "hw4.html#deliverables-for-part-2",
+    "title": "Homework 4: Sequence labeling",
+    "section": "Deliverables for part 2",
+    "text": "Deliverables for part 2\nIn your report, include: \n\nThe names of the pretrained BERT-based models you chose for both English and Norwegian\nA brief discussion of any choices you made about hyperparameters in training\n(Optionally, for extra credit) A description of changes you made or different pretrained models you tried and what accuracy you obtained on the dev set. 1 point of extra credit will be given if any changes result in an improved accuracy on the dev set.\nAccuracy of the fine-tuned models on the test set for both English and Norwegian\nPOS tags predicted for the words of a sentence of your choice in both English and Norwegian\nA link to your copied and filled out Colab notebook"
+  },
+  {
+    "objectID": "hw4.html#submission",
+    "href": "hw4.html#submission",
+    "title": "Homework 4: Sequence labeling",
+    "section": "Submission",
+    "text": "Submission\nPlease submit the following items on Canvas:\n\nYour report with results and answers to questions in Part 1 and Part 2, named report_{your pitt email id}_hw4.pdf. No need to include @pitt.edu, just use the email ID before that part. For example: report_mmyoder_hw4.pdf.\nA README.txt file explaining\n\nany additional resources, references, or web pages you’ve consulted\nany person with whom you’ve discussed the assignment and describe the nature of your discussions\nany generative AI tool used, and how it was used\nany unresolved issues or problems"
+  },
+  {
+    "objectID": "hw4.html#grading",
+    "href": "hw4.html#grading",
+    "title": "Homework 4: Sequence labeling",
+    "section": "Grading",
+    "text": "Grading\nThis homework assignment is worth 56 points."
+  },
+  {
+    "objectID": "hw4.html#acknowledgments",
+    "href": "hw4.html#acknowledgments",
+    "title": "Homework 4: Sequence labeling",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nPart 1 of this assignment is based on homework assignments by Prof. Hyeju Jang and Prof. Diane Litman. Part 2 is adapted from Jacob Eisenstein and Prof. Yulia Tsvetkov."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "CS 2731 Introduction to Natural Language Processing",

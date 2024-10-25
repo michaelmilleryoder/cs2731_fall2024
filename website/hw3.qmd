@@ -171,6 +171,8 @@ To do so, run each cell and fill out the missing code sections in the following 
 
 Note that training the model will take 30 minutes minimum, so make sure you schedule enough time for this part.
 
+If you run out of Google Colab resources, you will have to wait until later to run the notebook. Email Michael to inform him of this issue and ask for extra time if needed.
+
 ## Deliverables for part 2
 In your report, include
 

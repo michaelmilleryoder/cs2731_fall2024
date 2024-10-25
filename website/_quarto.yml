@@ -14,6 +14,8 @@ website:
         text: HW2
       - href: hw3.qmd
         text: HW3
+      - href: hw4.qmd
+        text: HW4
 
 format:
   html:
