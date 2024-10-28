@@ -241,7 +241,7 @@ Fall 2024
             <td>Dependency parsing</td>
             <!--<td><a href="slides/session21_cs2731_spring2024.pdf">Dependency parsing</a></td>-->
             <td>J+M 19-19.2, 19.4-19.5</td>
-            <td>Reading quiz due; <br/><strong><a href="hw4">HW4</a> due</strong></td>
+            <td>Reading quiz due</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 5: Application areas</td>
@@ -252,7 +252,7 @@ Fall 2024
             <td>Machine translation part 1</td>
             <!--<td><a href="slides/session22_cs2731_spring2024.pdf">Machine translation part 1</a></td>-->
             <td>J+M 13-13.3,<br/><a href="https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/">Bender 2019</a></td>
-            <td>Discussion post due; <br/><strong>HW4 due 11-07</strong>;<br/><b>Project peer review due 11-07</b></td>
+            <td>Discussion post due; <br/><strong><a href="hw4">HW4</a> due 11-07</strong>;<br/><b>Project peer review due 11-07</b></td>
             <!--<td>Reading quiz due;<br/><strong><a href="https://forms.gle/F8fhBkUpgCSJDTNA9">Project peer review due</a></strong></td>-->
         </tr>
         <tr>
