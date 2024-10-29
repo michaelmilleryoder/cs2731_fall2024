@@ -229,8 +229,7 @@ Fall 2024
         <tr>
             <td>18</td>
             <td>10-30 W</td>
-            <td>HMMs part 2, Viterbi alg, neural sequence labeling</td>
-            <!--<td><a href="slides/session19_cs2731_spring2024.pdf">HMMs part 2, Viterbi alg, neural sequence labeling</a></td>-->
+            <td><a href="slides/session18_cs2731_spring2024.pdf">HMMs part 2, Viterbi alg, neural sequence labeling</a></td>
             <td>J+M 17.4.5-17.4.6, 8.3.1, 11.5</td>
             <td>Reading quiz due</td>
         </tr>
