@@ -29,7 +29,7 @@ Projects will be done in groups of 2-4 students. Groups will be assigned by teac
 	8. What kinds of ethical issues may be raised by your model or data?
 	9. What are the proposed steps needed for completion of the project?
 	10. What are roles and tasks of each person in the group? Though group members will contribute in various capacities, it is best if each person is responsible for at least one aspect of the project.
-3. **Project peer review**. *Due 11-07*. In a form, you will rate your own performance and the performance of other group members. This feedback will not be used for grading, but to identify any workload distribution issues early on and assign roles accordingly.
+3. **Project peer review**. *Due 11-14*. In a form, you will rate your own performance and the performance of other group members. This feedback will not be used for grading, but to identify any workload distribution issues early on and assign roles accordingly.
 5. **Progress report**. *Due 11-14*. A brief (max 3 pages) progress report of a basic working system. Not everything needs to be done or fully functional, but there needs to be some sort of basic functionality. Also list any questions you have or resources you will need to successfully complete the project by the final deadline. This report should be in the ACL format that the final report will be in.
 6. **Final presentation**. *In class on 12-11*. Groups will present their finished work to the group, with Q&A and feedback opportunities from students. Please prepare a maximum 5-minute presentation in which you can divide up speaking responsibilities however you see fit, though having more than one group member is encouraged. Cover at least these key points:
 	1. Project motivation (briefly)

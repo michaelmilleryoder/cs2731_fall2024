@@ -246,8 +246,7 @@ Fall 2024
         <tr>
             <td>20</td>
             <td>11-06 W</td>
-            <td>Machine translation part 1</td>
-            <!--<td><a href="slides/session22_cs2731_spring2024.pdf">Machine translation part 1</a></td>-->
+            <td><a href="slides/session20_cs2731_spring2024.pdf">Machine translation part 1</a></td>
             <td>J+M 13-13.3,<br/><a href="https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/">Bender 2019</a></td>
             <td>Discussion post due 1pm; <br/><strong><a href="hw4">HW4</a> due 11-07</strong></td>
         </tr>
@@ -265,7 +264,7 @@ Fall 2024
             <td>Speech technologies, ASR, TTS</td>
             <!--<td><a href="slides/session24_cs2731_spring2024.pdf">Speech technologies, ASR, TTS</a></td>-->
             <td>J+M 16-16.3, 16.5-16.8</td>
-            <td><b>Project progress report due 11-14</b>;<br/><b>Project peer review due 11-14</b></td>
+            <td><b>Project progress report due 11-14</b>;<br/><b><a href="https://forms.office.com/r/AjAW253DHT">Project peer review</a> due 11-14</b></td>
         </tr>
         <tr>
             <td>23</td>
@@ -330,7 +329,7 @@ Description | Points | Percentage of final grade
 &ensp;[Project idea submission](https://forms.office.com/r/ZkMKpcSfhw) response | 5 | 1.0
 &ensp;Project idea ranking response | 5 | 1.0
 &ensp;Proposal and literature review | 40 | 8.0
-&ensp;Peer review | 2 | 0.4
+&ensp;[Peer review](https://forms.office.com/r/AjAW253DHT) | 2 | 0.4
 &ensp;Basic working system report | 30 | 6.0
 &ensp;Final report | 121 | 24.2
 **Reading quizzes total** | **33** | **6.6**
