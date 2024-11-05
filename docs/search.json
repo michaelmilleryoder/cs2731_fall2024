@@ -193,7 +193,7 @@
     "href": "hw4.html#deliverables-for-part-2",
     "title": "Homework 4: Sequence labeling",
     "section": "Deliverables for part 2",
-    "text": "Deliverables for part 2\nIn your report, include: \n\nThe names of the pretrained BERT-based models you chose for both English and Norwegian\nA brief discussion of any choices you made about hyperparameters in training\n(Optionally, for extra credit) A description of changes you made or different pretrained models you tried and what accuracy you obtained on the dev set. 1 point of extra credit will be given if any changes result in an improved accuracy on the dev set.\nAccuracy of the fine-tuned models on the test set for both English and Norwegian\nPOS tags predicted for the words of a sentence of your choice in both English and Norwegian\nA link to your copied and filled out Colab notebook"
+    "text": "Deliverables for part 2\nIn your report, include: \n\nThe names of the pretrained BERT-based models you chose for both English and Norwegian\nA brief discussion of any choices you made about hyperparameters in training\n(Optionally, for extra credit) A description of changes you made or different pretrained models you tried and what accuracy you obtained on the dev set. 1 point of extra credit will be given if any changes result in an improved accuracy on the dev set.\nAccuracy of the fine-tuned models on the test set for both English and Norwegian\nPOS tags predicted for the words of a sentence of your choice in both English and Norwegian\nA link to your copied and filled out Colab notebook. Please set the Colab document sharing to public viewing so that teaching staff can see it for grading."
   },
   {
     "objectID": "hw4.html#submission",

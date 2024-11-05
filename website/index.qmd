@@ -330,7 +330,7 @@ Description | Points | Percentage of final grade
 &ensp;Project idea ranking response | 5 | 1.0
 &ensp;Proposal and literature review | 40 | 8.0
 &ensp;[Peer review](https://forms.office.com/r/AjAW253DHT) | 2 | 0.4
-&ensp;Basic working system report | 30 | 6.0
+&ensp;Progress report | 30 | 6.0
 &ensp;Final report | 121 | 24.2
 **Reading quizzes total** | **33** | **6.6**
 &ensp;Each reading quiz of 13 total, 2 lowest scores dropped | 3 | 0.6
