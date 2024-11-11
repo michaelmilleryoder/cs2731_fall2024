@@ -253,8 +253,7 @@ Fall 2024
         <tr>
             <td>21</td>
             <td>11-11 M</td>
-            <td>Machine translation part 2</td>
-            <!--<td><a href="slides/session23_cs2731_spring2024.pdf">Machine translation part 2</a></td>-->
+            <td><a href="slides/session21_cs2731_fall2024.pdf">Machine translation part 2</a></td>
             <td>J+M 13.4-13.8</td>
             <td></td>
         </tr>
