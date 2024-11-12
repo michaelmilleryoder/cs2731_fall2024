@@ -260,8 +260,7 @@ Fall 2024
         <tr>
             <td>22</td>
             <td>11-13 W</td>
-            <td>Speech technologies, ASR, TTS</td>
-            <!--<td><a href="slides/session24_cs2731_spring2024.pdf">Speech technologies, ASR, TTS</a></td>-->
+            <td><a href="slides/session22_cs2731_fall2024.pdf">Speech technologies, ASR, TTS</a></td>
             <td>J+M 16-16.3, 16.5-16.8</td>
             <td><b>Project progress report due 11-14</b>;<br/><b><a href="https://forms.office.com/r/AjAW253DHT">Project peer review</a> due 11-14</b></td>
         </tr>
