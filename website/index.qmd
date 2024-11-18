@@ -267,8 +267,7 @@ Fall 2024
         <tr>
             <td>23</td>
             <td>11-18 M</td>
-            <td>Dialogue systems</td>
-            <!--<td><a href="slides/session25_cs2731_spring2024.pdf">Dialogue, chatbots part 1</a></td>-->
+            <td><a href="slides/session23_cs2731_fall2024.pdf">Dialogue systems</a></td>
             <td>J+M 15-15.3</td>
             <td></td>
         </tr>
