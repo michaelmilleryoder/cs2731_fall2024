@@ -274,8 +274,7 @@ Fall 2024
         <tr>
             <td>24</td>
             <td>11-20 W</td>
-            <td>Chatbots</td>
-            <!--<td><a href="slides/session26_cs2731_spring2024.pdf">Dialogue, chatbots part 2</a></td>-->
+            <td><a href="slides/session24_cs2731_fall2024.pdf">Chatbots</a></td>-->
             <td>J+M 15.4-15.6</td>
             <td></td>
         </tr>
