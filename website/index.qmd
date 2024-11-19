@@ -15,14 +15,6 @@ Fall 2024
 
 <!-- Should make this a quarto markdown table-->
 <table>
-	<!--
-	<thead>
-		<tr>
-			<th> University of Pittsburgh</th>
-			<th> Spring 2024</th>
-		</tr>
-	</thead>
-	-->
 	<tbody style="text-align:left">
 		<tr>
 			<td>Time</td>
@@ -274,7 +266,7 @@ Fall 2024
         <tr>
             <td>24</td>
             <td>11-20 W</td>
-            <td><a href="slides/session24_cs2731_fall2024.pdf">Chatbots</a></td>-->
+            <td><a href="slides/session24_cs2731_fall2024.pdf">Chatbots</a></td>
             <td>J+M 15.4-15.6</td>
             <td></td>
         </tr>
