@@ -2,7 +2,7 @@
 title: "Project"
 ---
 
-*Last revised 2024-10-10.*
+*Last revised 2024-12-03.*
 
 A major component of this course is a hands-on final project guided by students' own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.
 
@@ -31,37 +31,47 @@ Projects will be done in groups of 2-4 students. Groups will be assigned by teac
 	10. What are roles and tasks of each person in the group? Though group members will contribute in various capacities, it is best if each person is responsible for at least one aspect of the project.
 3. **[Project peer review](https://forms.office.com/r/AjAW253DHT)**. *Due 11-14*. In a form, you will rate your own performance and the performance of other group members. This feedback will not be used for grading, but to identify any workload distribution issues early on and assign roles accordingly.
 5. **Progress report**. *Due 11-14*. A brief (max 3 pages) progress report of a basic working system. Not everything needs to be done or fully functional, but there needs to be some sort of basic functionality. Also list any questions you have or resources you will need to successfully complete the project by the final deadline, if you have any. This report should be in the ACL format that the final report will be in and should **maximum 3 pages, not including references.** You do not have to repeat information from the project proposal except for basic descriptions of the project.
-6. **Final presentation**. *In class on 12-11*. Groups will present their finished work to the group, with Q&A and feedback opportunities from students. Please prepare a maximum 5-minute presentation in which you can divide up speaking responsibilities however you see fit, though having more than one group member is encouraged. Cover at least these key points:
+6. **Final presentation**. *In class on 12-11*. Groups will present their finished work to the group, with Q&A and feedback opportunities from students. Please prepare a maximum 5-minute presentation in which you can divide up speaking responsibilities however you see fit, though having more than one group member is encouraged. Add your slides to a shared PowerPoint (to be uploaded soon). Cover at least these key points:
 	1. Project motivation (briefly)
 	2. Data
 	3. Methods, or annotation/collection approach for dataset projects
 	4. Results
-	<br/><br/>Please add your slides to a Google Slide presentation which you can find in a Canvas announcement. These presentations are not graded.
-7. **Final report**. *Due 12-12*. At the end of the course, groups will provide a written report of their project. This report will be in the ACL format found [here](https://github.com/acl-org/acl-style-files) (Overleaf template [here](https://www.overleaf.com/latex/templates/association-for-computational-linguistics-acl-conference/jvxskxpnznfj). Include a section detailing the high-level tasks that each group member did. The report should be a maximum of 8 pages, not including references or the group member task breakdown.  Additional figures or explanation in an appendix is allowed, but they will not necessarily be considered in grading. Outstanding reports would be of a quality and structure that could be submitted to an NLP workshop or conference, but other types of projects can also achieve an A. 
+7. **Final report**. *Due 12-12*. At the end of the course, groups will provide a written report of their project. This report will be in the ACL format found [here](https://github.com/acl-org/acl-style-files) (Overleaf template [here](https://www.overleaf.com/latex/templates/association-for-computational-linguistics-acl-conference/jvxskxpnznfj).  The report should be a maximum of 8 pages, not including limitations, ethics, group member task breakdown, references sections or appendices.  Outstanding reports would be of a quality and structure that could be submitted to an NLP workshop or conference, but other types of projects can also achieve an A. There is flexibility in section names, but please provide information about the following aspects of the project:
+	1. Project motivation
+	2. Literature review. Please provide full citations in a references sections for works cited throughout the paper (not just URLs).
+	3. Data
+	4. Methods. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine).
+	5. Results
+	6. Discussion
+	9. Future work. This is a good place to describe things you thought about but never had time to complete!
+	7. Limitations (doesn't count toward page limit)
+	8. Ethical issues (doesn't count toward page limit)
+	10. Group member task breakdown (doesn't count toward page limit). This section details the high-level tasks that each group member completed.
+	11. References (doesn't count toward page limit)
+	12. Appendices (optional, doesn't count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading. 
 
-<!--
 Here is the rubric that will be used in grading:
 
 |Rubric category | Points|
 |---|---:|
-|Clear motivation for the work is provided | 5|
-|Research questions and/or task definition is clear | 10|
+|Clear motivation for the work is provided | 4|
+|Research questions and/or task definition is clear | 8|
 |Sufficient grounding in relevant related literature |  10 |
 |Applicable dataset/s are chosen | 5|
 |Methods are relevant.<br/>For new approach contributions, multiple methods are compared.<br/>For dataset contributions, annotation methodology is explained | 15|
-|Results are provided.<br/>For new approach contributions, results from multiple methods (at least one baseline) are presented.<br/>For dataset contributions, this may be a single set of results from a simple classifier, or other results if discussed with the instructor | 20|
+|Results are provided.<br/>For new approach contributions, results from multiple methods (at least one baseline) are presented.<br/>For dataset contributions, this may be a single set of results from a simple classifier, or other results if discussed with the instructor | 17|
 |Discussion is provided of the results and/or the potential uses or contributions of any new datasets contributed | 10|
-|Limitations of your approach or dataset are sufficiently discussed | 5|
-|Ethical issues that may be raised by your system or dataset are sufficiently discussed | 5|
-|***Project content total*** | ***85***|
-|Meets all formatting requirements. Is maximum 8 pages, not including references or group member task breakdown | 10|
-|Writing is clear | 15|
-|***Writing total*** | ***25***|
-|Group member had a sufficient amount of workload in the project | 15|
-|Task and roles assigned to this group member were completed sufficiently | 15|
-|***Individual contribution total*** | ***30***|
-|***Grand total*** | ***140***|
--->
+|Limitations of your approach or dataset are sufficiently discussed | 3|
+|Ethical issues that may be raised by your system or dataset are sufficiently discussed | 3|
+|Potential future work is discussed | 3|
+|***Project content total*** | ***78***|
+|Meets all formatting requirements. Is maximum 8 pages, not including references or group member task breakdown | 8|
+|Writing is clear | 9|
+|***Writing total*** | ***17***|
+|Group member had a sufficient amount of workload in the project | 13|
+|Task and roles assigned to this group member were completed sufficiently | 13|
+|***Individual contribution total*** | ***26***|
+|***Grand total*** | ***121***|
 
 ## Example projects
 Your goal is to make a contribution, even a small one, to NLP research or practice. You can select from the following types of contributions, combine multiple of them, or define a different type of contribution with instructor approval. Example project ideas and projects are provided (with a bias toward computational social science and hate speech, the instructor's research area). You are also encouraged to come up with your own ideas, too! Is there a text dataset in a field or your industry that you are familiar with that has not been analyzed? Projects can be related to students' research, but should not be projects for other classes.
