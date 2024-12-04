@@ -283,7 +283,7 @@ Fall 2024
         <tr>
             <td>26</td>
             <td>12-04 W</td>
-            <td>Project work time</td>
+            <td><a href="slides/session26_cs2731_fall2024.pdf">Project work time</a></td>
             <td></td>
             <td></td>
         </tr>
