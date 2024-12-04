@@ -53,7 +53,7 @@ Projects will be done in groups of 2-4 students. Groups will be assigned by teac
 Here is the rubric that will be used in grading:
 
 |Rubric category | Points|
-|---|---:|
+|-------------------|-:|
 |Clear motivation for the work is provided | 4|
 |Research questions and/or task definition is clear | 8|
 |Sufficient grounding in relevant related literature |  10 |
