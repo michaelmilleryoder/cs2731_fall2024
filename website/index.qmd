@@ -290,8 +290,7 @@ Fall 2024
         <tr>
             <td>27</td>
             <td>12-11 W</td>
-            <td><a href="https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/ERvjnz_S-f9PlmDCYMWGBbkBheXSi4dRcAalYyMUOVaftQ">Final project presentations</a></td>
-            <!--<td><a href="slides/session28_cs2731_spring2024.pdf">Final project presentations</a></td>-->
+            <td><a href="slides/session26_cs2731_fall2024.pdf">Final project presentations</a></td>
             <td></td>
             <td><strong>Final projects due 12-12</strong></td>
         </tr>
